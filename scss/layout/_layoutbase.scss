@@ -1,0 +1,13 @@
+/*
+base layout rules
+*/
+
+* {
+//    outline: 1px solid #ccc;
+}
+
+.row {
+    @include container(remCalc(768),remCalc(1000));
+    background-color: papayawhip;
+}
+

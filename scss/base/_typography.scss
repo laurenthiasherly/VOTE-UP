@@ -1,0 +1,69 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $text-color;
+  font: normal 125% / 1.4 $text-font-stack;
+}
+
+h1{
+    font-family:'wilmina', sans-serif;
+    
+    
+}
+
+h2{
+    font-family:'joystickregular', sans-serif;
+}
+
+h3, h4{
+    font-family:'wilmina', sans-serif;
+    color:white;
+    font-weight:normal;
+}
+
+h5,button{
+    font-family:'wilmina', sans-serif;
+    color:$super-dark-grey;
+    font-size: 1em;
+}
+
+a{
+    font-family:'wilmina', sans-serif;
+    text-decoration: none;
+}
+
+p {
+    font-family: 'wilmina', sans-serif;
+    color:$text-color;
+}
+
+label{
+    font-family: 'wilmina', sans-serif;
+    color:white;
+    padding: 0 10px;
+    
+}
+
+input{
+    font-family: 'wilmina', sans-serif;
+    color:white;
+    padding: 0 10px;
+    border:none;
+    border-bottom: solid 3px $dark-grey;
+    background: none;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

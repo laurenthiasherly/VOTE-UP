@@ -1,0 +1,13 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.button{
+    width:120px;
+    background-color:$light-grey;
+    color:$dark-grey;
+    height:30px;
+    border:none;
+    font-weight: bold;
+    font-family:'wilmina', sans-serif;
+}

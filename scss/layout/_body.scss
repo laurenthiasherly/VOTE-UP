@@ -1,0 +1,187 @@
+
+    
+
+
+    // ======================================
+    //              GENERAL STYLING 
+    //=========================================
+    
+    
+    .center{
+        text-align:center;
+        margin-left: auto;
+        margin-right:auto;
+    }
+    
+    .left{
+        text-align: left;
+        padding-left: 10px;
+    }
+    
+    .padding-none{
+        padding:0;
+    }
+    
+    .padding-vertical{
+        padding-top:10px;
+        padding-bottom:10px;    
+    }
+    
+    .margin-none{
+        margin:0;
+    }
+    
+    .margin-vertical{
+        margin-top:20px;
+        margin-bottom:20px;
+    }
+
+    img{
+        width:100%;
+    }
+    
+    li{
+        list-style-type: none;
+    }
+
+    .scrollPage{
+        width:100%;
+        height:100vh;
+    }
+    
+    .white{
+        color:white;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+      .is-visible {
+        display: block !important; }
+
+      .is-hidden {
+        display: none !important; }
+
+      .float-left {
+        float: left !important; }
+
+      .float-right {
+        float: right !important; }
+
+      .float-center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto; }
+
+      .clearfix::before, .clearfix::after {
+        content: ' ';
+        display: table; }
+
+      .clearfix::after {
+        clear: both; }
+
+      .hide {
+        display: none !important; }
+
+      .invisible {
+        visibility: hidden; }
+
+      @media screen and (max-width: 39.9375em) {
+        .hide-for-small-only {
+          display: none !important; } }
+
+      @media screen and (max-width: 0em), screen and (min-width: 40em) {
+        .show-for-small-only {
+          display: none !important; } }
+
+      @media screen and (min-width: 40em) {
+        .hide-for-medium {
+          display: none !important; } }
+
+      @media screen and (max-width: 39.9375em) {
+        .show-for-medium {
+          display: none !important; } }
+
+      @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+        .hide-for-medium-only {
+          display: none !important; } }
+
+      @media screen and (max-width: 39.9375em), screen and (min-width: 64em) {
+        .show-for-medium-only {
+          display: none !important; } }
+
+      @media screen and (min-width: 64em) {
+        .hide-for-large {
+          display: none !important; } }
+
+      @media screen and (max-width: 63.9375em) {
+        .show-for-large {
+          display: none !important; } }
+
+      @media screen and (min-width: 64em) and (max-width: 74.9375em) {
+        .hide-for-large-only {
+          display: none !important; } }
+
+      @media screen and (max-width: 63.9375em), screen and (min-width: 75em) {
+        .show-for-large-only {
+          display: none !important; } }
+
+      .show-for-sr,
+      .show-on-focus {
+        position: absolute !important;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0); }
+
+      .show-on-focus:active, .show-on-focus:focus {
+        position: static !important;
+        height: auto;
+        width: auto;
+        overflow: visible;
+        clip: auto; }
+
+      .show-for-landscape,
+      .hide-for-portrait {
+        display: block !important; }
+
+      @media screen and (orientation: landscape) {
+        .show-for-landscape,
+        .hide-for-portrait {
+          display: block !important; } }
+
+      @media screen and (orientation: portrait) {
+        .show-for-landscape,
+        .hide-for-portrait {
+          display: none !important; } }
+
+      .hide-for-landscape,
+      .show-for-portrait {
+        display: none !important; }
+
+      @media screen and (orientation: landscape) {
+        .hide-for-landscape,
+        .show-for-portrait {
+          display: none !important; } }
+
+      @media screen and (orientation: portrait) {
+        .hide-for-landscape,
+        .show-for-portrait {
+          display: block !important; } }

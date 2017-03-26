@@ -1,0 +1,121 @@
+
+
+
+
+ 
+
+@media screen and (max-width: 63.9375em) {
+    
+    
+    .nav-logo-mobile{
+        float:left;
+        position:absolute;
+        left:30px;
+        width:100px;
+        margin-top:-5px;
+    }
+    
+    .mobile-menu{
+        float:right;
+        padding-right:50px;
+    }
+    
+    .navigation-mobile{
+        position:fixed;
+        top:-300px;
+        width:100%;
+        transition: all 0.6s;
+        z-index:99;
+        
+        li{
+            background-color: $mid-grey;
+            
+            a{
+                text-decoration: none;
+                color:white;
+            }
+        }
+        
+        .nav1-mobile{
+            a{
+                color: $super-dark-grey;
+                font-weight: bold;
+            }
+        }
+        
+        .nav2-mobile{
+            a{
+                color: $crimson;
+                font-weight: bold;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 64em) {
+    /* styles for large and onward only */
+ 
+    
+}
+
+
+
+
+// --------------------------------------
+//              GENERAL STYLING
+// -----------------------------------------
+
+
+
+nav{
+    width: 100%;
+    background: $dark-grey;
+    height:70px;
+    overflow:hidden;
+    position:fixed;
+    z-index:100;
+    
+    li{
+        display:inline;
+        
+        .nav-logo{
+            width:100%;
+            margin-top: -10px;
+            float:left;
+        }
+    }
+     
+    a{
+        color:white;
+    }
+    
+    .nav1{
+       height: 70px;
+       background:$mid-grey;
+       margin-top:-20px;
+       padding-top:20px;
+       transition: all 0.5s;
+       
+       &:hover{
+           font-size: 1.1em;
+       }
+    }
+    .nav2{
+       height: 70px;
+       background: $crimson;
+       margin-top:-20px;
+       padding-top:20px;
+       transition: all 0.5s;
+       
+       &:hover{
+           font-size: 1.1em;
+       }
+    }
+}
+
+
+
+
+
+

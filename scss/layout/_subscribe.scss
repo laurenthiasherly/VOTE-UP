@@ -1,0 +1,55 @@
+
+@media screen and (max-width: 63.9375em) {      
+    
+    .sub-page{
+        background:url(../img/homepage/canada-city.jpg);
+        height:100vh;
+    }
+   
+    .subscription-form{
+        margin-top: 140px;
+        background-color: $crimson;
+        
+        h1{
+            color:white;
+        }
+        
+        li{
+            display: block;
+            
+            .sub-input{
+                width:40%;
+                background-color: white;
+                border:none;
+                height:30px;
+                
+            }
+            
+            .button{
+                background-color: #d05727;
+                color:white;
+                font-weight: normal;
+                height:45px;
+                width:180px;
+            }
+            
+/*            label{
+                color:$super-dark-grey;
+            }*/
+        }
+    } 
+    
+    .sub-logo{
+        width:300px;
+        margin-top:100px;
+    }
+    
+    .background{
+        background-attachment:fixed;
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position:center;
+    }
+    
+}
+

@@ -1,0 +1,319 @@
+@media screen and (max-width: 39.9375em) {
+    /* styles for small only */
+    .conservative-party{
+        overflow:hidden;
+
+        .conservative-logo{
+            background:white;
+            height:200px;
+
+            .logo-conservative{
+                width:70%;
+                margin-left:10%;
+                margin-top:23%;
+            }
+        }
+
+
+        .conservative-leader-img{
+            height:700px;           
+        }
+
+
+        .conservative-desc{
+            overflow:hidden;
+            
+            .conservative-desc-title{
+                width:100%;
+                transition: all 1s ease;
+                height:250px;
+
+            }
+
+            .conservative-desc-para{
+                width:100%;
+                height:450px;
+                padding: 40px 40px;
+                transition: all 1s ease;
+            }
+        }
+
+    }
+    
+    .conservative-economy-bg{
+        background:url(../img/conservative/economy.jpg);
+        height: 200px;
+    }
+    
+    .party-topic{
+        font-family:helvetica;
+        margin-left:30px;
+        color:white;
+        font-size:2.8em;
+        line-height: 30px;
+    }
+    
+    .voting-party{
+        height:350px;
+    }
+    
+}
+
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    /* styles for medium only */
+    .conservative-party{
+        overflow:hidden;
+
+        .conservative-logo{
+            background:white;
+            height:300px;
+
+            .logo-conservative{
+                width:70%;
+                margin-left:10%;
+                margin-top:15%;
+            }
+        }
+
+
+        .conservative-leader-img{
+            height:700px;           
+        }
+
+
+        .conservative-desc{
+            overflow:hidden;
+            
+            .conservative-desc-title{
+                width:100%;
+                transition: all 1s ease;
+                height:250px;
+
+            }
+
+            .conservative-desc-para{
+                width:100%;
+                height:450px;
+                padding: 40px 40px;
+                transition: all 1s ease;
+            }
+        }
+
+    }
+    
+    .conservative-economy-bg{
+        background:url(../img/conservative/economy.jpg);
+        height: 300px;
+    }
+    
+    .party-topic{
+        font-family:helvetica;
+        margin-left:30px;
+        color:white;
+        font-size:4em;
+        line-height: 30px;
+    }
+    
+    .voting-party{
+        height:350px;
+    }
+
+}
+
+@media screen and (min-width: 64em) {
+    /* styles for large and onward only */
+    .conservative-party{
+        overflow:hidden;
+        padding-top:70px;
+
+        .conservative-logo{
+            background:white;
+            height:50vh;
+
+            .logo-conservative{
+                width:70%;
+                margin-left:10%;
+                margin-top:15%;
+            }
+        }
+
+
+        .conservative-leader-img{
+            height:100vh;      
+            
+        }
+
+
+        .conservative-desc{
+            height:50vh;
+
+            .conservative-desc-title{
+                height:100vh;
+                width:100%;
+                transition: all 1s ease;
+
+                .arrow-conservative{
+                    margin-top:70px;
+                }
+
+            }
+
+            .conservative-desc-para{
+                height:100vh;
+                padding: 60px 40px;
+                margin-right:-1000px;
+                width:50%;
+                transition: all 1s ease;
+            }
+        }
+
+    }
+   
+    .conservative-economy-bg{
+        background:url(../img/conservative/economy.jpg);
+
+    }
+    
+    .full-page{
+        height:100vh;
+    }
+
+    .half-page{
+        height:50vh;
+    }
+    
+    .party-topic{
+        font-family:helvetica;
+        margin-top:13%;
+        margin-left:30px;
+        color:white;
+        font-size:6em;
+        line-height: 30px;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =================================================
+        CONSERVATIVE PARTY DESC - FRONT PAGE 
+    =============================================== */
+
+.conservative-party{
+    
+    overflow:hidden;
+    background:$light-blue;
+    
+    .conservative-logo{
+        background:white;
+
+        .logo-conservative{
+            width:70%;
+            margin-left:8%;
+        }
+    }
+
+
+    .conservative-leader-img{
+        background: url(../img/conservative/leader.jpg);
+
+    }
+
+
+    .conservative-desc{
+        background:$light-blue;
+
+        .conservative-desc-title{
+            background:$blue;
+            color:white;
+            padding-top:6%;
+
+            h2{
+                letter-spacing:1px;
+            }
+        }
+
+        .conservative-desc-para{
+            background:$light-blue;
+            
+        }
+    }
+    
+    .background{
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position:center;
+    }
+}
+
+
+
+
+/* =================================================
+        CONSERVATIVE PARTY - TOPICS SECTIONS 
+    =============================================== */
+
+
+
+.blue{
+    background:$blue;
+}
+
+.light-blue{
+    background:$light-blue;
+}
+
+.overlay{
+    background:rgba(0,0,0,0.8);
+    overflow:auto;
+    padding: 40px 50px;
+   
+    p{
+        color:white;
+    }
+}
+
+.background{
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+
+.voting-party{
+    overflow:hidden;
+    
+    .voting-icons{
+        width:100px;
+        transition: all 0.8s ease;
+        margin:20px 0;
+    }
+    
+    
+    .voting-icons-mediumsmall{
+        width:80px;
+        transition: all 0.8s ease;
+        margin:20px 0;
+    }
+    .voted{
+        margin-top:800px;
+        transition: all 0.7s ease;
+    }
+}
+
