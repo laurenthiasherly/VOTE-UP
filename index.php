@@ -34,7 +34,7 @@
         =========================================================== -->
     
     
-    <div id="scroll1" class="homepage1">
+    <div id="scroll1" class="homepage1 scrollDiv">
        
         <div class="row large-12 medium-12 small-12 padding-none center 
              homepage-desc pos-relative">
@@ -80,7 +80,7 @@
     
     
 
-    <div id="scroll2" class="homepage2 homepage-parties">
+    <div id="scroll2" class="homepage2 homepage-parties scrollDiv">
         <div class="column large-3 show-for-large padding-none center homepage-party">
         
         </div>
