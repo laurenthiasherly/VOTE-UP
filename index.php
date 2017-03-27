@@ -1,7 +1,7 @@
 
 
 <?php include "partials/header.php"; ?>
-
+<input id="scrollOption" type="hidden" value="0" />
 <div class="column large-12 medium-12 small-12 padding-none center">
     
     <!-- =========================================================

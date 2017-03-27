@@ -97,6 +97,9 @@
 @media screen and (min-width: 64em) {
     /* styles for large and onward only */
     
+    .homepage-desktop{
+        overflow: hidden;
+    }
     
     .homepage-desc{
         background: rgba(0,0,0,0.9);

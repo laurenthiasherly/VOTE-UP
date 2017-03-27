@@ -12,7 +12,9 @@ $(function(){
     
     sizeOfScrollDiv=$(".scrollDiv").length;
     
-    console.log(sizeOfScrollDiv);
+    if($("#scrollOption").val()=="0"){
+        $("body").css("overflow","hidden");
+    }
    
     resize();
     
