@@ -8,6 +8,8 @@ var iScrollPos = 0;
 
 var sizeOfScrollDiv=0;
 
+
+
 $(function(){
     
     sizeOfScrollDiv=$(".scrollDiv").length;
@@ -22,52 +24,58 @@ $(function(){
         document.body.addEventListener("wheel", myFunction);
     }
     
+    console.log(changeCurrent + " "+sizeOfScrollDiv);
     
     function myFunction(size) {
-        
-        if(size.wheelDelta<0){
-            if(!movingScroll){
-                changeCurrent+=1;
-                if(changeCurrent<=sizeOfScrollDiv){
-                    var target = $("#scroll"+changeCurrent);
-                    if (target.length) {
-                        if(!animationStatus){
-                            movingScroll=true;
-                            animationStatus=true;
-                            $('html, body').animate({scrollTop: target.offset().top}, 1000).delay(200).animate({},scrollAnimationFinished);
+        if(!movingScroll){
+            if(size.wheelDelta<0){
+                    changeCurrent+=1;
+                    if(changeCurrent<=sizeOfScrollDiv){
+                        var target = $("#scroll"+changeCurrent);
+                        if (target.length) {
+                            if(!animationStatus){
+                                movingScroll=true;
+                                animationStatus=true;
+                                $('html, body').animate({scrollTop: target.offset().top}, 1000,scrollAnimationFinished);
+    //                            $('html, body').animate({scrollTop: target.offset().top}, 1000).delay(200).animate({},scrollAnimationFinished);
+                            }
+                        }
+                    }else{
+                        changeCurrent=sizeOfScrollDiv;
+                    }
+
+            }else{
+                    changeCurrent-=1;
+                    if(changeCurrent<=0){
+                        changeCurrent=1;
+                    }else{
+                        var target = $("#scroll"+changeCurrent);
+                        if (target.length) {
+                            if(!animationStatus){
+                                movingScroll=true;
+                                animationStatus=true;
+                                $('html, body').animate({scrollTop: target.offset().top}, 1000,scrollAnimationFinished);
+    //                            $('html, body').animate({scrollTop: target.offset().top}, 1000).delay(200).animate({},scrollAnimationFinished);
+                            }
                         }
                     }
-                }else{
-                    changeCurrent=sizeOfScrollDiv;
-                }
             }
         }else{
-            if(!movingScroll){
-                changeCurrent-=1;
-                if(changeCurrent<=0){
-                    changeCurrent=1;
-                }else{
-                    var target = $("#scroll"+changeCurrent);
-                    if (target.length) {
-                        if(!animationStatus){
-                            movingScroll=true;
-                            animationStatus=true;
-                            $('html, body').animate({scrollTop: target.offset().top}, 1000).delay(200).animate({},scrollAnimationFinished);
-                        }
-                    }
-                }
-            }
+            movingScroll=true;
         }
-        console.log(changeCurrent);
     }
     
     $(".sidebar-topic").click(function() {
-        $('html, body').stop();
-        var target = $("#"+$(this).data("direct"));
-        if (target.length) {
-            changeCurrent=$(this).data("direct").match(/\d+/);
-            alert(changeCurrent);
-            $('html, body').animate({scrollTop: target.offset().top}, 1000);
+        if(!movingScroll){
+            var target = $("#"+$(this).data("direct"));
+            if (target.length) {
+                if(!animationStatus){
+                    changeCurrent=parseInt($(this).data("direct").match(/\d+/)[0]);
+                    movingScroll=true;
+                    animationStatus=true;
+                    $('html, body').animate({scrollTop: target.offset().top}, 1200,scrollAnimationFinished);
+                }
+            }
         }
     });
    
@@ -386,6 +394,7 @@ $(function(){
 
 
 function scrollAnimationFinished(){
+    console.log("finished!");
     movingScroll=false;
     animationStatus=false;
 }
