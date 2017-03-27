@@ -334,7 +334,7 @@ $(function(){
 
     },function(){
         $(".voting-icons").attr('src','img/conservative/badge-icon.svg');
-        $(".voted").css("margin-top","800px");
+        $(".voted").css("margin-top","300px");
         $(".voting-icons").css("width","100px");
     });
     
@@ -347,9 +347,36 @@ $(function(){
 
     },function(){
         $(".voting-icons-mediumsmall").attr('src','img/conservative/badge-icon-mediumsmall.svg');
-        $(".voted").css("margin-top","800px");
+        $(".voted").css("margin-top","300px");
         $(".voting-icons-mediumsmall").css("width","80px");
     });
+    
+    
+    
+    var partyBg = ["economy","economy", "economy", 
+                    "environment","environment","environment",
+                    "education","education","education",
+                        "health","health","health",
+                    "immigration","immigration","immigration",
+                    "housing","housing","housing",
+                    "foreign-policy","foreign-policy","foreign-policy",
+                    "privacy","privacy","privacy",
+                    "electoral-reform-1","electoral-reform-1","electoral-reform-1"];
+    
+//    $("#topics-bg3").css("background","url(img/conservative/"+partyBg[3]+".jpg)");
+    
+    $(".topics-bg").each(function(index){
+        $("#topics-bg"+[index]).css("background","url(img/conservative/"+partyBg[index]+".jpg)");
+        $(".topics-bg").css("background-size","cover");
+        $(".topics-bg").css("background-position","center");
+    });
+    
+   
+    
+    
+    
+    
+    
     
     
 });

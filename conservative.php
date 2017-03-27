@@ -1,5 +1,6 @@
 <?php include "partials/party.php"; ?>
 
+
 <input id="scrollOption" type="hidden" value="1" />
 
 <div id="scroll1" class="scrollpage column large-12 medium-12 small-12 center 
@@ -131,7 +132,7 @@
     </div>
     
     <div class="column hide-for-large medium-12 small-12 padding-none center 
-         conservative-economy-bg bg-party-height background">
+         topics-bg bg-party-height background" id="topics-bg0">
        
     </div>
     
@@ -185,7 +186,7 @@
    
     
     <div class="column large-2 show-for-large padding-none center 
-        conservative-economy-bg bg-party-height background half-page">
+        topics-bg bg-party-height background half-page" id="topics-bg1">
         
     </div>
     
@@ -195,7 +196,7 @@
     
     
     <div class="column large-6 show-for-large padding-none center 
-         conservative-economy-bg bg-party-height background half-page">
+         topics-bg bg-party-height background half-page" id="topics-bg2">
        
     </div>
     
@@ -299,7 +300,7 @@
     
     
     <div class="column hide-for-large medium-12 small-12 padding-none center 
-         conservative-economy-bg bg-party-height background">
+         topics-bg bg-party-height background" id="topics-bg3">
        
     </div>
     
@@ -354,7 +355,7 @@
    
     
     <div class="column large-2 show-for-large padding-none center 
-        conservative-environment-bg bg-party-height background half-page">
+        topics-bg bg-party-height background half-page" id="topics-bg4">
         
     </div>
     
@@ -364,7 +365,7 @@
     
     
     <div class="column large-6 show-for-large padding-none center 
-         conservative-environment-bg bg-party-height background half-page">
+         topics-bg bg-party-height background half-page" id="topics-bg5">
        
     </div>
     
@@ -465,7 +466,7 @@
     </div>
     
     <div class="column hide-for-large medium-12 small-12 padding-none center 
-         conservative-education-bg bg-party-height background">
+         topics-bg bg-party-height background" id="topics-bg6">
        
     </div>
     
@@ -519,7 +520,7 @@
    
     
     <div class="column large-2 show-for-large padding-none center 
-        conservative-education-bg bg-party-height background half-page">
+        topics-bg bg-party-height background half-page" id="topics-bg7">
         
     </div>
     
@@ -529,7 +530,7 @@
     
     
     <div class="column large-6 show-for-large padding-none center 
-         conservative-education-bg bg-party-height background half-page">
+         topics-bg bg-party-height background half-page" id="topics-bg8">
        
     </div>
     
@@ -622,7 +623,7 @@
     </div>
     
     <div class="column hide-for-large medium-12 small-12 padding-none center 
-         conservative-health-bg bg-party-height background">
+         topics-bg bg-party-height background" id="topics-bg9">
        
     </div>
     
@@ -676,7 +677,7 @@
    
     
     <div class="column large-2 show-for-large padding-none center 
-        conservative-health-bg bg-party-height background half-page">
+        topics-bg bg-party-height background half-page" id="topics-bg10">
         
     </div>
     
@@ -686,7 +687,7 @@
     
     
     <div class="column large-6 show-for-large padding-none center 
-         conservative-health-bg bg-party-height background half-page">
+         topics-bg bg-party-height background half-page" id="topics-bg11">
        
     </div>
     
@@ -781,7 +782,7 @@
     </div>
     
     <div class="column hide-for-large medium-12 small-12 padding-none center 
-         conservative-immigration-bg bg-party-height background">
+         topics-bg bg-party-height background" id="topics-bg12">
        
     </div>
     
@@ -835,7 +836,7 @@
    
     
     <div class="column large-2 show-for-large padding-none center 
-        conservative-immigration-bg bg-party-height background half-page">
+        topics-bg bg-party-height background half-page" id="topics-bg13">
         
     </div>
     
@@ -845,7 +846,7 @@
     
     
     <div class="column large-6 show-for-large padding-none center 
-         conservative-immigration-bg bg-party-height background half-page">
+         topics-bg bg-party-height background half-page" id="topics-bg14">
        
     </div>
     
@@ -932,7 +933,7 @@
     </div>
     
     <div class="column hide-for-large medium-12 small-12 padding-none center 
-         conservative-housing-bg bg-party-height background">
+         topics-bg bg-party-height background" id="topics-bg15">
        
     </div>
     
@@ -985,7 +986,7 @@
    
     
     <div class="column large-2 show-for-large padding-none center 
-        conservative-housing-bg bg-party-height background half-page">
+        topics-bg bg-party-height background half-page" id="topics-bg16">
         
     </div>
     
@@ -995,7 +996,7 @@
     
     
     <div class="column large-6 show-for-large padding-none center 
-         conservative-housing-bg bg-party-height background half-page">
+         topics-bg bg-party-height background half-page" id="topics-bg17">
        
     </div>
     
@@ -1084,7 +1085,7 @@
     </div>
     
     <div class="column hide-for-large medium-12 small-12 padding-none center 
-         conservative-education-bg bg-party-height background">
+         topics-bg bg-party-height background" id="topics-bg18">
        
     </div>
     
@@ -1137,7 +1138,7 @@
    
     
     <div class="column large-2 show-for-large padding-none center 
-        conservative-foreign-bg bg-party-height background half-page">
+        topics-bg bg-party-height background half-page" id="topics-bg19">
         
     </div>
     
@@ -1147,7 +1148,7 @@
     
     
     <div class="column large-6 show-for-large padding-none center 
-         conservative-foreign-bg bg-party-height background half-page">
+         topics-bg bg-party-height background half-page" id="topics-bg20">
        
     </div>
     
@@ -1238,7 +1239,7 @@
     </div>
     
     <div class="column hide-for-large medium-12 small-12 padding-none center 
-         conservative-privacy-bg bg-party-height background">
+         topics-bg bg-party-height background" id="topics-bg21">
        
     </div>
     
@@ -1292,7 +1293,7 @@
    
     
     <div class="column large-2 show-for-large padding-none center 
-        conservative-privacy-bg bg-party-height background half-page">
+        topics-bg bg-party-height background half-page" id="topics-bg22">
         
     </div>
     
@@ -1302,7 +1303,7 @@
     
     
     <div class="column large-6 show-for-large padding-none center 
-         conservative-privacy-bg bg-party-height background half-page">
+         topics-bg bg-party-height background half-page" id="topics-bg23">
        
     </div>
     
@@ -1374,7 +1375,7 @@
  
          
  <!-- =========================================================
-                    CONSERVATIVE PARTY - EDUCATION PAGE  
+                    CONSERVATIVE PARTY - ELECTORAL PAGE  
         =========================================================== -->
         
 
@@ -1395,7 +1396,7 @@
     </div>
     
     <div class="column hide-for-large medium-12 small-12 padding-none center 
-         conservative-electoral-bg bg-party-height background">
+         topics-bg bg-party-height background" id="topics-bg24">
        
     </div>
     
@@ -1449,7 +1450,7 @@
    
     
     <div class="column large-2 show-for-large padding-none center 
-        conservative-electoral-bg bg-party-height background half-page">
+        topics-bg bg-party-height background half-page" id="topics-bg25">
         
     </div>
     
@@ -1459,7 +1460,7 @@
     
     
     <div class="column large-6 show-for-large padding-none center 
-         conservative-electoral-bg bg-party-height background half-page">
+         topics-bg bg-party-height background half-page" id="topics-bg26">
        
     </div>
     
