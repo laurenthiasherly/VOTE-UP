@@ -1,7 +1,7 @@
 <?php include "partials/party.php"; ?>
 
 
-<input id="scrollOption" type="hidden" value="1" />
+<input id="scrollOption" type="hidden" value="0" />
 
 <div id="scroll1" class="scrollpage column large-12 medium-12 small-12 center 
                             padding-none conservative-party scrollDiv">

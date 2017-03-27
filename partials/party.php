@@ -14,7 +14,8 @@
             <li class="sidebar-topic" data-direct="scroll8"><a>7</a></li>
             <li class="sidebar-topic" data-direct="scroll9"><a>8</a></li>
             <li class="sidebar-topic" data-direct="scroll10"><a>9</a></li>
-            <li id="filterShow" class="sidebar-topic"><a>F</a></li>
+            <li id="filterShow" class="sidebar-topic" data-direct="filter0"><a>F</a></li>
+            <li id="filterShow" class="sidebar-topic" data-direct="voting0"><a>V</a></li>
         </ul>
         <div class="tip-topic-style">
             <div class="tip-topic"><a class="tip-style">Economy</a></div>
@@ -27,19 +28,19 @@
             <div class="tip-topic"><a class="tip-style">Foreign Policy</a></div>
             <div class="tip-topic"><a class="tip-style">Electoral Reform</a></div>
             <div class="tip-topic"><a class="tip-style">Filter</a></div>
+            <div class="tip-topic"><a class="tip-style">Voting</a></div>
         </div>
     </div>
 
-
     <div id="modalBox" class="modal-box-comparing">
+        <a id="closeComparingBox">X</a>
         <div class="comparing-box">
-            <a id="closeComparingBox">X</a>
             <div class="comp-topbar-style">
                 <ul>
-                    <li data-topic="1" data-selected="0" class="party-top-comp">Liberal</li>
-                    <li data-topic="1" data-selected="0" class="party-top-comp">Conservative</li>
-                    <li data-topic="1" data-selected="0" class="party-top-comp">Democratic</li>
-                    <li data-topic="1" data-selected="0" class="party-top-comp">Green</li>
+                    <li data-topic="1" data-selected="0" class="party-top-comp">LIBERAL</li>
+                    <li data-topic="1" data-selected="0" class="party-top-comp">CONSERVATIVE</li>
+                    <li data-topic="1" data-selected="0" class="party-top-comp">DEMOCRATIC</li>
+                    <li data-topic="1" data-selected="0" class="party-top-comp">GREEN</li>
                 </ul>
             </div>
             <div class="comp-sidebar-topic">

@@ -7,27 +7,29 @@ var animationStatus=false;
 var iScrollPos = 0;
 
 var sizeOfScrollDiv=0;
-
+var modalBoxShow=0;
 
 
 $(function(){
     
     sizeOfScrollDiv=$(".scrollDiv").length;
     
-    if($("#scrollOption").val()=="0"){
-        $("body").css("overflow","hidden");
-    }
    
     resize();
     
     if($( window ).width()>1024){
         document.body.addEventListener("wheel", myFunction);
+        if($("#scrollOption").val()=="0"){
+            $("body").css("overflow","hidden");
+        }
+    }else{
+        $("body").css("overflow","auto");
     }
     
     console.log(changeCurrent + " "+sizeOfScrollDiv);
     
     function myFunction(size) {
-        if(!movingScroll){
+        if(!movingScroll&&modalBoxShow==0){
             if(size.wheelDelta<0){
                     changeCurrent+=1;
                     if(changeCurrent<=sizeOfScrollDiv){
@@ -75,6 +77,10 @@ $(function(){
                     animationStatus=true;
                     $('html, body').animate({scrollTop: target.offset().top}, 1200,scrollAnimationFinished);
                 }
+                else{
+                    movingScroll=false;
+                    animationStatus=false;
+                }
             }
         }
     });
@@ -89,11 +95,14 @@ $(function(){
     });
     
     $("#filterShow").click(function(){
-        movingScroll=true;
+        modalBoxShow=1;
+        $("body").css("overflow","hidden");
         $("#modalBox").fadeIn("0.2","swing");
     });
     
     $("#closeComparingBox").click(function(){
+        modalBoxShow=0;
+        $("body").css("overflow","auto");
         $("#modalBox").fadeOut("0.2","swing");
     });
     
@@ -112,11 +121,11 @@ $(function(){
         if($(this).data("selected")==0){
             partiesSelected+=1;
             $(this).data("selected",1);
-            $(this).css("color","white");
+            $(this).css("border-bottom","solid 2px white");
         }else{
             partiesSelected-=1;
             $(this).data("selected",0);
-            $(this).css("color","black");
+            $(this).css("border-bottom","solid 2px transparent");
         }
         updateComparingContent();
     });
@@ -379,14 +388,6 @@ $(function(){
         $(".topics-bg").css("background-position","center");
     });
     
-   
-    
-    
-    
-    
-    
-    
-    
 });
 
 
@@ -408,7 +409,7 @@ function updateComparingContent(){
             topicSelected=$(this).text();
             $(".party-top-comp").each(function(){
                 if($(this).data("selected")==1){
-                    messageComparing+="<div class='content-topic-party"+partiesSelected+" col'><div class='content-showing-style'>"+$(this).text()+" "+topicSelected+"</div></div>";
+                    messageComparing+="<div class='content-topic-party"+partiesSelected+" col'><div class='content-showing-style'><div class='topic-title-"+$(this).text().toLocaleLowerCase()+"'>"+$(this).text()+" PARTY"+"</div><div class='comparison-content'>"+topicSelected+"</div></div></div>";
                     
                 }
             });
@@ -426,3 +427,134 @@ window.onbeforeunload = function(){
     $('body').stop(); 
     window.scrollTo(0,0); 
 }
+
+
+
+
+// ====================================================
+//                  VOTING SYSTEM
+// ====================================================
+
+
+var showVoting=0;
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function delete_cookie(name) {
+  document.cookie = name+'=;Path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+
+function checkCookie(name) {
+    var user = getCookie(name);
+    if (user != "") {
+        return true;
+    }
+}
+
+
+var party1=0;
+var party2=0;
+var party3=0;
+var party4=0;
+
+function ShowVotingBox(){
+    $(".voting-box").stop();
+    if(showVoting==0){
+//        $("#votingBox").fadeIn(500);
+        $(".voting-box").animate({"height":"153px"},400);
+        showVoting=1;
+        $(".voting-box-btn").eq(0).html("-");
+    }else{
+//        $("#votingBox").fadeOut(500);
+        $(".voting-box").animate({"height":"0px"},400);
+        showVoting=0;
+        $(".voting-box-btn").eq(0).html("+");
+    }
+}
+
+$(".voting-box-btn").click(function(){
+    ShowVotingBox();
+});
+
+$(function(){
+    
+    updateVoting();
+
+    $('.voting').click(function(){
+//        alert($(this).attr("id"));
+        if($(this).attr('data-vote')=='0'){
+            $(this).css('background-color','blue');
+            $(this).css('color','white');
+            $(this).attr('data-vote','1');
+            setCookie($(this).attr('id'),'1',1);
+        }else{
+            $(this).css('background-color','white');
+            $(this).css('color','black');
+            $(this).attr('data-vote','0');
+            delete_cookie($(this).attr('id'));
+        }
+        updateVoting();
+    });
+  
+});
+
+function animateVoting(){
+    
+}
+
+
+function updateVoting(){
+    party1=0;
+    party2=0;
+    party3=0;
+    party4=0;
+    for(var i=1;i<=4;i+=1){
+        for(var j=1;j<=9;j+=1){
+//            console.log("party"+i+"-"+j);
+            if(checkCookie("party"+i+"-"+j)){
+//                console.log("cookie found! "+"party"+i+"-"+j);
+                $("#party"+i+"-"+j).css('background-color','blue');
+                $("#party"+i+"-"+j).css('color','white');
+                $("#party"+i+"-"+j).attr('data-vote','1');
+                
+                if(i==1){
+                    party1+=1;
+                }else if(i==2){
+                    party2+=1;
+                }else if(i==3){
+                    party3+=1;
+                }else{
+                    party4+=1;
+                }
+            }
+        }
+    }
+    $("#party1total").text(party1);
+    $("#party2total").text(party2);
+    $("#party3total").text(party3);
+    $("#party4total").text(party4);
+}
+
+
+
