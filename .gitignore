@@ -1,4 +1,5 @@
-.sass-cache/
-*.css.map
-css/*
-video/*
+
+/css/*
+/sass-cached/*
+/video/*
+
