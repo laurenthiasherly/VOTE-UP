@@ -15,7 +15,7 @@
             <li class="sidebar-topic" data-direct="scroll9"><a>8</a></li>
             <li class="sidebar-topic" data-direct="scroll10"><a>9</a></li>
             <li id="filterShow" class="sidebar-topic" data-direct="filter0"><a>F</a></li>
-            <li id="filterShow" class="sidebar-topic" data-direct="voting0"><a>V</a></li>
+            <li id="votingBtn" class="sidebar-topic" data-direct="voting0"><a>V</a></li>
         </ul>
         <div class="tip-topic-style">
             <div class="tip-topic"><a class="tip-style">Economy</a></div>
@@ -33,7 +33,7 @@
     </div>
 
     <div id="modalBox" class="modal-box-comparing">
-        <a id="closeComparingBox">X</a>
+        <div id="closeComparingBox">X</div>
         <div class="comparing-box">
             <div class="comp-topbar-style">
                 <ul>
@@ -60,6 +60,27 @@
                 <div id="contentTopic">
                     <p class="content-topic-default">Please select the parties and Topics.</p>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="votingBox" class="centered">
+        <div class="voting-box">
+            <div class="voting-col">
+                <p>Conservative</p>
+                <a><div id="party1total"></div></a>
+            </div>
+            <div class="voting-col">
+                <p>Democratic</p>
+                <a><div id="party2total"></div></a>
+            </div>
+            <div class="voting-col">
+                <p>Green</p>
+                <a><div id="party3total"></div></a>
+            </div>
+            <div class="voting-col">
+                <p>Liberal</p>
+                <a><div id="party4total"></div></a>
             </div>
         </div>
     </div>

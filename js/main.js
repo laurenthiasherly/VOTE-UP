@@ -96,13 +96,13 @@ $(function(){
     
     $("#filterShow").click(function(){
         modalBoxShow=1;
-        $("body").css("overflow","hidden");
+//        $("body").css("overflow","hidden");
         $("#modalBox").fadeIn("0.2","swing");
     });
     
     $("#closeComparingBox").click(function(){
         modalBoxShow=0;
-        $("body").css("overflow","auto");
+//        $("body").css("overflow","auto");
         $("#modalBox").fadeOut("0.2","swing");
     });
     
@@ -320,14 +320,14 @@ $(function(){
     conservativeDesc();
     
     
-    $(".voting-icons").each(function(){
-        $(".voting-icons").hover(function(){
-            $(".voting-icons").css("width","120px");
-            
-        },function(){
-            $(".voting-icons").css("width","100px");
-            
-        });
+
+    
+    $(".voting-icons").hover(function(){
+        $(".voting-icons").css("width","120px");
+
+    },function(){
+        $(".voting-icons").css("width","100px");
+
     });
     
     (function($) {
@@ -344,15 +344,37 @@ $(function(){
         };
     }(jQuery));
     
-    $(".voting-icons").clickToggle(function(){
-        $(".voting-icons").attr('src','img/conservative/badge-icon-clicked.svg');
-        $(".voted").css("margin-top","0");
-        $(".voting-icons").css("width","120px");
-
-    },function(){
-        $(".voting-icons").attr('src','img/conservative/badge-icon.svg');
-        $(".voted").css("margin-top","300px");
-        $(".voting-icons").css("width","100px");
+//    $(".voting-icons").clickToggle(function(){
+//        $(this).attr('src','img/conservative/badge-icon-clicked.svg');
+//        $(".voted").eq($(this).data("voted")).css("margin-top","0");
+//        $(".voting-icons").eq($(this).data("voted")).css("width","120px");
+//        $(this).attr('data-vote','1');
+//        setCookie($(this).attr('id'),'1',1);
+//        updateVoting();
+//    },function(){
+//        $(this).attr('src','img/conservative/badge-icon.svg');
+//        $(".voted").eq($(this).data("voted")).css("margin-top","300px");
+//        $(".voting-icons").eq($(this).data("voted")).css("width","100px");
+//        $(this).attr('data-vote','0');
+//        delete_cookie($(this).attr('id'));
+//        updateVoting();
+//    });
+    
+    $(".voting-icons").click(function(){
+        if($(this).attr('data-vote')=='0'){
+            $(this).attr('src','img/conservative/badge-icon-clicked.svg');
+            $(".voted").eq($(this).data("voted")).css("margin-top","0");
+            $(".voting-icons").eq($(this).data("voted")).css("width","120px");
+            $(this).attr('data-vote','1');
+            setCookie($(this).attr('id'),'1',1);
+        }else{
+             $(this).attr('src','img/conservative/badge-icon.svg');
+            $(".voted").eq($(this).data("voted")).css("margin-top","300px");
+            $(".voting-icons").eq($(this).data("voted")).css("width","100px");
+            $(this).attr('data-vote','0');
+            delete_cookie($(this).attr('id'));
+        }
+        updateVoting();
     });
     
     
@@ -402,14 +424,14 @@ function scrollAnimationFinished(){
 
 function updateComparingContent(){
     messageComparing="";
-    $(".sidebar-topic-filt").each(function(){
+    $(".sidebar-topic-filt").each(function(index){
         if($(this).data("selected")==1){
             messageComparing+="<div class='clear-fix'>";
-            messageComparing+="<p class='content-topic-default'>"+$(this).text()+"</p>";
+            messageComparing+="<h3 class='content-topic-default'>"+$(".tip-topic").eq(index).text()+"</h3>";
             topicSelected=$(this).text();
             $(".party-top-comp").each(function(){
                 if($(this).data("selected")==1){
-                    messageComparing+="<div class='content-topic-party"+partiesSelected+" col'><div class='content-showing-style'><div class='topic-title-"+$(this).text().toLocaleLowerCase()+"'>"+$(this).text()+" PARTY"+"</div><div class='comparison-content'>"+topicSelected+"</div></div></div>";
+                    messageComparing+="<div class='content-topic-party"+partiesSelected+" col'><div class='content-showing-style'><div class='topic-title-"+$(this).text().toLocaleLowerCase()+"'>"+$(this).text()+" PARTY"+"</div><div class='comparison-content'>Proin tempus lobortis quam, non varius libero eleifend et. Aliquam vehicula, augue quis sodales lacinia, lectus felis facilisis diam, ac lacinia nulla sapien auctor orci. Ut bibendum ornare hendrerit. </div></div></div>";
                     
                 }
             });
@@ -482,7 +504,7 @@ function ShowVotingBox(){
     $(".voting-box").stop();
     if(showVoting==0){
 //        $("#votingBox").fadeIn(500);
-        $(".voting-box").animate({"height":"153px"},400);
+        $(".voting-box").animate({"height":"80px"},400);
         showVoting=1;
         $(".voting-box-btn").eq(0).html("-");
     }else{
@@ -493,7 +515,7 @@ function ShowVotingBox(){
     }
 }
 
-$(".voting-box-btn").click(function(){
+$("#votingBtn").click(function(){
     ShowVotingBox();
 });
 
@@ -519,10 +541,6 @@ $(function(){
   
 });
 
-function animateVoting(){
-    
-}
-
 
 function updateVoting(){
     party1=0;
@@ -533,9 +551,11 @@ function updateVoting(){
         for(var j=1;j<=9;j+=1){
 //            console.log("party"+i+"-"+j);
             if(checkCookie("party"+i+"-"+j)){
-//                console.log("cookie found! "+"party"+i+"-"+j);
-                $("#party"+i+"-"+j).css('background-color','blue');
-                $("#party"+i+"-"+j).css('color','white');
+                
+                $("#party"+i+"-"+j).attr('src','img/conservative/badge-icon-clicked.svg');
+                
+                $(".voted").eq( $("#party"+i+"-"+j).data("voted")).css("margin-top","0");
+                $(".voting-icons").eq( $("#party"+i+"-"+j).data("voted")).css("width","120px");
                 $("#party"+i+"-"+j).attr('data-vote','1');
                 
                 if(i==1){

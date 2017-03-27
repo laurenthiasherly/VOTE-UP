@@ -227,7 +227,7 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
-             class="voting-icons">
+             class="voting-icons" id="party1-1" data-voted="0" data-vote='0'>
         <p class="white voted"> Voted! </p>
     </div>
     
@@ -236,8 +236,8 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
-             class="voting-icons-mediumsmall">
-        <p class="white voted"> Voted! </p>
+             class="voting-icons-mediumsmall" id="party1-1" data-voted="0" data-vote='0'>
+        <p class="white voted-m"> Voted! </p>
     </div>
     
     
@@ -396,7 +396,7 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
-             class="voting-icons">
+             class="voting-icons" id="party1-2"  data-voted="1" data-vote='0'>
         <p class="white voted"> Voted! </p>
     </div>
     
@@ -405,8 +405,8 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
-             class="voting-icons-mediumsmall">
-        <p class="white voted"> Voted! </p>
+             class="voting-icons-mediumsmall" id="party1-2" data-voted="1" data-vote='0'>
+        <p class="white voted-m"> Voted! </p>
     </div>
     
     
@@ -561,7 +561,7 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
-             class="voting-icons">
+             class="voting-icons" id="party1-3" data-voted="2" data-vote='0'>
         <p class="white voted"> Voted! </p>
     </div>
     
@@ -570,8 +570,8 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
-             class="voting-icons-mediumsmall">
-        <p class="white voted"> Voted! </p>
+             class="voting-icons-mediumsmall" id="party1-3" data-voted="2" data-vote='0'>
+        <p class="white voted-m"> Voted! </p>
     </div>
     
     
@@ -718,7 +718,7 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
-             class="voting-icons">
+             class="voting-icons" id="party1-4" data-voted="3" data-vote='0'>
         <p class="white voted"> Voted! </p>
     </div>
     
@@ -727,8 +727,8 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
-             class="voting-icons-mediumsmall">
-        <p class="white voted"> Voted! </p>
+             class="voting-icons-mediumsmall" id="party1-4" data-voted="3" data-vote='0'>
+        <p class="white voted-m"> Voted! </p>
     </div>
     
     
@@ -877,7 +877,7 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
-             class="voting-icons">
+             class="voting-icons" id="party1-5" data-voted="4" data-vote='0'>
         <p class="white voted"> Voted! </p>
     </div>
     
@@ -886,8 +886,8 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
-             class="voting-icons-mediumsmall">
-        <p class="white voted"> Voted! </p>
+             class="voting-icons-mediumsmall" id="party1-5" data-voted="4" data-vote='0'>
+        <p class="white voted-m"> Voted! </p>
     </div>
     
     
@@ -1027,7 +1027,7 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
-             class="voting-icons">
+             class="voting-icons" id="party1-6" data-voted="5" data-vote='0'>
         <p class="white voted"> Voted! </p>
     </div>
     
@@ -1036,8 +1036,8 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
-             class="voting-icons-mediumsmall">
-        <p class="white voted"> Voted! </p>
+             class="voting-icons-mediumsmall" id="party1-6" data-voted="5" data-vote='0'>
+        <p class="white voted-m"> Voted! </p>
     </div>
     
     
@@ -1179,7 +1179,7 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
-             class="voting-icons">
+             class="voting-icons" id="party1-7" data-voted="6" data-vote='0'>
         <p class="white voted"> Voted! </p>
     </div>
     
@@ -1188,8 +1188,8 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
-             class="voting-icons-mediumsmall">
-        <p class="white voted"> Voted! </p>
+             class="voting-icons-mediumsmall" id="party1-7" data-voted="6" data-vote='0'>
+        <p class="white voted-m"> Voted! </p>
     </div>
     
     
@@ -1334,7 +1334,7 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
-             class="voting-icons">
+             class="voting-icons" id="party1-8" data-voted="7" data-vote='0'>
         <p class="white voted"> Voted! </p>
     </div>
     
@@ -1343,8 +1343,8 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
-             class="voting-icons-mediumsmall">
-        <p class="white voted"> Voted! </p>
+             class="voting-icons-mediumsmall" id="party1-8" data-voted="7" data-vote='0'>
+        <p class="white voted-m"> Voted! </p>
     </div>
     
     
@@ -1491,7 +1491,7 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
-             class="voting-icons">
+             class="voting-icons" id="party1-9" data-voted="8" data-vote='0'>
         <p class="white voted"> Voted! </p>
     </div>
     
@@ -1500,8 +1500,8 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
-             class="voting-icons-mediumsmall">
-        <p class="white voted"> Voted! </p>
+             class="voting-icons-mediumsmall" id="party1-9" data-voted="8" data-vote='0'>
+        <p class="white voted-m"> Voted! </p>
     </div>
     
     
