@@ -63,7 +63,9 @@ $(function(){
                     }
             }
         }else{
-            movingScroll=true;
+            if(modalBoxShow==0){
+                movingScroll=true;
+            }
         }
     }
     
@@ -72,10 +74,12 @@ $(function(){
             var target = $("#"+$(this).data("direct"));
             if (target.length) {
                 if(!animationStatus){
-                    changeCurrent=parseInt($(this).data("direct").match(/\d+/)[0]);
-                    movingScroll=true;
-                    animationStatus=true;
-                    $('html, body').animate({scrollTop: target.offset().top}, 1200,scrollAnimationFinished);
+                    if(parseInt($(this).data("direct").match(/\d+/)[0])!=0){
+                        changeCurrent=parseInt($(this).data("direct").match(/\d+/)[0]);
+                        movingScroll=true;
+                        animationStatus=true;
+                        $('html, body').animate({scrollTop: target.offset().top}, 1200,scrollAnimationFinished);
+                    }
                 }
                 else{
                     movingScroll=false;
