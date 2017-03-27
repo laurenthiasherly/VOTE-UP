@@ -26,7 +26,7 @@
         if($rowData>0){
             while($row = mysqli_fetch_assoc($result)){
                 if(($countData%2)==0){
-                    $message.="<div class='background-mp".$count."'>";
+                    $message.="<div class='background-mp-".strtolower($row["party"])."'>";
                     $message.="<div class='row'>";
                     $message.=  "<div class='column small-12 medium-6 large-6 mp-picture'>";
                     $message.=      "<div class='mp-info'>";
@@ -34,7 +34,12 @@
                     $message.=          "<p>".$row["name"]."</p>";
                     $message.=      "</div>";
                     $message.=  "</div>";
-                    $message.=  "<div class='column small-12 medium-6 large-6 background-content-mp".$count."'>";
+                    $message.=  "<div class='column small-12 medium-6 large-6 background-content-mp-".strtolower($row["party"])."'>";
+                    
+                    $message.="<div class='mp-definition'>";
+                    $message.="Nulla ac justo dictum, ultricies quam sit amet, tincidunt odio. Vivamus metus orci, tincidunt eu venenatis consectetur, interdum quis mi. Vivamus dictum nisi neque, eu molestie neque elementum ut.";
+                    $message.=  "</div>";
+                    
                     $message.=  "</div>";
                     $message.="</div>";
                     $message.="</div>";
@@ -44,9 +49,14 @@
                     }
                     $countData+=1;
                 }else{
-                    $message.="<div class='background-mp".$count."'>";
+                    $message.="<div class='background-mp-".strtolower($row["party"])."'>";
                     $message.="<div class='row'>";
-                    $message.=  "<div class='column small-12 medium-6 large-6 background-content-mp".$count."'>";
+                    $message.=  "<div class='column small-12 medium-6 large-6 background-content-mp-".strtolower($row["party"])."'>";
+                    
+                    $message.="<div class='mp-definition'>";
+                    $message.="Nulla ac justo dictum, ultricies quam sit amet, tincidunt odio. Vivamus metus orci, tincidunt eu venenatis consectetur, interdum quis mi. Vivamus dictum nisi neque, eu molestie neque elementum ut.";
+                    $message.=  "</div>";
+                    
                     $message.=  "</div>";
                     $message.=  "<div class='column small-12 medium-6 large-6 mp-picture'>";
                     $message.=      "<div class='mp-info'>";

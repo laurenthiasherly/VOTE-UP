@@ -10,7 +10,7 @@
     </div>
 </div>
 
-<div>
+<div class="mp-title-style">
     <h1 style="width:100%;text-align:center;" id="provinceNamePage"></h1>
     <div id="contentTopic">
         
@@ -34,11 +34,12 @@
     parsed: function (columns) {
 
         function pointClick() {
-
+             $("#provinceNamePage").css("padding","90px 0 20px 0");
             $("#provinceNamePage").text(this.name);
             if(this.name=="Québec"){
                 this.name="Quebec";
             }
+            $('html, body').animate({scrollTop: $("#provinceNamePage").offset().top}, 1000);
             $("#message-mp").text('');
             ajaxGetDatafromDatabase(this.name);
 
