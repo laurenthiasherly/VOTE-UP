@@ -5,15 +5,15 @@
 
     <div class="side-topics-bar">
         <ul class="sidebar-topic-style">
-            <li class="sidebar-topic" data-direct="scroll1"><a>1</a></li>
-            <li class="sidebar-topic" data-direct="scroll2"><a>2</a></li>
-            <li class="sidebar-topic" data-direct="scroll3"><a>3</a></li>
-            <li class="sidebar-topic" data-direct="scroll4"><a>4</a></li>
-            <li class="sidebar-topic" data-direct="scroll5"><a>5</a></li>
-            <li class="sidebar-topic" data-direct="scroll6"><a>6</a></li>
-            <li class="sidebar-topic" data-direct="scroll7"><a>7</a></li>
-            <li class="sidebar-topic" data-direct="scroll8"><a>8</a></li>
-            <li class="sidebar-topic" data-direct="scroll9"><a>9</a></li>
+            <li class="sidebar-topic" data-direct="scroll2"><a>1</a></li>
+            <li class="sidebar-topic" data-direct="scroll3"><a>2</a></li>
+            <li class="sidebar-topic" data-direct="scroll4"><a>3</a></li>
+            <li class="sidebar-topic" data-direct="scroll5"><a>4</a></li>
+            <li class="sidebar-topic" data-direct="scroll6"><a>5</a></li>
+            <li class="sidebar-topic" data-direct="scroll7"><a>6</a></li>
+            <li class="sidebar-topic" data-direct="scroll8"><a>7</a></li>
+            <li class="sidebar-topic" data-direct="scroll9"><a>8</a></li>
+            <li class="sidebar-topic" data-direct="scroll10"><a>9</a></li>
             <li id="filterShow" class="sidebar-topic"><a>F</a></li>
         </ul>
         <div class="tip-topic-style">
@@ -28,25 +28,6 @@
             <div class="tip-topic"><a class="tip-style">Electoral Reform</a></div>
             <div class="tip-topic"><a class="tip-style">Filter</a></div>
         </div>
-    </div>
-
-    <div id="scroll1" class="first-content">
-    </div>
-    <div id="scroll2" class="second-content">
-    </div>
-    <div id="scroll3" class="third-content">
-    </div>
-    <div id="scroll4" class="fourth-content">
-    </div>
-    <div id="scroll5" class="fith-content">
-    </div>
-    <div id="scroll6" class="first-content">
-    </div>
-    <div id="scroll7" class="second-content">
-    </div>
-    <div id="scroll8" class="third-content">
-    </div>
-    <div id="scroll9" class="fourth-content">
     </div>
 
 
