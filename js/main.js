@@ -24,6 +24,7 @@ $(function(){
     
     
     function myFunction(size) {
+        
         if(size.wheelDelta<0){
             if(!movingScroll){
                 changeCurrent+=1;
@@ -33,7 +34,7 @@ $(function(){
                         if(!animationStatus){
                             movingScroll=true;
                             animationStatus=true;
-                            $('body').animate({scrollTop: target.offset().top}, 1000).delay(200).animate({},scrollAnimationFinished);
+                            $('html, body').animate({scrollTop: target.offset().top}, 1000).delay(200).animate({},scrollAnimationFinished);
                         }
                     }
                 }else{
@@ -51,12 +52,13 @@ $(function(){
                         if(!animationStatus){
                             movingScroll=true;
                             animationStatus=true;
-                            $('body').animate({scrollTop: target.offset().top}, 1000).delay(200).animate({},scrollAnimationFinished);
+                            $('html, body').animate({scrollTop: target.offset().top}, 1000).delay(200).animate({},scrollAnimationFinished);
                         }
                     }
                 }
             }
         }
+        console.log(changeCurrent);
     }
     
     $(".sidebar-topic").click(function() {
@@ -64,6 +66,7 @@ $(function(){
         var target = $("#"+$(this).data("direct"));
         if (target.length) {
             changeCurrent=$(this).data("direct").match(/\d+/);
+            alert(changeCurrent);
             $('html, body').animate({scrollTop: target.offset().top}, 1000);
         }
     });

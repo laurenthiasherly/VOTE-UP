@@ -1,8 +1,9 @@
 <?php include "partials/party.php"; ?>
 
+<input id="scrollOption" type="hidden" value="1" />
 
 <div id="scroll1" class="scrollpage column large-12 medium-12 small-12 center 
-                            padding-none conservative-party">
+                            padding-none conservative-party scrollDiv">
     
     
     
@@ -64,10 +65,10 @@
                 Ms. Ambrose is the Conservative MP 
                 for the new riding of Sturgeon River-Parkland.
                 She was first elected as a Member of Parliament
-                for Edmonton–Spruce Grove in 2004.<br><br> 
+                for Edmontonâ€“Spruce Grove in 2004.<br><br> 
 
                 Ms. Ambrose holds a Bachelor of Arts from the
-                University of Victoria and a Master’s Degree
+                University of Victoria and a Masterâ€™s Degree
                 in Political Science from the University of Alberta.
 
                 <!--   She held several cabinet positions including 
@@ -76,7 +77,7 @@
                 Public Works and Government Services Canada,
                 Receiver General, Status of Women, and Health. 
                 Ms. Ambrose holds a Bachelor of Arts from the
-                University of Victoria and a Master’s Degree
+                University of Victoria and a Masterâ€™s Degree
                 in Political Science from the University of Alberta.-->
 
             </p>
@@ -114,7 +115,7 @@
 
 
 <div id="scroll2" class="scrollpage column large-12 medium-12 small-12 center 
-                            padding-none conservative-party topic-pages full-page">
+                            padding-none conservative-party topic-pages full-page scrollDiv">
     
 
     <div class="column large-2 show-for-large padding-none center 
@@ -140,7 +141,7 @@
     <div class="column large-4 medium-12 small-12 padding-none center overlay
          half-page">
         
-        <p> Blue mountain pumpkin spice café au lait, 
+        <p> Blue mountain pumpkin spice cafÃ© au lait, 
             cultivar pumpkin spice filter et caffeine
             spoon. Blue mountain extraction cinnamon
             variety java aroma medium lungo. Grinder
@@ -156,7 +157,7 @@
         </p>
         
         <p class="column medium-12 small-12 hide-for-large"> 
-            Blue mountain pumpkin spice café au lait, 
+            Blue mountain pumpkin spice cafÃ© au lait, 
             cultivar pumpkin spice filter et caffeine
             spoon. Blue mountain extraction cinnamon
             variety java aroma medium lungo. Grinder
@@ -202,7 +203,7 @@
     <div class="column large-4 show-for-large padding-none center 
          overlay half-page">
         
-        <p> Blue mountain pumpkin spice café au lait, 
+        <p> Blue mountain pumpkin spice cafÃ© au lait, 
             cultivar pumpkin spice filter et caffeine
             spoon. Blue mountain extraction cinnamon
             variety java aroma medium lungo. Grinder
@@ -280,8 +281,8 @@
         
 
 
-<div id="scroll2" class="scrollpage column large-12 medium-12 small-12 center 
-                            padding-none conservative-party topic-pages full-page">
+<div id="scroll3" class="scrollpage column large-12 medium-12 small-12 center 
+                            padding-none conservative-party topic-pages full-page scrollDiv">
     
 
     <div class="column large-2 show-for-large padding-none center 
@@ -309,7 +310,7 @@
     <div class="column large-4 medium-12 small-12 padding-none center overlay
          half-page">
         
-        <p> Blue mountain pumpkin spice café au lait, 
+        <p> Blue mountain pumpkin spice cafÃ© au lait, 
             cultivar pumpkin spice filter et caffeine
             spoon. Blue mountain extraction cinnamon
             variety java aroma medium lungo. Grinder
@@ -325,7 +326,7 @@
         </p>
         
         <p class="column medium-12 small-12 hide-for-large"> 
-            Blue mountain pumpkin spice café au lait, 
+            Blue mountain pumpkin spice cafÃ© au lait, 
             cultivar pumpkin spice filter et caffeine
             spoon. Blue mountain extraction cinnamon
             variety java aroma medium lungo. Grinder
@@ -371,7 +372,7 @@
     <div class="column large-4 show-for-large padding-none center 
          overlay half-page">
         
-        <p> Blue mountain pumpkin spice café au lait, 
+        <p> Blue mountain pumpkin spice cafÃ© au lait, 
             cultivar pumpkin spice filter et caffeine
             spoon. Blue mountain extraction cinnamon
             variety java aroma medium lungo. Grinder
@@ -448,8 +449,8 @@
         
 
 
-<div id="scroll2" class="scrollpage column large-12 medium-12 small-12 center 
-                            padding-none conservative-party topic-pages full-page">
+<div id="scroll4" class="scrollpage column large-12 medium-12 small-12 center 
+                            padding-none conservative-party topic-pages full-page scrollDiv">
     
 
     <div class="column large-2 show-for-large padding-none center 
@@ -474,7 +475,7 @@
     <div class="column large-4 medium-12 small-12 padding-none center overlay
          half-page">
         
-        <p> Blue mountain pumpkin spice café au lait, 
+        <p> Blue mountain pumpkin spice cafÃ© au lait, 
             cultivar pumpkin spice filter et caffeine
             spoon. Blue mountain extraction cinnamon
             variety java aroma medium lungo. Grinder
@@ -490,7 +491,7 @@
         </p>
         
         <p class="column medium-12 small-12 hide-for-large"> 
-            Blue mountain pumpkin spice café au lait, 
+            Blue mountain pumpkin spice cafÃ© au lait, 
             cultivar pumpkin spice filter et caffeine
             spoon. Blue mountain extraction cinnamon
             variety java aroma medium lungo. Grinder
@@ -536,7 +537,7 @@
     <div class="column large-4 show-for-large padding-none center 
          overlay half-page">
         
-        <p> Blue mountain pumpkin spice café au lait, 
+        <p> Blue mountain pumpkin spice cafÃ© au lait, 
             cultivar pumpkin spice filter et caffeine
             spoon. Blue mountain extraction cinnamon
             variety java aroma medium lungo. Grinder
@@ -605,7 +606,7 @@
         
 
 
-<div id="scroll2" class="scrollpage column large-12 medium-12 small-12 center 
+<div id="scroll5" class="scrollpage column large-12 medium-12 small-12 center 
                             padding-none conservative-party topic-pages full-page">
     
 
@@ -631,7 +632,7 @@
     <div class="column large-4 medium-12 small-12 padding-none center overlay
          half-page">
         
-        <p> Blue mountain pumpkin spice café au lait, 
+        <p> Blue mountain pumpkin spice cafÃ© au lait, 
             cultivar pumpkin spice filter et caffeine
             spoon. Blue mountain extraction cinnamon
             variety java aroma medium lungo. Grinder
@@ -647,7 +648,7 @@
         </p>
         
         <p class="column medium-12 small-12 hide-for-large"> 
-            Blue mountain pumpkin spice café au lait, 
+            Blue mountain pumpkin spice cafÃ© au lait, 
             cultivar pumpkin spice filter et caffeine
             spoon. Blue mountain extraction cinnamon
             variety java aroma medium lungo. Grinder
@@ -693,7 +694,7 @@
     <div class="column large-4 show-for-large padding-none center 
          overlay half-page">
         
-        <p> Blue mountain pumpkin spice café au lait, 
+        <p> Blue mountain pumpkin spice cafÃ© au lait, 
             cultivar pumpkin spice filter et caffeine
             spoon. Blue mountain extraction cinnamon
             variety java aroma medium lungo. Grinder
@@ -764,7 +765,7 @@
         
 
 
-<div id="scroll2" class="scrollpage column large-12 medium-12 small-12 center 
+<div id="scroll6" class="scrollpage column large-12 medium-12 small-12 center 
                             padding-none conservative-party topic-pages full-page">
     
 
@@ -790,7 +791,7 @@
     <div class="column large-4 medium-12 small-12 padding-none center overlay
          half-page">
         
-        <p> Blue mountain pumpkin spice café au lait, 
+        <p> Blue mountain pumpkin spice cafÃ© au lait, 
             cultivar pumpkin spice filter et caffeine
             spoon. Blue mountain extraction cinnamon
             variety java aroma medium lungo. Grinder
@@ -806,7 +807,7 @@
         </p>
         
         <p class="column medium-12 small-12 hide-for-large"> 
-            Blue mountain pumpkin spice café au lait, 
+            Blue mountain pumpkin spice cafÃ© au lait, 
             cultivar pumpkin spice filter et caffeine
             spoon. Blue mountain extraction cinnamon
             variety java aroma medium lungo. Grinder
@@ -852,7 +853,7 @@
     <div class="column large-4 show-for-large padding-none center 
          overlay half-page">
         
-        <p> Blue mountain pumpkin spice café au lait, 
+        <p> Blue mountain pumpkin spice cafÃ© au lait, 
             cultivar pumpkin spice filter et caffeine
             spoon. Blue mountain extraction cinnamon
             variety java aroma medium lungo. Grinder
@@ -915,7 +916,7 @@
         
 
 
-<div id="scroll2" class="scrollpage column large-12 medium-12 small-12 center 
+<div id="scroll7" class="scrollpage column large-12 medium-12 small-12 center 
                             padding-none conservative-party topic-pages full-page">
     
 
@@ -941,7 +942,7 @@
     <div class="column large-4 medium-12 small-12 padding-none center overlay
          half-page">
         
-        <p> Blue mountain pumpkin spice café au lait, 
+        <p> Blue mountain pumpkin spice cafÃ© au lait, 
             cultivar pumpkin spice filter et caffeine
             spoon. Blue mountain extraction cinnamon
             variety java aroma medium lungo. Grinder
@@ -957,7 +958,7 @@
         </p>
         
         <p class="column medium-12 small-12 hide-for-large"> 
-            Blue mountain pumpkin spice café au lait, 
+            Blue mountain pumpkin spice cafÃ© au lait, 
             cultivar pumpkin spice filter et caffeine
             spoon. Blue mountain extraction cinnamon
             variety java aroma medium lungo. Grinder
@@ -1002,7 +1003,7 @@
     <div class="column large-4 show-for-large padding-none center 
          overlay half-page">
         
-        <p> Blue mountain pumpkin spice café au lait, 
+        <p> Blue mountain pumpkin spice cafÃ© au lait, 
             cultivar pumpkin spice filter et caffeine
             spoon. Blue mountain extraction cinnamon
             variety java aroma medium lungo. Grinder
@@ -1067,7 +1068,7 @@
         
 
 
-<div id="scroll2" class="scrollpage column large-12 medium-12 small-12 center 
+<div id="scroll8" class="scrollpage column large-12 medium-12 small-12 center 
                             padding-none conservative-party topic-pages full-page">
     
 
@@ -1093,7 +1094,7 @@
     <div class="column large-4 medium-12 small-12 padding-none center overlay
          half-page">
         
-        <p> Blue mountain pumpkin spice café au lait, 
+        <p> Blue mountain pumpkin spice cafÃ© au lait, 
             cultivar pumpkin spice filter et caffeine
             spoon. Blue mountain extraction cinnamon
             variety java aroma medium lungo. Grinder
@@ -1109,7 +1110,7 @@
         </p>
         
         <p class="column medium-12 small-12 hide-for-large"> 
-            Blue mountain pumpkin spice café au lait, 
+            Blue mountain pumpkin spice cafÃ© au lait, 
             cultivar pumpkin spice filter et caffeine
             spoon. Blue mountain extraction cinnamon
             variety java aroma medium lungo. Grinder
@@ -1154,7 +1155,7 @@
     <div class="column large-4 show-for-large padding-none center 
          overlay half-page">
         
-        <p> Blue mountain pumpkin spice café au lait, 
+        <p> Blue mountain pumpkin spice cafÃ© au lait, 
             cultivar pumpkin spice filter et caffeine
             spoon. Blue mountain extraction cinnamon
             variety java aroma medium lungo. Grinder
@@ -1221,7 +1222,7 @@
         
 
 
-<div id="scroll2" class="scrollpage column large-12 medium-12 small-12 center 
+<div id="scroll9" class="scrollpage column large-12 medium-12 small-12 center 
                             padding-none conservative-party topic-pages full-page">
     
 
@@ -1247,7 +1248,7 @@
     <div class="column large-4 medium-12 small-12 padding-none center overlay
          half-page">
         
-        <p> Blue mountain pumpkin spice café au lait, 
+        <p> Blue mountain pumpkin spice cafÃ© au lait, 
             cultivar pumpkin spice filter et caffeine
             spoon. Blue mountain extraction cinnamon
             variety java aroma medium lungo. Grinder
@@ -1263,7 +1264,7 @@
         </p>
         
         <p class="column medium-12 small-12 hide-for-large"> 
-            Blue mountain pumpkin spice café au lait, 
+            Blue mountain pumpkin spice cafÃ© au lait, 
             cultivar pumpkin spice filter et caffeine
             spoon. Blue mountain extraction cinnamon
             variety java aroma medium lungo. Grinder
@@ -1309,7 +1310,7 @@
     <div class="column large-4 show-for-large padding-none center 
          overlay half-page">
         
-        <p> Blue mountain pumpkin spice café au lait, 
+        <p> Blue mountain pumpkin spice cafÃ© au lait, 
             cultivar pumpkin spice filter et caffeine
             spoon. Blue mountain extraction cinnamon
             variety java aroma medium lungo. Grinder
@@ -1378,8 +1379,8 @@
         
 
 
-<div id="scroll2" class="scrollpage column large-12 medium-12 small-12 center 
-                            padding-none conservative-party topic-pages full-page">
+<div id="scroll10" class="scrollpage column large-12 medium-12 small-12 center 
+                            padding-none conservative-party topic-pages full-page scrollDiv">
     
 
     <div class="column large-2 show-for-large padding-none center 
@@ -1404,7 +1405,7 @@
     <div class="column large-4 medium-12 small-12 padding-none center overlay
          half-page">
         
-        <p> Blue mountain pumpkin spice café au lait, 
+        <p> Blue mountain pumpkin spice cafÃ© au lait, 
             cultivar pumpkin spice filter et caffeine
             spoon. Blue mountain extraction cinnamon
             variety java aroma medium lungo. Grinder
@@ -1420,7 +1421,7 @@
         </p>
         
         <p class="column medium-12 small-12 hide-for-large"> 
-            Blue mountain pumpkin spice café au lait, 
+            Blue mountain pumpkin spice cafÃ© au lait, 
             cultivar pumpkin spice filter et caffeine
             spoon. Blue mountain extraction cinnamon
             variety java aroma medium lungo. Grinder
@@ -1466,7 +1467,7 @@
     <div class="column large-4 show-for-large padding-none center 
          overlay half-page">
         
-        <p> Blue mountain pumpkin spice café au lait, 
+        <p> Blue mountain pumpkin spice cafÃ© au lait, 
             cultivar pumpkin spice filter et caffeine
             spoon. Blue mountain extraction cinnamon
             variety java aroma medium lungo. Grinder
