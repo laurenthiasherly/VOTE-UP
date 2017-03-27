@@ -58,7 +58,7 @@
            
             <a href="#scroll2" class="show-for-large"> 
                 <img src="img/homepage/homepage-arrow.png" alt="animated arrow" 
-                class="arrow" id="arrow"> 
+                class="arrow" id="arrow" > 
             </a>
             
             </div>

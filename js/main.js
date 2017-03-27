@@ -11,20 +11,17 @@ var sizeOfScrollDiv=0;
 $(function(){
     
     sizeOfScrollDiv=$(".scrollDiv").length;
+    
+    console.log(sizeOfScrollDiv);
    
     resize();
     
-    $(this).scrollTop(0);
-    
-    
-    $(this).scrollTop(0);
     if($( window ).width()>1024){
         document.body.addEventListener("wheel", myFunction);
     }
     
     
     function myFunction(size) {
-   
         if(size.wheelDelta<0){
             if(!movingScroll){
                 changeCurrent+=1;
@@ -37,6 +34,8 @@ $(function(){
                             $('body').animate({scrollTop: target.offset().top}, 1000).delay(200).animate({},scrollAnimationFinished);
                         }
                     }
+                }else{
+                    changeCurrent=sizeOfScrollDiv;
                 }
             }
         }else{
@@ -171,14 +170,16 @@ $(function(){
     }
     
     arrowBig();
+
     
     $(function() {
         $('a[href*="#"]:not([href="#"])').click(function() {
           if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
             var target = $(this.hash);
+            changeCurrent=this.hash.match(/\d+/);
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
             if (target.length) {
-              $('html, body').delay(500).animate({
+              $('html, body').delay(300).animate({
                 scrollTop: target.offset().top
               }, 1000);
               return false;
