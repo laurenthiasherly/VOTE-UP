@@ -24,7 +24,7 @@
             overflow:hidden;
             
             .conservative-desc-title{
-                width:100%;
+                 width:100%;
                 transition: all 1s ease;
                 height:250px;
 
@@ -40,16 +40,21 @@
 
     }
     
-    .conservative-economy-bg{
-        background:url(../img/conservative/economy.jpg);
-        height: 200px;
+    .bg-party-height{
+        height:200px;
     }
     
     .party-topic{
         font-family:helvetica;
-        margin-left:30px;
         color:white;
         font-size:2.8em;
+        line-height: 30px;
+    }
+    
+    .party-topic1{
+        font-family:helvetica;
+        color:white;
+        font-size:2.1em;
         line-height: 30px;
     }
     
@@ -58,6 +63,19 @@
     }
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
@@ -102,16 +120,22 @@
 
     }
     
-    .conservative-economy-bg{
-        background:url(../img/conservative/economy.jpg);
-        height: 300px;
+    .bg-party-height{
+        height:300px;
     }
     
     .party-topic{
         font-family:helvetica;
-        margin-left:30px;
         color:white;
         font-size:4em;
+        line-height: 30px;
+    }
+    
+    
+    .party-topic1{
+        font-family:helvetica;
+        color:white;
+        font-size:3em;
         line-height: 30px;
     }
     
@@ -120,6 +144,22 @@
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (min-width: 64em) {
     /* styles for large and onward only */
@@ -170,13 +210,12 @@
 
     }
    
-    .conservative-economy-bg{
-        background:url(../img/conservative/economy.jpg);
-
+    .bg-party-height{
+        height:50vh;
     }
     
     .full-page{
-        height:100vh;
+        height:100vh; 
     }
 
     .half-page{
@@ -185,14 +224,32 @@
     
     .party-topic{
         font-family:helvetica;
-        margin-top:13%;
+        margin-top:16%;
         margin-left:30px;
         color:white;
         font-size:6em;
         line-height: 30px;
     }
     
+    .party-topic1{
+        font-family:helvetica;
+        margin-top:16%;
+        margin-left:30px;
+        color:white;
+        font-size:5em;
+        line-height: 30px;
+    }
+    
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -269,6 +326,56 @@
 /* =================================================
         CONSERVATIVE PARTY - TOPICS SECTIONS 
     =============================================== */
+
+
+.conservative-economy-bg{
+    background:url(../img/conservative/economy.jpg);
+
+}
+
+.conservative-environment-bg{
+    background:url(../img/conservative/environment.jpg);
+
+}
+.conservative-education-bg{
+    background:url(../img/conservative/education.jpg);
+
+}
+.conservative-health-bg{
+    background:url(../img/conservative/health.jpg);
+
+}
+
+.conservative-immigration-bg{
+    background:url(../img/conservative/immigration.jpg);
+
+}
+
+.conservative-housing-bg{
+    background:url(../img/conservative/housing.jpg);
+
+}
+.conservative-foreign-bg{
+    background:url(../img/conservative/foreign-policy.jpg);
+
+}
+
+.conservative-privacy-bg{
+    background:url(../img/conservative/privacy.jpg);
+
+}
+.conservative-electoral-bg{
+    background:url(../img/conservative/electoral-reform-1.jpg);
+
+}
+
+
+
+
+
+
+
+
 
 
 
