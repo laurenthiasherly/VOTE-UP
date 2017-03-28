@@ -24,8 +24,8 @@
             <div class="tip-topic"><a class="tip-style">Health</a></div>
             <div class="tip-topic"><a class="tip-style">Immigration</a></div>
             <div class="tip-topic"><a class="tip-style">Housing</a></div>
-            <div class="tip-topic"><a class="tip-style">Privacy</a></div>
             <div class="tip-topic"><a class="tip-style">Foreign Policy</a></div>
+            <div class="tip-topic"><a class="tip-style">Privacy</a></div>
             <div class="tip-topic"><a class="tip-style">Electoral Reform</a></div>
             <div class="tip-topic"><a class="tip-style">Filter</a></div>
             <div class="tip-topic"><a class="tip-style">Voting</a></div>
@@ -37,10 +37,10 @@
         <div class="comparing-box">
             <div class="comp-topbar-style">
                 <ul>
-                    <li data-topic="1" data-selected="0" class="party-top-comp">LIBERAL</li>
-                    <li data-topic="1" data-selected="0" class="party-top-comp">CONSERVATIVE</li>
-                    <li data-topic="1" data-selected="0" class="party-top-comp">DEMOCRATIC</li>
-                    <li data-topic="1" data-selected="0" class="party-top-comp">GREEN</li>
+                    <li data-topic="1" data-selected="0" data-cparty="#ff1a24" class="party-top-comp">LIBERAL</li>
+                    <li data-topic="1" data-selected="0" data-cparty="#0331cf" class="party-top-comp">CONSERVATIVE</li>
+                    <li data-topic="1" data-selected="0" data-cparty="#f6821f" class="party-top-comp">DEMOCRATIC</li>
+                    <li data-topic="1" data-selected="0" data-cparty="#3c9b35" class="party-top-comp">GREEN</li>
                 </ul>
             </div>
             <div class="comp-sidebar-topic">
@@ -81,6 +81,9 @@
             <div class="voting-col">
                 <p>Liberal</p>
                 <a><div id="party4total"></div></a>
+            </div>
+            <div id="refreshVoting" class="voting-col-clear">
+                X
             </div>
         </div>
     </div>
