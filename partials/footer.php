@@ -4,7 +4,12 @@
 
 
 
-
+        <footer>
+            <div class="column show-for-small small-12 padding-none center footer-section">
+                
+                <p> Copyright 2017 </p> 
+            </div>
+        </footer>
 
         
 

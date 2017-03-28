@@ -1,3 +1,13 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+
+.footer-section{
+    margin:none;
+    height:70px;
+    background:$text-color;
+    
+    p{
+        color:white;
+    }
+}
