@@ -391,6 +391,23 @@ $(function(){
         updateVoting();
     });
     
+    $(".voting-icons-mediumsmall").click(function(){
+        if($(this).attr('data-vote')=='0'){
+            $(this).attr('src','img/conservative/badge-icon-clicked.svg');
+            $(".voted-m").eq($(this).data("voted")).css("margin-top","0");
+            $(".voting-icons-mediumsmall").eq($(this).data("voted")).css("width","100px");
+            $(this).attr('data-vote','1');
+            setCookie($(this).attr('id'),'1',1);
+        }else{
+            $(this).attr('src','img/conservative/badge-icon-mediumsmall.svg');
+            $(".voted-m").eq($(this).data("voted")).css("margin-top","300px");
+            $(".voting-icons-mediumsmall").eq($(this).data("voted")).css("width","80px");
+            $(this).attr('data-vote','0');
+            delete_cookie($(this).attr('id'));
+        }
+        updateVoting();
+    });
+    
     
     
 //    $(".voting-icons-mediumsmall").clickToggle(function(){

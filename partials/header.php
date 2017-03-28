@@ -21,8 +21,6 @@
     </head>
     
     <body>
-        
-        
         <header class="page-header column large-12 medium-12 small-12 padding-none">
             <nav class="column large-12 show-for-large padding-none">
                 <ul class="navigation center">
@@ -36,13 +34,13 @@
                         <a href="conservative.php" id="nav-conservative"> Conservative </a>
                     </li>
                       <li class="column large-2 medium-2 nav nav-democratic">                       
-                        <a href="democratic.php" id="nav-democratic"> Democratic </a>
+                        <a href="parties.php?party=Democratic" id="nav-democratic"> Democratic </a>
                     </li>
                     <li class="column large-2 medium-2 nav nav-green">                       
-                        <a href="green.php" id="nav-green"> Green </a>
+                        <a href="parties.php?party=Green" id="nav-green"> Green </a>
                     </li>
                     <li class="column large-2 medium-2 nav nav-liberal">                       
-                        <a href="liberal.php" id="nav-liberal"> Liberal </a>
+                        <a href="parties.php?party=Liberal" id="nav-liberal"> Liberal </a>
                     </li>
                     <li class="column large-2 medium-2 nav1">                       
                         <a href="mp.php"> Who's my MP </a>
@@ -114,13 +112,13 @@
                         <a href="conservative.php" id="nav-conservative"> Conservative </a>
                     </li>
                       <li class="column medium-12 small-12 padding-vertical nav-democratic">                       
-                        <a href="democratic.php" id="nav-democratic"> Democratic </a>
+                        <a href="parties.php?party=Democratic" id="nav-democratic"> Democratic </a>
                     </li>
-                    <li class="column medium-12 small-12 padding-vertical nav-green">                       
-                        <a href="green.php" id="nav-green"> Green </a>
+                    <li class="column medium-12 small-12 padding-vertical nav-green">                     
+                        <a href="parties.php?party=Democratic" id="nav-green"> Green </a>
                     </li>
                     <li class="column medium-12 small-12 padding-vertical nav-liberal">                       
-                        <a href="liberal.php" id="nav-liberal"> Liberal </a>
+                        <a href="parties.php?party=Democratic" id="nav-liberal"> Liberal </a>
                     </li>
                     <li class="column medium-12 small-12 padding-vertical nav1-mobile">                       
                         <a href="mp.php"> Who's my MP </a>
