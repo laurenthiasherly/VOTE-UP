@@ -5,17 +5,30 @@
 
     <div class="side-topics-bar">
         <ul class="sidebar-topic-style">
-            <li class="sidebar-topic" data-direct="scroll2"><a>1</a></li>
-            <li class="sidebar-topic" data-direct="scroll3"><a>2</a></li>
-            <li class="sidebar-topic" data-direct="scroll4"><a>3</a></li>
-            <li class="sidebar-topic" data-direct="scroll5"><a>4</a></li>
-            <li class="sidebar-topic" data-direct="scroll6"><a>5</a></li>
-            <li class="sidebar-topic" data-direct="scroll7"><a>6</a></li>
-            <li class="sidebar-topic" data-direct="scroll8"><a>7</a></li>
-            <li class="sidebar-topic" data-direct="scroll9"><a>8</a></li>
-            <li class="sidebar-topic" data-direct="scroll10"><a>9</a></li>
-            <li id="filterShow" class="sidebar-topic" data-direct="filter0"><a>F</a></li>
-            <li id="votingBtn" class="sidebar-topic" data-direct="voting0"><a>V</a></li>
+            <li class="sidebar-topic" data-direct="scroll2">
+                <a><i class="fa fa-line-chart white" aria-hidden="true"> </i> </a></li>
+            <li class="sidebar-topic" data-direct="scroll3">
+                <a> <i class="fa fa-tree white" aria-hidden="true"> </i> </a></li>
+            <li class="sidebar-topic" data-direct="scroll4">
+                <a> <i class="fa fa-graduation-cap white" aria-hidden="true"> </i> </a></li>
+            <li class="sidebar-topic" data-direct="scroll5">
+                <a> <i class="fa fa-medkit white" aria-hidden="true"> </i> </a></li>
+            <li class="sidebar-topic" data-direct="scroll6">
+                <a> <i class="fa fa-users white" aria-hidden="true"> </i> </a></li>
+            <li class="sidebar-topic" data-direct="scroll7">
+                <a> <i class="fa fa-building white" aria-hidden="true"> </i> </a></li>
+            <li class="sidebar-topic" data-direct="scroll8">
+                <a> <i class="fa fa-lock white" aria-hidden="true"> </i> </a></li>
+            <li class="sidebar-topic" data-direct="scroll9">
+                <a> <i class="fa fa-flag white" aria-hidden="true"> </i> </a></li>
+            <li class="sidebar-topic" data-direct="scroll10">
+                <a> <i class="fa fa-sitemap white" aria-hidden="true"> </i> </a></li>
+            
+            <li id="filterShow" class="sidebar-topic" data-direct="filter0">
+                <a> <i class="fa fa-arrows fa-spin white" aria-hidden="true"> </i> </a></li>
+            <li id="votingBtn" class="sidebar-topic" data-direct="voting0">
+                <a> <i id="voting-icon" class="fa fa-check " aria-hidden="true"> </i>
+                </a></li>
         </ul>
         <div class="tip-topic-style">
             <div class="tip-topic"><a class="tip-style">Economy</a></div>
@@ -27,7 +40,7 @@
             <div class="tip-topic"><a class="tip-style">Privacy</a></div>
             <div class="tip-topic"><a class="tip-style">Foreign Policy</a></div>
             <div class="tip-topic"><a class="tip-style">Electoral Reform</a></div>
-            <div class="tip-topic"><a class="tip-style">Filter</a></div>
+            <div class="tip-topic"><a class="tip-style">Compare Party!</a></div>
             <div class="tip-topic"><a class="tip-style">Voting</a></div>
         </div>
     </div>
@@ -41,11 +54,11 @@
                     <li data-topic="1" data-selected="0" class="party-top-comp">CONSERVATIVE</li>
                     <li data-topic="1" data-selected="0" class="party-top-comp">DEMOCRATIC</li>
                     <li data-topic="1" data-selected="0" class="party-top-comp">GREEN</li>
-                </ul>
+                </ul> 
             </div>
             <div class="comp-sidebar-topic">
                 <ul class="comp-topic-style">
-                    <li data-topic="1" data-selected="0" class="sidebar-topic-filt"><a>1</a></li>
+                    <li data-topic="1" data-selected="0" class="sidebar-topic-filt"><a></a></li>
                     <li data-topic="2" data-selected="0" class="sidebar-topic-filt"><a>2</a></li>
                     <li data-topic="3" data-selected="0" class="sidebar-topic-filt"><a>3</a></li>
                     <li data-topic="4" data-selected="0" class="sidebar-topic-filt"><a>4</a></li>

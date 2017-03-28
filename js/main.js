@@ -91,7 +91,7 @@ $(function(){
    
     $(".sidebar-topic").each(function(index){
         $(this).mouseover(function(){
-            $(".tip-topic").eq(index).css("transform","translateX(175px)");
+            $(".tip-topic").eq(index).css("transform","translateX(185px)");
         });
         $(this).mouseout(function(){
             $(".tip-topic").eq(index).css("transform","translateX(0px)");
@@ -307,15 +307,17 @@ $(function(){
     // ====================================================
     //                  CONSERVATIVE
     // ===================================================
+    
 
     function conservativeDesc(){
         
         if(window.innerWidth > 1024){
+            
             setInterval(function(){
 
                 $(".conservative-desc-para").css("margin-right","0");
                 $(".conservative-desc-title").css("width","50%");
-
+                $(".side-topics-bar").slideDown({"display":"initial"},500);
 
             },2500);
         }
@@ -323,6 +325,15 @@ $(function(){
     
     conservativeDesc();
     
+    function checkBig(){
+        $("#voting-icon").animate({"font-size":"24px"},1000,"swing",checkSmall);
+    }
+    
+    function checkSmall(){
+        $("#voting-icon").animate({"font-size":"20px"},1000,"swing", checkBig);
+    }
+    
+    checkBig();
     
 
     
@@ -383,17 +394,17 @@ $(function(){
     
     
     
-    $(".voting-icons-mediumsmall").clickToggle(function(){
-        $(".voting-icons-mediumsmall").attr('src','img/conservative/badge-icon-clicked.svg');
-        $(".voted").css("margin-top","0");
-        $(".voting-icons-mediumsmall").css("width","100px");
-
-    },function(){
-        $(".voting-icons-mediumsmall").attr('src','img/conservative/badge-icon-mediumsmall.svg');
-        $(".voted").css("margin-top","300px");
-        $(".voting-icons-mediumsmall").css("width","80px");
-    });
-    
+//    $(".voting-icons-mediumsmall").clickToggle(function(){
+//        $(".voting-icons-mediumsmall").attr('src','img/conservative/badge-icon-clicked.svg');
+//        $(".voted").css("margin-top","0");
+//        $(".voting-icons-mediumsmall").css("width","100px");
+//
+//    },function(){
+//        $(".voting-icons-mediumsmall").attr('src','img/conservative/badge-icon-mediumsmall.svg');
+//        $(".voted").css("margin-top","300px");
+//        $(".voting-icons-mediumsmall").css("width","80px");
+//    });
+//    
     
     
     var partyBg = ["economy","economy", "economy", 
