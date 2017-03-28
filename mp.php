@@ -126,4 +126,6 @@ $(".highcharts-background").eq(0).attr("fill","#7f142b");
 
 </script>
 
+<?php include "partials/footer.php"; ?>
+
 

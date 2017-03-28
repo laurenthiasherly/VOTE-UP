@@ -35,6 +35,20 @@
         transform: translateY(-50%);
         z-index:100;
         cursor: pointer;
+        display:none; 
+    }
+    
+    #filterShow{
+        background:$crimson;
+    }
+    
+    #votingBtn{
+        background:$mid-grey;
+        
+        i {
+            color:$text-color;
+            font-size:20px;
+        }
     }
 }
 
@@ -89,6 +103,7 @@
     list-style: none;
     color: white;
     background-color: #272526;
+
 }
 
 .tip-topic-style{
