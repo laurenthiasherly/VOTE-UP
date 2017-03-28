@@ -13,7 +13,6 @@ var modalBoxShow=0;
 $(function(){
     
     sizeOfScrollDiv=$(".scrollDiv").length;
-    
    
     resize();
     
@@ -159,7 +158,14 @@ $(function(){
             $("#nav-"+navParty[index]).css("border-top","none");
             $("#nav-"+navParty[index]).css("border-bottom","none");
         });
+        
+   
     });
+    
+  
+    
+    
+    
     
     menuShow =0;
     $(".mobile-menu").click(function(){
@@ -345,19 +351,7 @@ $(function(){
 
     });
     
-    (function($) {
-        $.fn.clickToggle = function(func1, func2) {
-            var funcs = [func1, func2];
-            this.data('toggleclicked', 0);
-            this.click(function() {
-                var data = $(this).data();
-                var tc = data.toggleclicked;
-                $.proxy(funcs[tc], this)();
-                data.toggleclicked = (tc + 1) % 2;
-            });
-            return this;
-        };
-    }(jQuery));
+    
     
 //    $(".voting-icons").clickToggle(function(){
 //        $(this).attr('src','img/conservative/badge-icon-clicked.svg');
@@ -382,6 +376,7 @@ $(function(){
             $(".voting-icons").eq($(this).data("voted")).css("width","120px");
             $(this).attr('data-vote','1');
             setCookie($(this).attr('id'),'1',1);
+            $(".voting-box").animate({"height":"80px"},400);
         }else{
              $(this).attr('src','img/conservative/badge-icon.svg');
             $(".voted").eq($(this).data("voted")).css("margin-top","300px");

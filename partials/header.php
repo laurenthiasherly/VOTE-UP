@@ -32,17 +32,17 @@
                                  class="nav-logo">
                         </a>
                     </li>
-                    <li class="column large-2 medium-2 nav nav-conservative">                       
-                        <a href="conservative.php" id="nav-conservative"> Conservative </a>
+                    <li class="column large-2 medium-2 nav nav-conservative ">                       
+                        <a href="conservative.php" class="active1" id="nav-conservative"> Conservative </a>
                     </li>
                       <li class="column large-2 medium-2 nav nav-democratic">                       
-                        <a href="democratic.php" id="nav-democratic"> Democratic </a>
+                        <a href="democratic.php" class="active2"  id="nav-democratic"> Democratic </a>
                     </li>
                     <li class="column large-2 medium-2 nav nav-green">                       
-                        <a href="green.php" id="nav-green"> Green </a>
+                        <a href="green.php"  class="active3"  id="nav-green"> Green </a>
                     </li>
-                    <li class="column large-2 medium-2 nav nav-liberal">                       
-                        <a href="liberal.php" id="nav-liberal"> Liberal </a>
+                    <li class="column large-2 medium-2 nav nav-liberal ">                       
+                        <a href="liberal.php" class="active4"  id="nav-liberal"> Liberal </a>
                     </li>
                     <li class="column large-2 medium-2 nav1">                       
                         <a href="mp.php"> Who's my MP </a>
