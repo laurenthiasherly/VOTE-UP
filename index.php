@@ -26,9 +26,6 @@
     </div>
     
     
-    
-    
-    
     <!-- =========================================================
                             TOP SECTION HOME PAGE
         =========================================================== -->
@@ -113,7 +110,7 @@
         <div class="column large-3 show-for-large padding-none center homepage-party">
         
         </div>
-        <a href="party.php"> <div class="column large-3 medium-6 small-12 padding-none center homepage-blue">
+        <a href="conservative.php"> <div class="column large-3 medium-6 small-12 padding-none center homepage-blue">
             <div class="column homepage-blue-hover party-div-height center">
                 <h2> Conservative Party </h2>
                 <h1> ' Proven Leadership for a Strong Canada '</h1> 

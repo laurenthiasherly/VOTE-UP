@@ -14,6 +14,7 @@ $(function(){
     
     sizeOfScrollDiv=$(".scrollDiv").length;
    
+
     resize();
     
     if($( window ).width()>1024){
@@ -124,11 +125,11 @@ $(function(){
         if($(this).data("selected")==0){
             partiesSelected+=1;
             $(this).data("selected",1);
-            $(this).css("border-bottom","solid 2px white");
+            $(this).css({"border-bottom":"solid 2px "+$(this).data("cparty"),"color":$(this).data("cparty")});
         }else{
             partiesSelected-=1;
             $(this).data("selected",0);
-            $(this).css("border-bottom","solid 2px transparent");
+            $(this).css({"border-bottom":"solid 2px transparent","color":"white"});
         }
         updateComparingContent();
     });
@@ -378,9 +379,26 @@ $(function(){
             setCookie($(this).attr('id'),'1',1);
             $(".voting-box").animate({"height":"80px"},400);
         }else{
-             $(this).attr('src','img/conservative/badge-icon.svg');
+            $(this).attr('src','img/conservative/badge-icon.svg');
             $(".voted").eq($(this).data("voted")).css("margin-top","300px");
             $(".voting-icons").eq($(this).data("voted")).css("width","100px");
+            $(this).attr('data-vote','0');
+            delete_cookie($(this).attr('id'));
+        }
+        updateVoting();
+    });
+    
+    $(".voting-icons-mediumsmall").click(function(){
+        if($(this).attr('data-vote')=='0'){
+            $(this).attr('src','img/conservative/badge-icon-clicked.svg');
+            $(".voted-m").eq($(this).data("voted")).css("margin-top","0");
+            $(".voting-icons-mediumsmall").eq($(this).data("voted")).css("width","100px");
+            $(this).attr('data-vote','1');
+            setCookie($(this).attr('id'),'1',1);
+        }else{
+            $(this).attr('src','img/conservative/badge-icon-mediumsmall.svg');
+            $(".voted-m").eq($(this).data("voted")).css("margin-top","300px");
+            $(".voting-icons-mediumsmall").eq($(this).data("voted")).css("width","80px");
             $(this).attr('data-vote','0');
             delete_cookie($(this).attr('id'));
         }
@@ -427,7 +445,7 @@ $(function(){
 
 
 function scrollAnimationFinished(){
-    console.log("finished!");
+//    console.log("finished!");
     movingScroll=false;
     animationStatus=false;
 }
@@ -501,6 +519,8 @@ function checkCookie(name) {
     var user = getCookie(name);
     if (user != "") {
         return true;
+    }else{
+        return false;
     }
 }
 
@@ -585,6 +605,32 @@ function updateVoting(){
     $("#party3total").text(party3);
     $("#party4total").text(party4);
 }
+
+function resetVotingBox(){
+    party1=0;
+    party2=0;
+    party3=0;
+    party4=0;
+    for(var i=1;i<=4;i+=1){
+        for(var j=1;j<=9;j+=1){
+            if(checkCookie("party"+i+"-"+j)){
+                $("#party"+i+"-"+j).attr('src','img/conservative/badge-icon.svg');
+                $(".voted").eq($("#party"+i+"-"+j).data("voted")).css("margin-top","300px");
+                $(".voting-icons").eq($("#party"+i+"-"+j).data("voted")).css("width","100px");
+                $("#party"+i+"-"+j).attr('data-vote','0');
+                delete_cookie("party"+i+"-"+j);
+            }
+        }
+    }
+    $("#party1total").text(party1);
+    $("#party2total").text(party2);
+    $("#party3total").text(party3);
+    $("#party4total").text(party4);
+}
+
+$("#refreshVoting").click(function(){
+    resetVotingBox();
+});
 
 
 
