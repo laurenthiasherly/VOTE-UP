@@ -18,9 +18,9 @@
             <li class="sidebar-topic" data-direct="scroll7">
                 <a> <i class="fa fa-building white" aria-hidden="true"> </i> </a></li>
             <li class="sidebar-topic" data-direct="scroll8">
-                <a> <i class="fa fa-lock white" aria-hidden="true"> </i> </a></li>
-            <li class="sidebar-topic" data-direct="scroll9">
                 <a> <i class="fa fa-flag white" aria-hidden="true"> </i> </a></li>
+            <li class="sidebar-topic" data-direct="scroll9">
+                <a> <i class="fa fa-lock white" aria-hidden="true"> </i> </a></li>
             <li class="sidebar-topic" data-direct="scroll10">
                 <a> <i class="fa fa-sitemap white" aria-hidden="true"> </i> </a></li>
             
@@ -58,26 +58,49 @@
             </div>
             <div class="comp-sidebar-topic">
                 <ul class="comp-topic-style">
-                    <li data-topic="1" data-selected="0" class="sidebar-topic-filt"><a></a></li>
-                    <li data-topic="2" data-selected="0" class="sidebar-topic-filt"><a>2</a></li>
-                    <li data-topic="3" data-selected="0" class="sidebar-topic-filt"><a>3</a></li>
-                    <li data-topic="4" data-selected="0" class="sidebar-topic-filt"><a>4</a></li>
-                    <li data-topic="5" data-selected="0" class="sidebar-topic-filt"><a>5</a></li>
-                    <li data-topic="6" data-selected="0" class="sidebar-topic-filt"><a>6</a></li>
-                    <li data-topic="7" data-selected="0" class="sidebar-topic-filt"><a>7</a></li>
-                    <li data-topic="8" data-selected="0" class="sidebar-topic-filt"><a>8</a></li>
-                    <li data-topic="9" data-selected="0" class="sidebar-topic-filt"><a>9</a></li>
+                    <li data-topic="1" data-selected="0" class="sidebar-topic-filt">
+                        <a> <i class="fa fa-line-chart white" aria-hidden="true"> </i> </a></li>
+                    <li data-topic="2" data-selected="0" class="sidebar-topic-filt">
+                        <a><i class="fa fa-tree white" aria-hidden="true"> </i></a></li>
+                    <li data-topic="3" data-selected="0" class="sidebar-topic-filt">
+                        <a><i class="fa fa-graduation-cap white" aria-hidden="true"> </i></a></li>
+                    <li data-topic="4" data-selected="0" class="sidebar-topic-filt">
+                        <a><i class="fa fa-medkit white" aria-hidden="true"> </i></a></li>
+                    <li data-topic="5" data-selected="0" class="sidebar-topic-filt">
+                        <a><i class="fa fa-users white" aria-hidden="true"> </i></a></li>
+                    <li data-topic="6" data-selected="0" class="sidebar-topic-filt">
+                        <a><i class="fa fa-building white" aria-hidden="true"> </i></a></li>
+                    <li data-topic="7" data-selected="0" class="sidebar-topic-filt">
+                        <a><i class="fa fa-flag white" aria-hidden="true"> </i></a></li>
+                    <li data-topic="8" data-selected="0" class="sidebar-topic-filt">
+                        <a><i class="fa fa-lock white" aria-hidden="true"> </i></a></li>
+                    <li data-topic="9" data-selected="0" class="sidebar-topic-filt">
+                        <a><i class="fa fa-sitemap white" aria-hidden="true"> </i></a></li>
                 </ul>
             </div>
+            
             <div class="comp-content">
                 <div id="contentTopic">
                     <p class="content-topic-default">Please select the parties and Topics.</p>
                 </div>
             </div>
         </div>
+        
+        <div class="modalbox-topic-text center">
+            <div class="modalbox-topic" id="modal-text0"><a>Economy</a></div>
+            <div class="modalbox-topic" id="modal-text1"><a>Environment</a></div>
+            <div class="modalbox-topic" id="modal-text2"><a>Education</a></div>
+            <div class="modalbox-topic" id="modal-text3"><a>Health</a></div>
+            <div class="modalbox-topic" id="modal-text4"><a>Immigration</a></div>
+            <div class="modalbox-topic" id="modal-text5"><a>Housing</a></div>
+            <div class="modalbox-topic" id="modal-text6"><a>Foreign Policy</a></div>
+            <div class="modalbox-topic" id="modal-text7"><a>Privacy</a></div>
+            <div class="modalbox-topic" id="modal-text8"><a>Electoral Reform</a></div>
+
+        </div>
     </div>
 
-    <div id="votingBox" class="centered">
+    <div id="votingBox" class="center">
         <div class="voting-box">
             <div class="voting-col">
                 <p>Conservative</p>
@@ -96,7 +119,10 @@
                 <a><div id="party4total"></div></a>
             </div>
             <div id="refreshVoting" class="voting-col-clear">
-                X
+                <h3> Clear <br> Voting </h3>
+            </div>
+            <div class="voting-close" id="voting-close">
+                <i class="fa fa-sort-down fa-2x white" aria-hidden="true"> </i>
             </div>
         </div>
     </div>
