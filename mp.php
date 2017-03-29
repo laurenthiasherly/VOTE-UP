@@ -1,7 +1,14 @@
 <?php include "partials/header.php"; ?>
 
 <div class="map-space">
-    <p id="message-mp">Please, select your province for more information about your MP</p>
+    <div class="column map-title center">
+        <h5>
+            Please, select your province for more information about your MP
+        </h5>
+    
+    </div>
+    
+    
     <div id="container" class="map-style">
         <div class="loading">
             <i class="icon-spinner icon-spin icon-large"></i>
@@ -10,12 +17,49 @@
     </div>
 </div>
 
+<div class="column show-for-small-only mp-title center">
+    <div class="column center">
+        <h1> Who's My Members of Parliament? </h1>
+    </div>
+    <div class="column map-title center">
+        <h5>
+            Please, select your province for more information about your MP
+        </h5>
+    
+    </div>
+    <form method="" action="">
+        <li> 
+            <select>
+                <option value="bc"> British Columbia </option>
+                <option value="alberta"> Alberta </option>
+                <option value="saskatchewan"> Saskatchewan</option>
+                <option value="manitoba"> Manitoba </option>
+                <option value="ontario"> Ontario </option>
+                <option value="quebec"> Quebec </option>
+                <option value="manitoba"> Manitoba </option>
+                <option value="nb"> New Brunswick </option>
+                <option value="ns"> Nova Scotia </option>
+                <option value="pe"> Prince Edward </option>
+                <option value="nl"> Newfoundland and Labrador </option>
+                <option value="nuvanut"> Nuvanut </option>
+                <option value="nt"> Northwest Territories </option>
+                <option value="yukon"> Yukon </option>
+
+            </select>
+        </li>
+    </form>
+
+</div>
+
 <div class="mp-title-style">
     <h1 style="width:100%;text-align:center;" id="provinceNamePage"></h1>
     <div id="contentTopic">
         
     </div>
 </div>
+
+
+<?php include "partials/footer.php"; ?>
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -40,7 +84,7 @@
                 this.name="Quebec";
             }
             $('html, body').animate({scrollTop: $("#provinceNamePage").offset().top}, 1000);
-            $("#message-mp").text('');
+            //$("#message-mp").text('');
             ajaxGetDatafromDatabase(this.name);
 
         }  
@@ -126,6 +170,6 @@ $(".highcharts-background").eq(0).attr("fill","#7f142b");
 
 </script>
 
-<?php include "partials/footer.php"; ?>
+
 
 

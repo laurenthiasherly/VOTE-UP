@@ -16,7 +16,7 @@
 
 @media screen and (min-width: 64em) {
     .comparing-box{
-        background-color: #464646;
+        background-color: $dark-grey;
         width: 960px;
         height: 80vh;
         margin: auto;
@@ -25,7 +25,9 @@
         left: 50%;
         transform: translateX(-50%);
         overflow: auto;
-        overflow-x: hidden;
+        
+        //overflow-x: hidden;
+        
     }
     
     .side-topics-bar{
@@ -76,7 +78,7 @@
     text-align: center;
     color:white;
     li{
-        background-color: #272526;
+        background-color: $mid-grey;
     }
 }
 
@@ -286,6 +288,31 @@
 }
 
 
+//////////////////////////////=======   LAUREN ADDED THIS   ======////////////
+
+.modalbox-topic-text{
+    position:fixed;
+    top: 185px;
+    left: 210px;
+    list-style: none;
+    z-index:-1;
+    
+    .modalbox-topic{
+        position:relative;
+        background:$dark-grey;
+        padding:5px;
+        border-radius:10px;
+        margin-bottom:30px;
+        margin-left:200px;
+        width:140px;
+        transition: all 0.5s ease;
+        
+        a{
+            color:white;
+        }
+    }
+}
+
 /////////////////////
 // Parties Style  ///
 /////////////////////
@@ -396,11 +423,14 @@ conservative-desc{
 .voting-box{
     overflow: hidden;
     position: fixed;
-    bottom: 0px;
+    bottom: -10px;
     left: 0px;
+    height:0;
     width: 100%;
-    background-color: #272526;
-    height: 0px;
+    padding-top:10px;
+    background-color: $dark-grey;
+    
+    
     p{
         color:white;
         padding: 0;
@@ -416,17 +446,30 @@ conservative-desc{
     text-align: center;
 }
 .voting-col{
-    width: 24%;
+    width: 22%;
     float: left;
     color: white;
 }
 .voting-col-clear{
-    height: 100%;
+    position:absolute;
+    height: 100px;
+    right:50px;
+    bottom:0;
     cursor: pointer;
-    width: 4%;
-    float: left;
-    background-color: white;
+    width: 10%;
+    background-color: $crimson;
 }
+
+.voting-close{
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:50px;
+    height:100px;
+    cursor: pointer;
+}
+
+
 
 #party1total,
 #party2total,
