@@ -21,7 +21,7 @@
         }
             
         
-     
+        mysqli_set_charset($connection,"utf8");
         $result=mysqli_query($connection,$query);
         
         while($row = mysqli_fetch_assoc($result)){
@@ -71,23 +71,27 @@
     
     
     <div class="column hide-for-large medium-12 small-12 padding-none conservative-logo background">
-    
-        <img src="img/conservative/logo-conservative.png" alt="conservative logo"
+        
+        <img src="img/conservative/logo-<?php echo $_GET['party']; ?>.png" alt="conservative logo"
              class="logo-conservative">
       
     </div>
     
     
     <div class="column large-5 medium-6 small-12 padding-none center
-         conservative-leader-img background">
+         <?php echo strtolower($_GET['party']); ?>-leader-img background">
 
     </div>
     
     <div class="column large-7 show-for-large padding-none conservative-logo background">
+        <div class="column padding-none center">
+            <img src="img/conservative/logo-<?php echo $_GET['party']; ?>.png" alt="conservative logo"
+                 class="logo-conservative">
+        </div>
     
-        <img src="img/conservative/logo-conservative.png" alt="conservative logo"
-             class="logo-conservative">
-      
+        <div class="column padding-none center parties-page-mp">
+            
+        </div>
     </div>
 
 
@@ -237,25 +241,13 @@
     
     
     
-    <div class="column large-2 show-for-large padding-vertical center 
+    <div class="column small-12 medium-12 large-2 padding-vertical center 
          <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
-        
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
              class="voting-icons" id="<?php echo strtolower($_GET['party']); ?>-1" data-voted="0" data-vote='0'>
         <p class="white voted"> Voted! </p>
     </div>
-    
-    <div class="column hide-for-large medium-12 small-12 padding-vertical center 
-         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page voting-party">
-        <h3> CLICK <br> TO <br> VOTE </h3>
-        
-        <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
-             class="voting-icons-mediumsmall" id="<?php echo strtolower($_GET['party']); ?>-1" data-voted="0" data-vote='0'>
-        <p class="white voted-m"> Voted! </p>
-    </div>
-    
-    
     
     
 </div>
@@ -382,7 +374,7 @@
     
     
     
-    <div class="column large-2 show-for-large padding-vertical center 
+    <div class="column small-12 medium-12 large-2 padding-vertical center 
          <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
@@ -390,18 +382,7 @@
              class="voting-icons" id="<?php echo strtolower($_GET['party']); ?>-2"  data-voted="1" data-vote='0'>
         <p class="white voted"> Voted! </p>
     </div>
-    
-    <div class="column hide-for-large medium-12 small-12 padding-vertical center 
-         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page voting-party">
-        <h3> CLICK <br> TO <br> VOTE </h3>
-        
-        <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
-             class="voting-icons-mediumsmall" id="<?php echo strtolower($_GET['party']); ?>-2" data-voted="1" data-vote='0'>
-        <p class="white voted-m"> Voted! </p>
-    </div>
-    
-    
-    
+
     
 </div>   
  
@@ -523,7 +504,7 @@
     
     
     
-    <div class="column large-2 show-for-large padding-vertical center 
+    <div class="column small-12 medium-12 large-2 padding-vertical center 
          <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
@@ -531,17 +512,6 @@
              class="voting-icons" id="<?php echo strtolower($_GET['party']); ?>-3" data-voted="2" data-vote='0'>
         <p class="white voted"> Voted! </p>
     </div>
-    
-    <div class="column hide-for-large medium-12 small-12 padding-vertical center 
-         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page voting-party">
-        <h3> CLICK <br> TO <br> VOTE </h3>
-        
-        <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
-             class="voting-icons-mediumsmall" id="<?php echo strtolower($_GET['party']); ?>-3" data-voted="2" data-vote='0'>
-        <p class="white voted-m"> Voted! </p>
-    </div>
-    
-    
     
     
 </div>        
@@ -655,7 +625,7 @@
     
     
     
-    <div class="column large-2 show-for-large padding-vertical center 
+    <div class="column small-12 medium-12 large-2 padding-vertical center 
          <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
@@ -663,17 +633,6 @@
              class="voting-icons" id="<?php echo strtolower($_GET['party']); ?>-4" data-voted="3" data-vote='0'>
         <p class="white voted"> Voted! </p>
     </div>
-    
-    <div class="column hide-for-large medium-12 small-12 padding-vertical center 
-         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page voting-party">
-        <h3> CLICK <br> TO <br> VOTE </h3>
-        
-        <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
-             class="voting-icons-mediumsmall" id="<?php echo strtolower($_GET['party']); ?>-4" data-voted="3" data-vote='0'>
-        <p class="white voted-m"> Voted! </p>
-    </div>
-    
-    
     
     
 </div>        
@@ -789,7 +748,7 @@
     
     
     
-    <div class="column large-2 show-for-large padding-vertical center 
+    <div class="column small-12 medium-12 large-2 padding-vertical center 
          <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
@@ -797,19 +756,7 @@
              class="voting-icons" id="<?php echo strtolower($_GET['party']); ?>-5" data-voted="4" data-vote='0'>
         <p class="white voted"> Voted! </p>
     </div>
-    
-    <div class="column hide-for-large medium-12 small-12 padding-vertical center 
-         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page voting-party">
-        <h3> CLICK <br> TO <br> VOTE </h3>
-        
-        <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
-             class="voting-icons-mediumsmall" id="<?php echo strtolower($_GET['party']); ?>-5" data-voted="4" data-vote='0'>
-        <p class="white voted-m"> Voted! </p>
-    </div>
-    
-    
-    
-    
+  
 </div>        
         
 
@@ -915,7 +862,7 @@
     
     
     
-    <div class="column large-2 show-for-large padding-vertical center 
+    <div class="column small-12 medium-12 large-2 padding-vertical center 
          <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
@@ -923,17 +870,6 @@
              class="voting-icons" id="<?php echo strtolower($_GET['party']); ?>-6" data-voted="5" data-vote='0'>
         <p class="white voted"> Voted! </p>
     </div>
-    
-    <div class="column hide-for-large medium-12 small-12 padding-vertical center 
-         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page voting-party">
-        <h3> CLICK <br> TO <br> VOTE </h3>
-        
-        <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
-             class="voting-icons-mediumsmall" id="<?php echo strtolower($_GET['party']); ?>-6" data-voted="5" data-vote='0'>
-        <p class="white voted-m"> Voted! </p>
-    </div>
-    
-    
     
     
 </div>        
@@ -1043,7 +979,7 @@
     
     
     
-    <div class="column large-2 show-for-large padding-vertical center 
+    <div class="column small-12 medium-12 large-2 padding-vertical center 
          <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
@@ -1051,18 +987,6 @@
              class="voting-icons" id="<?php echo strtolower($_GET['party']); ?>-7" data-voted="6" data-vote='0'>
         <p class="white voted"> Voted! </p>
     </div>
-    
-    <div class="column hide-for-large medium-12 small-12 padding-vertical center 
-         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page voting-party">
-        <h3> CLICK <br> TO <br> VOTE </h3>
-        
-        <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
-             class="voting-icons-mediumsmall" id="<?php echo strtolower($_GET['party']); ?>-7" data-voted="6" data-vote='0'>
-        <p class="white voted-m"> Voted! </p>
-    </div>
-    
-    
-    
     
 </div>        
         
@@ -1174,7 +1098,7 @@
     
     
     
-    <div class="column large-2 show-for-large padding-vertical center 
+    <div class="column small-12 medium-12 large-2 padding-vertical center 
          <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
@@ -1182,17 +1106,6 @@
              class="voting-icons" id="<?php echo strtolower($_GET['party']); ?>-8" data-voted="7" data-vote='0'>
         <p class="white voted"> Voted! </p>
     </div>
-    
-    <div class="column hide-for-large medium-12 small-12 padding-vertical center 
-         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page voting-party">
-        <h3> CLICK <br> TO <br> VOTE </h3>
-        
-        <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
-             class="voting-icons-mediumsmall" id="<?php echo strtolower($_GET['party']); ?>-8" data-voted="7" data-vote='0'>
-        <p class="white voted-m"> Voted! </p>
-    </div>
-    
-    
     
     
 </div>        
@@ -1306,7 +1219,7 @@
     
     
     
-    <div class="column large-2 show-for-large padding-vertical center 
+    <div class="column small-12 medium-12 large-2 padding-vertical center 
          <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
@@ -1314,18 +1227,6 @@
              class="voting-icons" id="<?php echo strtolower($_GET['party']); ?>-9" data-voted="8" data-vote='0'>
         <p class="white voted"> Voted! </p>
     </div>
-    
-    <div class="column hide-for-large medium-12 small-12 padding-vertical center 
-         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page voting-party">
-        <h3> CLICK <br> TO <br> VOTE </h3>
-        
-        <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
-             class="voting-icons-mediumsmall" id="<?php echo strtolower($_GET['party']); ?>-9" data-voted="8" data-vote='0'>
-        <p class="white voted-m"> Voted! </p>
-    </div>
-    
-    
-    
     
 </div>        
         

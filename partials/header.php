@@ -1,8 +1,8 @@
 <!doctype html>
 <html class="no-js" lang="">
     <head>
-         <title>VANARTAS STUDENT MOCK PROJECT SITE - MARK YOUR VOTE UP</title>
-        <meta charset="utf-8">
+        <title>VANARTAS STUDENT MOCK PROJECT SITE - MARK YOUR VOTE UP</title>
+        <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge">
 
         <meta name="description" content="This is a student exercise website for the Vancouver Institute of Media Arts (www.vanarts.com)">
@@ -107,16 +107,16 @@
                 <ul class="navigation-mobile center padding-none">
 
                     <li class="column medium-12 small-12 padding-vertical nav-conservative">                       
-                        <a href="conservative.php" id="nav-conservative"> Conservative </a>
+                        <a href="parties.php?party=Conservative" id="nav-conservative"> Conservative </a>
                     </li>
                       <li class="column medium-12 small-12 padding-vertical nav-democratic">                       
                         <a href="parties.php?party=Democratic" id="nav-democratic"> Democratic </a>
                     </li>
                     <li class="column medium-12 small-12 padding-vertical nav-green">                     
-                        <a href="parties.php?party=Democratic" id="nav-green"> Green </a>
+                        <a href="parties.php?party=Green" id="nav-green"> Green </a>
                     </li>
                     <li class="column medium-12 small-12 padding-vertical nav-liberal">                       
-                        <a href="parties.php?party=Democratic" id="nav-liberal"> Liberal </a>
+                        <a href="parties.php?party=Liberal" id="nav-liberal"> Liberal </a>
                     </li>
                     <li class="column medium-12 small-12 padding-vertical nav1-mobile">                       
                         <a href="mp.php"> Who's my MP </a>
@@ -132,17 +132,9 @@
             <div class="column see-your-vote center padding-none" >
                 <div class="column padding-none center arrow-down" data-status="open" id="arrow-down">
                     <i class="fa fa-sort white" aria-hidden="true"> </i>
-                    
                 </div>
                 <h3 data-direct="filter0" id="filterShow"> COMPARE PARTY! </h3>
             </div>
-            
-            
-            
-            
-            
-            
-            
             
         </header>
         

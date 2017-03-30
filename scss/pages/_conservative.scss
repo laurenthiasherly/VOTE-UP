@@ -181,7 +181,10 @@
         }
 
 
-        .conservative-leader-img{
+        .conservative-leader-img,
+        .green-leader-img,
+        .liberal-leader-img,
+        .democratic-leader-img{
             height:100vh;      
             
         }
@@ -294,6 +297,18 @@
         background: url(../img/conservative/leader.jpg);
         
     }
+    .green-leader-img{
+        background: url(../img/conservative/Green.jpg);
+
+    }
+    .liberal-leader-img{
+        background: url(../img/conservative/Liberal.jpg);
+
+    }
+    .democratic-leader-img{
+        background: url(../img/conservative/Democratic.jpg);
+
+    }
 
 
     .conservative-desc{
@@ -335,8 +350,21 @@
 
 }*/
 
+.conservative-leader-img{
+    background: url(../img/conservative/Conservative.jpg);
+}
+.green-leader-img{
+    background: url(../img/conservative/Green.jpg);
 
+}
+.liberal-leader-img{
+    background: url(../img/conservative/Liberal.jpg);
 
+}
+.democratic-leader-img{
+    background: url(../img/conservative/Democratic.jpg);
+
+}
 
 
 

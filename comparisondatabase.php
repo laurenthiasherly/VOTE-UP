@@ -56,7 +56,6 @@
                         $message.="</div>";
                         $counter=0;
                     }
-                    
                 }
             }
         }
