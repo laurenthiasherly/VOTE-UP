@@ -82,21 +82,23 @@
         transition: all 1s ease;
     }
     
-    .conservative-desc-para, .conservative-desc{
-        background:$light-blue;
-    }
-    .democratic-desc-para, .democratic-desc{
-        background:$light-orange;
-    }
-    .liberal-desc-para, .liberal-desc{
-        background:$light-red;
-    }
-    .green-desc-para, .green-desc{
-        background:$light-green;
-    }
+    
 }
 
 /* ----- Modal Box (Comparing Side) ------*/
+
+.conservative-desc-para, .conservative-desc{
+    background:$light-blue;
+}
+.democratic-desc-para, .democratic-desc{
+    background:$light-orange;
+}
+.liberal-desc-para, .liberal-desc{
+    background:$light-red;
+}
+.green-desc-para, .green-desc{
+    background:$light-green;
+}
 
 .comp-topbar-style{
     position:fixed;

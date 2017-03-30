@@ -597,6 +597,10 @@ $(function(){
     $("#votingBtn").click(function(){
         ShowVotingBox();
     });
+    
+    $("#showVoteBoxMenu").click(function(){
+        ShowVotingBox();
+    });
 
     $("#voting-close").click(function(){
         $(".voting-box").animate({"height":"0", "bottom":"-10px"},400);
