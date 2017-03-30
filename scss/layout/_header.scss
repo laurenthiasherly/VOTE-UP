@@ -55,7 +55,7 @@
 
 @media screen and (min-width: 64em) {
     /* styles for large and onward only */
- 
+    
     
 }
 
@@ -112,6 +112,34 @@ nav{
            font-size: 1.1em;
        }
     }
+}
+
+
+.see-your-vote{
+    position:fixed;
+    top:300px;
+    right:-123px;
+    background:$crimson;
+    height:90px;
+    width:200px;
+    z-index:100;
+    -ms-transform: rotate(-90deg); /* IE 9 */
+    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+    transform: rotate(-90deg);
+    cursor:pointer;
+    
+    h2{
+        color:white;
+        letter-spacing:1px;
+    }
+    
+    .arrow-down{
+        position:absolute;
+        top:-10px;
+        padding-top:7px;
+    }
+    
+    
 }
 
 

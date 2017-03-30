@@ -3,7 +3,7 @@
 <div class="map-space">
     <div class="column map-title center">
         <h5>
-            Please, select your province for more information about your MP
+            Please, select your province for more information about your Members of Parliament
         </h5>
     
     </div>

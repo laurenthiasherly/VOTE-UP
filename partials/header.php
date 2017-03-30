@@ -81,8 +81,6 @@
 
                     </form>            
                 </div>
-
-
             </div>
     
             
@@ -130,6 +128,22 @@
                 </ul>   
                 
             </div>
+            
+            <div class="column see-your-vote center padding-none" >
+                <div class="column padding-none center arrow-down" data-status="open" id="arrow-down">
+                    <i class="fa fa-sort white" aria-hidden="true"> </i>
+                    
+                </div>
+                <h3 data-direct="filter0" id="filterShow"> COMPARE PARTY! </h3>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
         </header>
         
         
