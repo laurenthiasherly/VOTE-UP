@@ -81,7 +81,7 @@
             
             <div class="comp-content">
                 <div id="contentTopic">
-                    <p class="content-topic-default">Please select the parties and Topics.</p>
+                    <h3 class="content-topic-default">Please select the parties and Topics.</h3>
                 </div>
             </div>
         </div>
