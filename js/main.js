@@ -123,33 +123,38 @@ $(function(){
         $("#modalBox").fadeOut("0.2","swing");
     });
     
+    
     $(".sidebar-topic-filt").click(function(){
         if($(this).data("selected")==0){
             $(this).data("selected",1);
-            $(this).css("color","white");
+            $(this).children().children().css("color","rgb(127,20,43)");
+            $(this).css("background","rgb(200,200,200)");
         }else{
             $(this).data("selected",0);
-            $(this).css("color","black");
+            $(this).children().children().css("color","white");
+            $(this).css("background","none");
         }
         updateComparingContent();
     });
     
     $(".party-top-comp").click(function(){
         if($(this).data("selected")==0){
-            partiesSelected+=1;
+            partiesSelected+=1; 
             $(this).data("selected",1);
-            $(this).css({"border-bottom":"solid 2px "+$(this).data("cparty"),
-                        "color":$(this).data("cparty"),
+            $(this).css({"background":$(this).data("cparty"),
+                        "color":"white",
                         "font-weight":"bold"});
         }else{
             partiesSelected-=1;
             $(this).data("selected",0);
-            $(this).css({"border-bottom":"solid 2px transparent",
+            $(this).css({"background":"rgb(112, 112, 112)",
                         "color":"white",
                         "font-weight":"normal"});
         }
         updateComparingContent();
     });
+    
+    
     
     
     
@@ -445,7 +450,7 @@ $(function(){
         $(".sidebar-topic-filt").each(function(index){
             if($(this).data("selected")==1){
                 messageComparing+="<div class='clear-fix'>";
-                messageComparing+="<h3 class='content-topic-default'>"+$(".tip-topic").eq(index).text()+"</h3>";
+                messageComparing+="<h1 class='content-topic-default'>"+$(".tip-topic").eq(index).text()+"</h1>";
                 topicSelected=$(this).text();
                 $(".party-top-comp").each(function(){
                     if($(this).data("selected")==1){
