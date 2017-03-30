@@ -46,7 +46,7 @@
     </div>
 
     <div id="modalBox" class="modal-box-comparing">
-        <div id="closeComparingBox">X</div>
+        <div id="closeComparingBox"><i class="fa fa-3x fa-times-circle-o" aria-hidden="true"></i></div>
         <div class="comparing-box">
             <div class="comp-topbar-style">
                 <ul>

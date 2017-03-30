@@ -346,7 +346,7 @@ $(function(){
             setInterval(function(){
 
                 $(".conservative-desc-para").css("margin-right","0");
-                $(".conservative-desc-title").css("width","50%");
+                $("."+$("#type-party").val()+"-desc-title").css("width","50%");
                 $(".side-topics-bar").slideDown({"display":"initial"},500);
 
             },2500);

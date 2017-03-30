@@ -1,6 +1,6 @@
 <?php include "partials/party.php"; ?>
 
-
+<input type="hidden" value="<?php echo strtolower($_GET['party']); ?>" id="type-party">
 <input id="scrollOption" type="hidden" value="0" />
 
 <div id="scroll1" class="scrollpage column large-12 medium-12 small-12 center 
@@ -45,7 +45,7 @@
   
     
     <div class="column large-7 medium-6 small-12 padding-none center
-         conservative-desc">
+          <?php echo strtolower($_GET['party'])."-desc"; ?>">
         
         <div class="column large-6 medium-12 small-12 padding-none center 
              <?php echo strtolower($_GET['party'])."-desc-title"; ?>">
@@ -116,7 +116,7 @@
 
 
 <div id="scroll2" class="scrollpage column large-12 medium-12 small-12 center 
-                            padding-none conservative-party topic-pages full-page scrollDiv">
+                            padding-none <?php echo strtolower($_GET["party"])."-party"; ?> topic-pages full-page scrollDiv">
     
 
     <div class="column large-2 show-for-large padding-none center 
@@ -127,7 +127,7 @@
     
     <!-- THE DIVS BELOW IS FOR SMALL & MEDIUM VERSION -->
     
-     <div class="column hide-for-large medium-12 small-12 padding-none center blue">
+     <div class="column hide-for-large medium-12 small-12 padding-none center <?php echo "party-".strtolower($_GET['party'])."-bground"; ?>">
         <h1 class="party-topic"> ECONOMY </h1>   
     </div>
     
@@ -183,7 +183,7 @@
         
     </div>
     
-   
+    
     
     <div class="column large-2 show-for-large padding-none center 
         topics-bg bg-party-height background half-page" id="topics-bg1">
@@ -223,7 +223,7 @@
     
     
     <div class="column large-2 show-for-large padding-vertical center 
-         blue half-page voting-party">
+         <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
@@ -232,7 +232,7 @@
     </div>
     
     <div class="column hide-for-large medium-12 small-12 padding-vertical center 
-         light-blue half-page voting-party">
+         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
@@ -283,17 +283,17 @@
 
 
 <div id="scroll3" class="scrollpage column large-12 medium-12 small-12 center 
-                            padding-none conservative-party topic-pages full-page scrollDiv">
+                            padding-none <?php echo strtolower($_GET["party"])."-party"; ?> topic-pages full-page scrollDiv">
     
 
     <div class="column large-2 show-for-large padding-none center 
-         light-blue half-page">
+         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page">
         
     </div>
     
     <!-- THE DIVS BELOW IS FOR SMALL & MEDIUM VERSION -->
     
-     <div class="column hide-for-large medium-12 small-12 padding-none center blue">
+     <div class="column hide-for-large medium-12 small-12 padding-none center <?php echo "party-".strtolower($_GET['party'])."-bground"; ?>">
         <h1 class="party-topic1"> ENVIRONMENT </h1>   
     </div>
     
@@ -345,7 +345,7 @@
     </div>
     
     
-    <div class="column large-4 show-for-large padding-none left blue half-page">
+    <div class="column large-4 show-for-large padding-none left <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page">
         <h1 class="party-topic"> ENVI </h1>
         <h1 class="party-topic"> RON </h1>
         <h1 class="party-topic"> MENT </h1>
@@ -392,7 +392,7 @@
     
     
     <div class="column large-2 show-for-large padding-vertical center 
-         blue half-page voting-party">
+         <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
@@ -401,7 +401,7 @@
     </div>
     
     <div class="column hide-for-large medium-12 small-12 padding-vertical center 
-         light-blue half-page voting-party">
+         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
@@ -451,17 +451,17 @@
 
 
 <div id="scroll4" class="scrollpage column large-12 medium-12 small-12 center 
-                            padding-none conservative-party topic-pages full-page scrollDiv">
+                            padding-none <?php echo strtolower($_GET["party"])."-party"; ?> topic-pages full-page scrollDiv">
     
 
     <div class="column large-2 show-for-large padding-none center 
-         light-blue half-page">
+         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page">
         
     </div>
     
     <!-- THE DIVS BELOW IS FOR SMALL & MEDIUM VERSION -->
     
-    <div class="column hide-for-large medium-12 small-12 padding-none center blue">
+    <div class="column hide-for-large medium-12 small-12 padding-none center <?php echo "party-".strtolower($_GET['party'])."-bground"; ?>">
         <h1 class="party-topic"> EDUCATION </h1>   
     </div>
     
@@ -510,7 +510,7 @@
     </div>
     
     
-    <div class="column large-4 show-for-large padding-none left blue half-page">
+    <div class="column large-4 show-for-large padding-none left <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page">
         <h1 class="party-topic"> EDU </h1>
         <h1 class="party-topic"> CA </h1>
         <h1 class="party-topic"> TION </h1>
@@ -557,7 +557,7 @@
     
     
     <div class="column large-2 show-for-large padding-vertical center 
-         blue half-page voting-party">
+         <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
@@ -566,7 +566,7 @@
     </div>
     
     <div class="column hide-for-large medium-12 small-12 padding-vertical center 
-         light-blue half-page voting-party">
+         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
@@ -608,17 +608,17 @@
 
 
 <div id="scroll5" class="scrollpage column large-12 medium-12 small-12 center 
-                            padding-none conservative-party topic-pages full-page scrollDiv">
+                            padding-none <?php echo strtolower($_GET["party"])."-party"; ?> topic-pages full-page scrollDiv">
     
 
     <div class="column large-2 show-for-large padding-none center 
-         light-blue half-page">
+         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page">
         
     </div>
     
     <!-- THE DIVS BELOW IS FOR SMALL & MEDIUM VERSION -->
     
-    <div class="column hide-for-large medium-12 small-12 padding-none center blue">
+    <div class="column hide-for-large medium-12 small-12 padding-none center <?php echo "party-".strtolower($_GET['party'])."-bground"; ?>">
         <h1 class="party-topic"> HEALTH </h1>   
     </div>
     
@@ -667,7 +667,7 @@
     </div>
     
     
-    <div class="column large-4 show-for-large padding-none left blue half-page">
+    <div class="column large-4 show-for-large padding-none left <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page">
         <br><br><h1 class="party-topic1"> HEALTH </h1>
        
         
@@ -714,7 +714,7 @@
     
     
     <div class="column large-2 show-for-large padding-vertical center 
-         blue half-page voting-party">
+         <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
@@ -723,7 +723,7 @@
     </div>
     
     <div class="column hide-for-large medium-12 small-12 padding-vertical center 
-         light-blue half-page voting-party">
+         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
@@ -767,17 +767,17 @@
 
 
 <div id="scroll6" class="scrollpage column large-12 medium-12 small-12 center 
-                            padding-none conservative-party topic-pages full-page scrollDiv">
+                            padding-none <?php echo strtolower($_GET["party"])."-party"; ?> topic-pages full-page scrollDiv">
     
 
     <div class="column large-2 show-for-large padding-none center 
-         light-blue half-page">
+         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page">
         
     </div>
     
     <!-- THE DIVS BELOW IS FOR SMALL & MEDIUM VERSION -->
     
-    <div class="column hide-for-large medium-12 small-12 padding-none center blue">
+    <div class="column hide-for-large medium-12 small-12 padding-none center <?php echo "party-".strtolower($_GET['party'])."-bground"; ?>">
         <h1 class="party-topic1"> IMMIGRATION </h1>   
     </div>
     
@@ -826,7 +826,7 @@
     </div>
     
     
-    <div class="column large-4 show-for-large padding-none left blue half-page">
+    <div class="column large-4 show-for-large padding-none left <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page">
         <h1 class="party-topic"> IMMI </h1>
         <h1 class="party-topic"> GRA </h1>
         <h1 class="party-topic"> TION </h1>
@@ -873,7 +873,7 @@
     
     
     <div class="column large-2 show-for-large padding-vertical center 
-         blue half-page voting-party">
+         <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
@@ -882,7 +882,7 @@
     </div>
     
     <div class="column hide-for-large medium-12 small-12 padding-vertical center 
-         light-blue half-page voting-party">
+         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
@@ -918,17 +918,17 @@
 
 
 <div id="scroll7" class="scrollpage column large-12 medium-12 small-12 center 
-                            padding-none conservative-party topic-pages full-page scrollDiv">
+                            padding-none <?php echo strtolower($_GET["party"])."-party"; ?> topic-pages full-page scrollDiv">
     
 
     <div class="column large-2 show-for-large padding-none center 
-         light-blue half-page">
+         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page">
         
     </div>
     
     <!-- THE DIVS BELOW IS FOR SMALL & MEDIUM VERSION -->
     
-    <div class="column hide-for-large medium-12 small-12 padding-none center blue">
+    <div class="column hide-for-large medium-12 small-12 padding-none center <?php echo "party-".strtolower($_GET['party'])."-bground"; ?>">
         <h1 class="party-topic"> HOUSING </h1>   
     </div>
     
@@ -977,7 +977,7 @@
     </div>
     
     
-    <div class="column large-4 show-for-large padding-none left blue half-page">
+    <div class="column large-4 show-for-large padding-none left <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page">
         <h1 class="party-topic"> HOU </h1>
         <h1 class="party-topic"> SING </h1>
         
@@ -1023,7 +1023,7 @@
     
     
     <div class="column large-2 show-for-large padding-vertical center 
-         blue half-page voting-party">
+         <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
@@ -1032,7 +1032,7 @@
     </div>
     
     <div class="column hide-for-large medium-12 small-12 padding-vertical center 
-         light-blue half-page voting-party">
+         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
@@ -1070,17 +1070,17 @@
 
 
 <div id="scroll8" class="scrollpage column large-12 medium-12 small-12 center 
-                            padding-none conservative-party topic-pages full-page scrollDiv">
+                            padding-none <?php echo strtolower($_GET["party"])."-party"; ?> topic-pages full-page scrollDiv">
     
 
     <div class="column large-2 show-for-large padding-none center 
-         light-blue half-page">
+         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page">
         
     </div>
     
     <!-- THE DIVS BELOW IS FOR SMALL & MEDIUM VERSION -->
     
-    <div class="column hide-for-large medium-12 small-12 padding-none center blue">
+    <div class="column hide-for-large medium-12 small-12 padding-none center <?php echo "party-".strtolower($_GET['party'])."-bground"; ?>">
         <h1 class="party-topic1"> FOREIGN POLICY </h1>   
     </div>
     
@@ -1129,7 +1129,7 @@
     </div>
     
     
-    <div class="column large-4 show-for-large padding-none left blue half-page">
+    <div class="column large-4 show-for-large padding-none left <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page">
         <br><br> <h1 class="party-topic1"> FOREIGN  </h1>
         <h1 class="party-topic1"> POLICY </h1>
         
@@ -1175,7 +1175,7 @@
     
     
     <div class="column large-2 show-for-large padding-vertical center 
-         blue half-page voting-party">
+         <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
@@ -1184,7 +1184,7 @@
     </div>
     
     <div class="column hide-for-large medium-12 small-12 padding-vertical center 
-         light-blue half-page voting-party">
+         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
@@ -1224,17 +1224,17 @@
 
 
 <div id="scroll9" class="scrollpage column large-12 medium-12 small-12 center 
-                            padding-none conservative-party topic-pages full-page scrollDiv">
+                            padding-none <?php echo strtolower($_GET["party"])."-party"; ?> topic-pages full-page scrollDiv">
     
 
     <div class="column large-2 show-for-large padding-none center 
-         light-blue half-page">
+         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page">
         
     </div>
     
     <!-- THE DIVS BELOW IS FOR SMALL & MEDIUM VERSION -->
     
-    <div class="column hide-for-large medium-12 small-12 padding-none center blue">
+    <div class="column hide-for-large medium-12 small-12 padding-none center <?php echo "party-".strtolower($_GET['party'])."-bground"; ?>">
         <h1 class="party-topic"> PRIVACY </h1>   
     </div>
     
@@ -1283,7 +1283,7 @@
     </div>
     
     
-    <div class="column large-4 show-for-large padding-none left blue half-page">
+    <div class="column large-4 show-for-large padding-none left <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page">
         <h1 class="party-topic"> PRI </h1>
         <h1 class="party-topic"> VA </h1>
         <h1 class="party-topic"> CY </h1>
@@ -1330,7 +1330,7 @@
     
     
     <div class="column large-2 show-for-large padding-vertical center 
-         blue half-page voting-party">
+         <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
@@ -1339,7 +1339,7 @@
     </div>
     
     <div class="column hide-for-large medium-12 small-12 padding-vertical center 
-         light-blue half-page voting-party">
+         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
@@ -1381,17 +1381,17 @@
 
 
 <div id="scroll10" class="scrollpage column large-12 medium-12 small-12 center 
-                            padding-none conservative-party topic-pages full-page scrollDiv">
+                            padding-none <?php echo strtolower($_GET["party"])."-party"; ?> topic-pages full-page scrollDiv">
     
 
     <div class="column large-2 show-for-large padding-none center 
-         light-blue half-page">
+         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page">
         
     </div>
     
     <!-- THE DIVS BELOW IS FOR SMALL & MEDIUM VERSION -->
     
-    <div class="column hide-for-large medium-12 small-12 padding-none center blue">
+    <div class="column hide-for-large medium-12 small-12 padding-none center <?php echo "party-".strtolower($_GET['party'])."-bground"; ?>">
         <h1 class="party-topic1"> ELECTORAL REFORM </h1>   
     </div>
     
@@ -1440,7 +1440,7 @@
     </div>
     
     
-    <div class="column large-4 show-for-large padding-none left blue half-page">
+    <div class="column large-4 show-for-large padding-none left <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page">
         <h1 class="party-topic1"> ELEC- </h1>
         <h1 class="party-topic1"> TORAL </h1>
         <h1 class="party-topic1"> REFORM </h1>
@@ -1487,7 +1487,7 @@
     
     
     <div class="column large-2 show-for-large padding-vertical center 
-         blue half-page voting-party">
+         <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
@@ -1496,7 +1496,7 @@
     </div>
     
     <div class="column hide-for-large medium-12 small-12 padding-vertical center 
-         light-blue half-page voting-party">
+         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"

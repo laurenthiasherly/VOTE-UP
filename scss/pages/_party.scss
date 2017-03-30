@@ -39,6 +39,15 @@
         display:none; 
     }
     
+    .democratic-party,
+    .green-party,
+    .liberal-party,
+    .conservative-party
+    {
+        padding-top:70px; 
+    }
+
+    
     #filterShow{
         background:$crimson;
     }
@@ -50,6 +59,15 @@
             color:$text-color;
             font-size:20px;
         }
+    }
+    
+    .conservative-desc-para,
+    .green-desc-para,
+    .liberal-desc-para,
+    .democratic-desc-para{
+        padding: 60px 40px;
+        width: 50%;
+        transition: all 1s ease;
     }
 }
 
@@ -106,7 +124,6 @@
     list-style: none;
     color: white;
     background-color: #272526;
-
 }
 
 .tip-topic-style{
@@ -159,10 +176,12 @@
     top: 70px;
     right: 70px;
     cursor: pointer;
-    color: white;
-    background-color: #272526;
-    padding: 20px 25px;
-    border-radius: 50%;
+    color: black;
+    i{
+        color:black;
+    }
+//    padding: 20px 25px;
+//    border-radius: 50%;
 }
 
 .comp-sidebar-topic{
@@ -310,8 +329,49 @@
 // Parties Style  ///
 /////////////////////
 
+.democratic-party{
+    overflow: hidden;
+    background: #f3b27a;
+}
+
+.conservative-party{
+    overflow: hidden;
+    background: #6588fb;
+}
+
+.green-party{
+    overflow: hidden;
+    background: #4a834a;
+}
+
+.liberal-party{
+    overflow: hidden;
+    background: #e96a6f;
+}
+
 .democratic-desc-title{
     background:#f6821f;
+    height:50vh;
+    width:100%;
+    transition: all 1s ease;
+}
+
+.conservative-desc-title{
+    background:#0232cf;
+    height:50vh;
+    width:100%;
+    transition: all 1s ease;
+}
+
+.liberal-desc-title{
+    background:#ff1a24;
+    height:50vh;
+    width:100%;
+    transition: all 1s ease;
+}
+
+.green-desc-title{
+    background:green;
     height:50vh;
     width:100%;
     transition: all 1s ease;
@@ -320,8 +380,17 @@
 .party-democratic-bground{
     background:#f6821f;
 }
+
 .party-green-bground{
     background:green;
+}
+
+.party-liberal-bground{
+    background:#ff1a24;
+}
+
+.party-conservative-bground{
+    background:#0232cf;
 }
 
 .party-democratic-lightbground{
@@ -329,9 +398,30 @@
 }
 
 .party-green-lightbground{
-    background:green;
+    background:#4a834a;
 }
 
+.party-liberal-lightbground{
+    background:#e96a6f;
+}
+
+.party-conservative-lightbground{
+    background:#6588fb;
+}
+
+
+conservative-desc{
+    background:#6588fb;
+}
+.green-desc{
+    background:#4a834a;
+}
+.liberal-desc{
+    background:#e96a6f;
+}
+.democratic-desc{
+    background:#f3b27a;
+}
 
 
 
