@@ -9,7 +9,6 @@ var iScrollPos = 0;
 var sizeOfScrollDiv=0;
 var modalBoxShow=0;
 
-$partyList=["conservative","democratic","green","liberal"]
 
 $(function(){
     
@@ -101,7 +100,7 @@ $(function(){
     
     $(".sidebar-topic-filt").each(function(index){
         $(this).mouseover(function(){
-            $("#modal-text"+[index]).css("margin-left","0");
+            $("#modal-text"+[index]).css("margin-left","30px");
             $("#modal-text"+[index]).css("width","140px");
         });
         $(this).mouseout(function(){
@@ -342,6 +341,14 @@ $(function(){
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
     // ====================================================
     //           CONSERVATIVE - ORIGINAL PAGE
     // ===================================================
@@ -353,7 +360,7 @@ $(function(){
             
             setInterval(function(){
 
-                $("."+$("#type-party").val()+"-desc-para").css("margin-right","0");
+                $(".conservative-desc-para").css("margin-right","0");
                 $("."+$("#type-party").val()+"-desc-title").css("width","50%");
                 $(".side-topics-bar").slideDown({"display":"initial"},500);
 
@@ -434,8 +441,7 @@ $(function(){
                     "foreign-policy","foreign-policy","foreign-policy",
                     "privacy","privacy","privacy",
                     "electoral-reform-1","electoral-reform-1","electoral-reform-1"];
-    
-//    $("#topics-bg3").css("background","url(img/conservative/"+partyBg[3]+".jpg)");
+
     
     $(".topics-bg").each(function(index){
         $("#topics-bg"+[index]).css("background","url(img/conservative/"+partyBg[index]+".jpg)");
@@ -459,64 +465,27 @@ $(function(){
     }
 
     function updateComparingContent(){
-        let partyComparing="";
-        let topics="";
+        messageComparing="";
         $(".sidebar-topic-filt").each(function(index){
-            
             if($(this).data("selected")==1){
-                topics+=$(".tip-topic").eq(index).text()+",";
-//                messageComparing+="<div class='clear-fix'>";
-//                messageComparing+="<h1 class='content-topic-default'>"+$(".tip-topic").eq(index).text()+"</h1>";
-//                topicSelected=$(this).text();
-//                $(".party-top-comp").each(function(){
-//                    if($(this).data("selected")==1){
-//                        messageComparing+="<div class='content-topic-party"+partiesSelected+" col'><div class='content-showing-style'><div class='topic-title-"+$(this).text().toLocaleLowerCase()+"'>"+$(this).text()+" PARTY"+"</div><div class='comparison-content'>Proin tempus lobortis quam, non varius libero eleifend et. Aliquam vehicula, augue quis sodales lacinia, lectus felis facilisis diam, ac lacinia nulla sapien auctor orci. Ut bibendum ornare hendrerit. </div></div></div>";
-//
-            }
-//                });
-//                messageComparing+="</div>";
-//            }
-        });
-        $(".party-top-comp").each(function(){
-            if($(this).data("selected")==1){
-                partyComparing+=$(this).text()+",";
+                messageComparing+="<div class='clear-fix'>";
+                messageComparing+="<h1 class='content-topic-default'>"+$(".tip-topic").eq(index).text()+"</h1>";
+                topicSelected=$(this).text();
+                $(".party-top-comp").each(function(){
+                    if($(this).data("selected")==1){
+                        messageComparing+="<div class='content-topic-party"+partiesSelected+" col'><div class='content-showing-style'><div class='topic-title-"+$(this).text().toLocaleLowerCase()+"'>"+$(this).text()+" PARTY"+"</div><div class='comparison-content'>Proin tempus lobortis quam, non varius libero eleifend et. Aliquam vehicula, augue quis sodales lacinia, lectus felis facilisis diam, ac lacinia nulla sapien auctor orci. Ut bibendum ornare hendrerit. </div></div></div>";
+
+                    }
+                });
+                messageComparing+="</div>";
             }
         });
-        if(partiesSelected==0||topics==""){
-            $("#contentTopic").html('<p class="content-topic-default">Please select the parties.</p>');
+        if(partiesSelected==0){
+            $("#contentTopic").html('<p class="content-topic-default">Please select the parties and Topics.</p>');
         }else{
-            topics=topics.substring(0,topics.length-1);
-            partyComparing=partyComparing.substring(0,partyComparing.length-1);
-            if(topics!=""&&partyComparing!=""){
-                ajaxGetDatafromDatabase(partyComparing,topics);
-            }else{
-                $("#contentTopic").html('<p class="content-topic-default">Please select the Topics.</p>');
-            }
+            $("#contentTopic").html(messageComparing);
         }
     }
-    
-    
-    //////////////////// AJAX ///////////////////////
-
-
-    function ajaxGetDatafromDatabase(partyname,topics){
-        $.ajax({
-            url: 'comparisondatabase.php',
-            type: 'POST',
-            data: {"party":partyname,"topics":topics},
-            success: function(data, status) {
-                $("#contentTopic").html(data);
-            },
-            error: function(xhr, desc, err) {
-                console.log(xhr);
-                console.log("Details: " + desc + "\nError:" + err);
-            }
-        });
-    }
-
-
-    /////////////////////////////////////////////////
-    
 
     window.onbeforeunload = function(){
         $('body').stop(); 
@@ -624,24 +593,28 @@ $(function(){
 
     });
 
+
     function updateVoting(){
         party1=0;
         party2=0;
         party3=0;
         party4=0;
-        for(var i=0;i<$partyList.length;i+=1){
+        for(var i=1;i<=4;i+=1){
             for(var j=1;j<=9;j+=1){
-                if(checkCookie($partyList[i]+"-"+j)){
-                    $("#"+$partyList[i]+"-"+j).attr('src','img/conservative/badge-icon-clicked.svg');
-                    $(".voted").eq( $("#"+$partyList[i]+"-"+j).data("voted")).css("margin-top","0");
-                    $(".voting-icons").eq( $("#"+$partyList[i]+"-"+j).data("voted")).css("width","120px");
-                    $("#"+$partyList[i]+"-"+j).attr('data-vote','1');
+    //            console.log("party"+i+"-"+j);
+                if(checkCookie("party"+i+"-"+j)){
 
-                    if(i==0){
+                    $("#party"+i+"-"+j).attr('src','img/conservative/badge-icon-clicked.svg');
+
+                    $(".voted").eq( $("#party"+i+"-"+j).data("voted")).css("margin-top","0");
+                    $(".voting-icons").eq( $("#party"+i+"-"+j).data("voted")).css("width","120px");
+                    $("#party"+i+"-"+j).attr('data-vote','1');
+
+                    if(i==1){
                         party1+=1;
-                    }else if(i==1){
-                        party2+=1;
                     }else if(i==2){
+                        party2+=1;
+                    }else if(i==3){
                         party3+=1;
                     }else{
                         party4+=1;
@@ -649,7 +622,6 @@ $(function(){
                 }
             }
         }
-            
         $("#party1total").text(party1);
         $("#party2total").text(party2);
         $("#party3total").text(party3);
@@ -661,14 +633,14 @@ $(function(){
         party2=0;
         party3=0;
         party4=0;
-        for(var i=0;i<$partyList.length;i+=1){
+        for(var i=1;i<=4;i+=1){
             for(var j=1;j<=9;j+=1){
-                if(checkCookie($partyList[i]+"-"+j)){
-                   $("#"+$partyList[i]+"-"+j).attr('src','img/conservative/badge-icon.svg');
-                    $(".voted").eq( $("#"+$partyList[i]+"-"+j).data("voted")).css("margin-top","300px");
-                    $(".voting-icons").eq($("#"+$partyList[i]+"-"+j).data("voted")).css("width","100px");
-                    $("#"+$partyList[i]+"-"+j).attr('data-vote','0');
-                    delete_cookie($partyList[i]+"-"+j);
+                if(checkCookie("party"+i+"-"+j)){
+                    $("#party"+i+"-"+j).attr('src','img/conservative/badge-icon.svg');
+                    $(".voted").eq($("#party"+i+"-"+j).data("voted")).css("margin-top","300px");
+                    $(".voting-icons").eq($("#party"+i+"-"+j).data("voted")).css("width","100px");
+                    $("#party"+i+"-"+j).attr('data-vote','0');
+                    delete_cookie("party"+i+"-"+j);
                 }
             }
         }
@@ -682,6 +654,6 @@ $(function(){
         resetVotingBox();
     });
 
+
+
 });
-
-
