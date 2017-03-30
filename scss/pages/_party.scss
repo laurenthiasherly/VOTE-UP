@@ -61,13 +61,38 @@
         }
     }
     
+    .conservative-desc-title,
+    .democratic-desc-title,
+    .green-desc-title,
+    .liberal-desc-title{
+        height:100vh;
+        width:100%;
+        transition: all 1s ease;
+        padding-top:70px;
+    }
+    
     .conservative-desc-para,
     .green-desc-para,
     .liberal-desc-para,
     .democratic-desc-para{
-        padding: 60px 40px;
+        height: 50vh;
+        padding: 20px;
         width: 50%;
+        margin-right:-1000px;
         transition: all 1s ease;
+    }
+    
+    .conservative-desc-para, .conservative-desc{
+        background:$light-blue;
+    }
+    .democratic-desc-para, .democratic-desc{
+        background:$light-orange;
+    }
+    .liberal-desc-para, .liberal-desc{
+        background:$light-red;
+    }
+    .green-desc-para, .green-desc{
+        background:$light-green;
     }
 }
 
@@ -234,7 +259,7 @@
 
 .content-topic-party4{
     padding: 10px;
-    width: 50%;
+    width: 100%;
 }
 
 .content-showing-style{
@@ -331,98 +356,83 @@
 
 .democratic-party{
     overflow: hidden;
-    background: #f3b27a;
+    background: $light-orange;
 }
 
 .conservative-party{
     overflow: hidden;
-    background: #6588fb;
+    background: $light-blue;
 }
 
 .green-party{
     overflow: hidden;
-    background: #4a834a;
+    background: $light-green;
 }
 
 .liberal-party{
     overflow: hidden;
-    background: #e96a6f;
+    background: $light-red;
 }
 
 .democratic-desc-title{
-    background:#f6821f;
+    background:$orange;
     height:50vh;
     width:100%;
     transition: all 1s ease;
 }
 
 .conservative-desc-title{
-    background:#0232cf;
+    background:$blue;
     height:50vh;
     width:100%;
     transition: all 1s ease;
 }
 
 .liberal-desc-title{
-    background:#ff1a24;
+    background:$red;
     height:50vh;
     width:100%;
     transition: all 1s ease;
 }
 
 .green-desc-title{
-    background:green;
+    background:$green;
     height:50vh;
     width:100%;
     transition: all 1s ease;
 }
 
 .party-democratic-bground{
-    background:#f6821f;
+    background:$orange;
 }
 
 .party-green-bground{
-    background:green;
+    background:$green;
 }
 
 .party-liberal-bground{
-    background:#ff1a24;
+    background:$red;
 }
 
 .party-conservative-bground{
-    background:#0232cf;
+    background:$blue;
 }
 
 .party-democratic-lightbground{
-    background:#f3b27a;
+    background:$light-orange;
 }
 
 .party-green-lightbground{
-    background:#4a834a;
+    background:$light-green;
 }
 
 .party-liberal-lightbground{
-    background:#e96a6f;
+    background:$light-red;
 }
 
 .party-conservative-lightbground{
-    background:#6588fb;
+    background:$light-blue;
 }
-
-
-conservative-desc{
-    background:#6588fb;
-}
-.green-desc{
-    background:#4a834a;
-}
-.liberal-desc{
-    background:#e96a6f;
-}
-.democratic-desc{
-    background:#f3b27a;
-}
-
 
 
 
