@@ -372,10 +372,10 @@
          overlay half-page">
         
         <p>
-            <?php echo $asocArray["Environment"]["column-1-p1"]; ?>
+            <?php echo $asocArray["Environment"]["column-2-p1"]; ?>
         </p>              
         <p>
-            <?php echo $asocArray["Environment"]["column-1-p2"]; ?>
+            <?php echo $asocArray["Environment"]["column-2-p2"]; ?>
         </p>
         
     </div>
@@ -513,10 +513,10 @@
          overlay half-page">
         
         <p>
-            <?php echo $asocArray["Education"]["column-1-p1"]; ?>
+            <?php echo $asocArray["Education"]["column-2-p1"]; ?>
         </p>              
         <p>
-            <?php echo $asocArray["Education"]["column-1-p2"]; ?>
+            <?php echo $asocArray["Education"]["column-2-p2"]; ?>
         </p>
         
     </div>
@@ -645,10 +645,10 @@
          overlay half-page">
         
         <p>
-            <?php echo $asocArray["Healthcare"]["column-1-p1"]; ?>
+            <?php echo $asocArray["Healthcare"]["column-2-p1"]; ?>
         </p>              
         <p>
-            <?php echo $asocArray["Healthcare"]["column-1-p2"]; ?>
+            <?php echo $asocArray["Healthcare"]["column-2-p2"]; ?>
         </p>
         
     </div>
@@ -779,10 +779,10 @@
          overlay half-page">
         
         <p>
-            <?php echo $asocArray["Immigration"]["column-1-p1"]; ?>
+            <?php echo $asocArray["Immigration"]["column-2-p1"]; ?>
         </p>              
         <p>
-            <?php echo $asocArray["Immigration"]["column-1-p2"]; ?>
+            <?php echo $asocArray["Immigration"]["column-2-p2"]; ?>
         </p>
         
     </div>
@@ -905,10 +905,10 @@
          overlay half-page">
         
         <p>
-            <?php echo $asocArray["Housing"]["column-1-p1"]; ?>
+            <?php echo $asocArray["Housing"]["column-2-p1"]; ?>
         </p>              
         <p>
-            <?php echo $asocArray["Housing"]["column-1-p2"]; ?>
+            <?php echo $asocArray["Housing"]["column-2-p2"]; ?>
         </p>
         
     </div>
@@ -1033,10 +1033,10 @@
          overlay half-page">
         
        <p>
-            <?php echo $asocArray["Foreign Policy"]["column-1-p1"]; ?>
+            <?php echo $asocArray["Foreign Policy"]["column-2-p1"]; ?>
         </p>              
         <p>
-            <?php echo $asocArray["Foreign Policy"]["column-1-p2"]; ?>
+            <?php echo $asocArray["Foreign Policy"]["column-2-p2"]; ?>
         </p>
         
     </div>
@@ -1164,10 +1164,10 @@
          overlay half-page">
         
         <p>
-            <?php echo $asocArray["Privacy"]["column-1-p1"]; ?>
+            <?php echo $asocArray["Privacy"]["column-2-p1"]; ?>
         </p>              
         <p>
-            <?php echo $asocArray["Privacy"]["column-1-p2"]; ?>
+            <?php echo $asocArray["Privacy"]["column-2-p2"]; ?>
         </p>
         
     </div>
@@ -1297,10 +1297,10 @@
          overlay half-page">
         
         <p>
-            <?php echo $asocArray["Electoral Reform"]["column-1-p1"]; ?>
+            <?php echo $asocArray["Electoral Reform"]["column-2-p1"]; ?>
         </p>              
         <p>
-            <?php echo $asocArray["Electoral Reform"]["column-1-p2"]; ?>
+            <?php echo $asocArray["Electoral Reform"]["column-2-p2"]; ?>
         </p>
     </div>
     
