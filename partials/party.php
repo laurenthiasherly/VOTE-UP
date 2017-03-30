@@ -24,8 +24,10 @@
             <li class="sidebar-topic" data-direct="scroll10">
                 <a> <i class="fa fa-sitemap white" aria-hidden="true"> </i> </a></li>
             
+<!--
             <li class="sidebar-topic" id="seeyourvote">
                 <a> <i class="fa fa-arrows fa-spin white" aria-hidden="true"> </i> </a></li>
+-->
             <li id="votingBtn" class="sidebar-topic" data-direct="voting0">
                 <a> <i id="voting-icon" class="fa fa-check " aria-hidden="true"> </i>
                 </a></li>

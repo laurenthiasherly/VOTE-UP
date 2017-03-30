@@ -27,8 +27,6 @@ $(function(){
         $("body").css("overflow","auto");
     }
     
-    console.log(changeCurrent + " "+sizeOfScrollDiv);
-    
     function myFunction(size) {
         if(!movingScroll&&modalBoxShow==0){
             if(size.wheelDelta<0){

@@ -71,23 +71,27 @@
     
     
     <div class="column hide-for-large medium-12 small-12 padding-none conservative-logo background">
-    
-        <img src="img/conservative/logo-conservative.png" alt="conservative logo"
+        
+        <img src="img/conservative/logo-<?php echo $_GET['party']; ?>.png" alt="conservative logo"
              class="logo-conservative">
       
     </div>
     
     
     <div class="column large-5 medium-6 small-12 padding-none center
-         conservative-leader-img background">
+         <?php echo strtolower($_GET['party']); ?>-leader-img background">
 
     </div>
     
     <div class="column large-7 show-for-large padding-none conservative-logo background">
+        <div class="column padding-none center">
+            <img src="img/conservative/logo-<?php echo $_GET['party']; ?>.png" alt="conservative logo"
+                 class="logo-conservative">
+        </div>
     
-        <img src="img/conservative/logo-conservative.png" alt="conservative logo"
-             class="logo-conservative">
-      
+        <div class="column padding-none center parties-page-mp">
+            
+        </div>
     </div>
 
 
