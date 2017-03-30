@@ -82,7 +82,7 @@
         
         </div>
     
-        <a href="party.php"> <div class="column large-3 medium-6 small-12 
+        <a href="parties.php?party=Democratic"> <div class="column large-3 medium-6 small-12 
                                   padding-vertical homepage-orange center">
             <div class="column homepage-orange-hover party-div-height center">
                 <h2> New Democratic Party </h2>
@@ -110,7 +110,7 @@
         <div class="column large-3 show-for-large padding-none center homepage-party">
         
         </div>
-        <a href="conservative.php"> <div class="column large-3 medium-6 small-12 padding-none center homepage-blue">
+        <a href="parties.php?party=Conservative"> <div class="column large-3 medium-6 small-12 padding-none center homepage-blue">
             <div class="column homepage-blue-hover party-div-height center">
                 <h2> Conservative Party </h2>
                 <h1> ' Proven Leadership for a Strong Canada '</h1> 
@@ -133,7 +133,7 @@
         
         
         
-        <a href="party.php"> <div class="column large-3 medium-6 small-12 padding-none center homepage-green">
+        <a href="parties.php?party=Green"> <div class="column large-3 medium-6 small-12 padding-none center homepage-green">
             <div class="column homepage-green-hover party-div-height center">
                 <h2> Green Party </h2>
                 <h1> ' A Canada That Works.<br> Together. '</h1> 
@@ -155,7 +155,7 @@
         
         
         
-        <a href="party.php"> <div class="column large-3 medium-6 small-12 padding-none center homepage-red">
+        <a href="parties.php?party=Liberal"> <div class="column large-3 medium-6 small-12 padding-none center homepage-red">
             <div class="column homepage-red-hover party-div-height center">
                 <h2> Liberal Party </h2>
                 <h1> ' Real Change '</h1> 

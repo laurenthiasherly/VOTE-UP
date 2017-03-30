@@ -104,19 +104,19 @@
         <div class="voting-box">
             <div class="voting-col">
                 <p>Conservative</p>
-                <a><div id="party1total"></div></a>
+                <a href="parties.php?party=Conservative"><div id="party1total"></div></a>
             </div>
             <div class="voting-col">
                 <p>Democratic</p>
-                <a><div id="party2total"></div></a>
+                <a href="parties.php?party=Democratic"><div id="party2total"></div></a>
             </div>
             <div class="voting-col">
                 <p>Green</p>
-                <a><div id="party3total"></div></a>
+                <a href="parties.php?party=Green"><div id="party3total"></div></a>
             </div>
             <div class="voting-col">
                 <p>Liberal</p>
-                <a><div id="party4total"></div></a>
+                 <a href="parties.php?party=Liberal"><div id="party4total"></div></a>
             </div>
             <div id="refreshVoting" class="voting-col-clear">
                 <h3> Clear <br> Voting </h3>

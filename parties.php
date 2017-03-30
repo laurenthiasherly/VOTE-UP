@@ -1,5 +1,60 @@
 <?php include "partials/party.php"; ?>
 
+
+<?php 
+
+    $host='localhost';
+    $user='root';
+    $password='';
+    $database='party_db';
+
+    $connection=mysqli_connect($host,$user,$password,$database);
+
+    if(!$connection){
+        echo "connection failed";
+    }else{
+        
+        if($_GET['party']=="Democratic"){
+            $query="SELECT * FROM leader_tbl WHERE party='NDP'";
+        }else{
+            $query="SELECT * FROM leader_tbl WHERE party='".$_GET['party']."'";
+        }
+            
+        
+     
+        $result=mysqli_query($connection,$query);
+        
+        while($row = mysqli_fetch_assoc($result)){
+            $leadername=$row['leader'];
+            $leadercontent1=$row['leader-content-p1'];
+            $leadercontent2=$row['leader-content-p2'];
+        }
+        
+        
+        if($_GET['party']=="Democratic"){
+            $query="SELECT * FROM party_tbl WHERE party='NDP'";
+        }else{
+            $query="SELECT * FROM party_tbl  WHERE party='".$_GET['party']."'";
+        }
+        $result=mysqli_query($connection,$query);
+        
+        $asocArray=array();
+        while($row = mysqli_fetch_assoc($result)){
+            $asocdata=array();
+            $asocdata['column-1-p1']=$row['column-1-p1'];
+            $asocdata['column-1-p2']=$row['column-1-p2'];
+            $asocdata['column-2-p1']=$row['column-2-p1'];
+            $asocdata['column-2-p2']=$row['column-2-p2'];
+            $asocArray[$row['topic']]=$asocdata;
+        }
+//        echo var_dump($asocArray);
+    }
+
+?>
+
+
+
+
 <input type="hidden" value="<?php echo strtolower($_GET['party']); ?>" id="type-party">
 <input id="scrollOption" type="hidden" value="0" />
 
@@ -49,8 +104,8 @@
         
         <div class="column large-6 medium-12 small-12 padding-none center 
              <?php echo strtolower($_GET['party'])."-desc-title"; ?>">
-            <h1> Rona Ambrose </h1>
-            <h2> Conservative Party Leader </h2> 
+            <h1> <?php echo $leadername; ?></h1>
+            <h2> <?php echo $_GET['party']; ?> Party Leader </h2> 
             
             
             <a href="#scroll2" class="show-for-large"> 
@@ -59,28 +114,12 @@
             </a>
         </div>
         <div class="column large-6 medium-12 small-12 padding-none center 
-             conservative-desc-para">
+             <?php echo strtolower($_GET['party'])."-desc-para"; ?>">
             <p>
-                Rona Ambrose is the interim leader of 
-                the Conservative Party of Canada. 
-                Ms. Ambrose is the Conservative MP 
-                for the new riding of Sturgeon River-Parkland.
-                She was first elected as a Member of Parliament
-                for Edmontonâ€“Spruce Grove in 2004.<br><br> 
-
-                Ms. Ambrose holds a Bachelor of Arts from the
-                University of Victoria and a Masterâ€™s Degree
-                in Political Science from the University of Alberta.
-
-                <!--   She held several cabinet positions including 
-                Environment, Intergovernmental Affairs, 
-                Western Economic Diversification, Labour, 
-                Public Works and Government Services Canada,
-                Receiver General, Status of Women, and Health. 
-                Ms. Ambrose holds a Bachelor of Arts from the
-                University of Victoria and a Masterâ€™s Degree
-                in Political Science from the University of Alberta.-->
-
+               <?php echo $leadercontent1; ?>
+            </p>
+            <p>
+                <?php echo $leadercontent2; ?>
             </p>
         </div>
     </div>
@@ -142,36 +181,19 @@
     <div class="column large-4 medium-12 small-12 padding-none center overlay
          half-page">
         
-        <p> Blue mountain pumpkin spice cafÃ© au lait, 
-            cultivar pumpkin spice filter et caffeine
-            spoon. Blue mountain extraction cinnamon
-            variety java aroma medium lungo. Grinder
-            spoon foam, cappuccino dripper plunger 
-            pot, siphon mazagran plunger pot decaffeinated aged.<br><br>                
-
-            Plunger pot coffee in sweet instant 
-            arabica frappuccino decaffeinated dark
-            brewed. Organic, lungo, sit seasonal latte,
-            chicory trifecta instant crema single origin 
-            organic. Trifecta, brewed siphon, doppio 
-            est cortado grounds instant organic americano.
+        <p>
+            <?php echo $asocArray["Economy"]["column-1-p1"]; ?>
+        </p>              
+        <p>
+            <?php echo $asocArray["Economy"]["column-1-p2"]; ?>
         </p>
         
         <p class="column medium-12 small-12 hide-for-large"> 
-            Blue mountain pumpkin spice cafÃ© au lait, 
-            cultivar pumpkin spice filter et caffeine
-            spoon. Blue mountain extraction cinnamon
-            variety java aroma medium lungo. Grinder
-            spoon foam, cappuccino dripper plunger 
-            pot, siphon mazagran plunger pot decaffeinated aged.<br><br>                
-
-            Plunger pot coffee in sweet instant 
-            arabica frappuccino decaffeinated dark
-            brewed. Organic, lungo, sit seasonal latte,
-            chicory trifecta instant crema single origin 
-            organic. Trifecta, brewed siphon, doppio 
-            est cortado grounds instant organic americano.
-        </p>
+            <?php echo $asocArray["Economy"]["column-1-p1"]; ?>
+        </p>  
+        <p class="column medium-12 small-12 hide-for-large"> 
+            <?php echo $asocArray["Economy"]["column-1-p2"]; ?>
+        </p>  
         
     </div>
     
@@ -204,20 +226,13 @@
     <div class="column large-4 show-for-large padding-none center 
          overlay half-page">
         
-        <p> Blue mountain pumpkin spice cafÃ© au lait, 
-            cultivar pumpkin spice filter et caffeine
-            spoon. Blue mountain extraction cinnamon
-            variety java aroma medium lungo. Grinder
-            spoon foam, cappuccino dripper plunger 
-            pot, siphon mazagran plunger pot decaffeinated aged.<br><br>                
-
-            Plunger pot coffee in sweet instant 
-            arabica frappuccino decaffeinated dark
-            brewed. Organic, lungo, sit seasonal latte,
-            chicory trifecta instant crema single origin 
-            organic. Trifecta, brewed siphon, doppio 
-            est cortado grounds instant organic americano.
-        </p>
+        <p> 
+            <?php echo $asocArray["Economy"]["column-2-p1"]; ?>
+        </p>  
+        <p> 
+            <?php echo $asocArray["Economy"]["column-2-p2"]; ?>
+        </p> 
+        
     </div>
     
     
@@ -227,7 +242,7 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
-             class="voting-icons" id="party1-1" data-voted="0" data-vote='0'>
+             class="voting-icons" id="<?php echo strtolower($_GET['party']); ?>-1" data-voted="0" data-vote='0'>
         <p class="white voted"> Voted! </p>
     </div>
     
@@ -236,7 +251,7 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
-             class="voting-icons-mediumsmall" id="party1-1" data-voted="0" data-vote='0'>
+             class="voting-icons-mediumsmall" id="<?php echo strtolower($_GET['party']); ?>-1" data-voted="0" data-vote='0'>
         <p class="white voted-m"> Voted! </p>
     </div>
     
@@ -311,35 +326,18 @@
     <div class="column large-4 medium-12 small-12 padding-none center overlay
          half-page">
         
-        <p> Blue mountain pumpkin spice cafÃ© au lait, 
-            cultivar pumpkin spice filter et caffeine
-            spoon. Blue mountain extraction cinnamon
-            variety java aroma medium lungo. Grinder
-            spoon foam, cappuccino dripper plunger 
-            pot, siphon mazagran plunger pot decaffeinated aged.<br><br>                
-
-            Plunger pot coffee in sweet instant 
-            arabica frappuccino decaffeinated dark
-            brewed. Organic, lungo, sit seasonal latte,
-            chicory trifecta instant crema single origin 
-            organic. Trifecta, brewed siphon, doppio 
-            est cortado grounds instant organic americano.
+        <p>
+            <?php echo $asocArray["Environment"]["column-1-p1"]; ?>
+        </p>              
+        <p>
+            <?php echo $asocArray["Environment"]["column-1-p2"]; ?>
         </p>
         
         <p class="column medium-12 small-12 hide-for-large"> 
-            Blue mountain pumpkin spice cafÃ© au lait, 
-            cultivar pumpkin spice filter et caffeine
-            spoon. Blue mountain extraction cinnamon
-            variety java aroma medium lungo. Grinder
-            spoon foam, cappuccino dripper plunger 
-            pot, siphon mazagran plunger pot decaffeinated aged.<br><br>                
-
-            Plunger pot coffee in sweet instant 
-            arabica frappuccino decaffeinated dark
-            brewed. Organic, lungo, sit seasonal latte,
-            chicory trifecta instant crema single origin 
-            organic. Trifecta, brewed siphon, doppio 
-            est cortado grounds instant organic americano.
+            <?php echo $asocArray["Environment"]["column-1-p1"]; ?>
+        </p>  
+        <p class="column medium-12 small-12 hide-for-large"> 
+            <?php echo $asocArray["Environment"]["column-1-p2"]; ?>
         </p>
         
     </div>
@@ -373,20 +371,13 @@
     <div class="column large-4 show-for-large padding-none center 
          overlay half-page">
         
-        <p> Blue mountain pumpkin spice cafÃ© au lait, 
-            cultivar pumpkin spice filter et caffeine
-            spoon. Blue mountain extraction cinnamon
-            variety java aroma medium lungo. Grinder
-            spoon foam, cappuccino dripper plunger 
-            pot, siphon mazagran plunger pot decaffeinated aged.<br><br>                
-
-            Plunger pot coffee in sweet instant 
-            arabica frappuccino decaffeinated dark
-            brewed. Organic, lungo, sit seasonal latte,
-            chicory trifecta instant crema single origin 
-            organic. Trifecta, brewed siphon, doppio 
-            est cortado grounds instant organic americano.
+        <p>
+            <?php echo $asocArray["Environment"]["column-1-p1"]; ?>
+        </p>              
+        <p>
+            <?php echo $asocArray["Environment"]["column-1-p2"]; ?>
         </p>
+        
     </div>
     
     
@@ -396,7 +387,7 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
-             class="voting-icons" id="party1-2"  data-voted="1" data-vote='0'>
+             class="voting-icons" id="<?php echo strtolower($_GET['party']); ?>-2"  data-voted="1" data-vote='0'>
         <p class="white voted"> Voted! </p>
     </div>
     
@@ -405,7 +396,7 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
-             class="voting-icons-mediumsmall" id="party1-2" data-voted="1" data-vote='0'>
+             class="voting-icons-mediumsmall" id="<?php echo strtolower($_GET['party']); ?>-2" data-voted="1" data-vote='0'>
         <p class="white voted-m"> Voted! </p>
     </div>
     
@@ -476,35 +467,18 @@
     <div class="column large-4 medium-12 small-12 padding-none center overlay
          half-page">
         
-        <p> Blue mountain pumpkin spice cafÃ© au lait, 
-            cultivar pumpkin spice filter et caffeine
-            spoon. Blue mountain extraction cinnamon
-            variety java aroma medium lungo. Grinder
-            spoon foam, cappuccino dripper plunger 
-            pot, siphon mazagran plunger pot decaffeinated aged.<br><br>                
-
-            Plunger pot coffee in sweet instant 
-            arabica frappuccino decaffeinated dark
-            brewed. Organic, lungo, sit seasonal latte,
-            chicory trifecta instant crema single origin 
-            organic. Trifecta, brewed siphon, doppio 
-            est cortado grounds instant organic americano.
+        <p>
+            <?php echo $asocArray["Education"]["column-1-p1"]; ?>
+        </p>              
+        <p>
+            <?php echo $asocArray["Education"]["column-1-p2"]; ?>
         </p>
         
         <p class="column medium-12 small-12 hide-for-large"> 
-            Blue mountain pumpkin spice cafÃ© au lait, 
-            cultivar pumpkin spice filter et caffeine
-            spoon. Blue mountain extraction cinnamon
-            variety java aroma medium lungo. Grinder
-            spoon foam, cappuccino dripper plunger 
-            pot, siphon mazagran plunger pot decaffeinated aged.<br><br>                
-
-            Plunger pot coffee in sweet instant 
-            arabica frappuccino decaffeinated dark
-            brewed. Organic, lungo, sit seasonal latte,
-            chicory trifecta instant crema single origin 
-            organic. Trifecta, brewed siphon, doppio 
-            est cortado grounds instant organic americano.
+            <?php echo $asocArray["Education"]["column-1-p1"]; ?>
+        </p>  
+        <p class="column medium-12 small-12 hide-for-large"> 
+            <?php echo $asocArray["Education"]["column-1-p2"]; ?>
         </p>
         
     </div>
@@ -538,20 +512,13 @@
     <div class="column large-4 show-for-large padding-none center 
          overlay half-page">
         
-        <p> Blue mountain pumpkin spice cafÃ© au lait, 
-            cultivar pumpkin spice filter et caffeine
-            spoon. Blue mountain extraction cinnamon
-            variety java aroma medium lungo. Grinder
-            spoon foam, cappuccino dripper plunger 
-            pot, siphon mazagran plunger pot decaffeinated aged.<br><br>                
-
-            Plunger pot coffee in sweet instant 
-            arabica frappuccino decaffeinated dark
-            brewed. Organic, lungo, sit seasonal latte,
-            chicory trifecta instant crema single origin 
-            organic. Trifecta, brewed siphon, doppio 
-            est cortado grounds instant organic americano.
+        <p>
+            <?php echo $asocArray["Education"]["column-1-p1"]; ?>
+        </p>              
+        <p>
+            <?php echo $asocArray["Education"]["column-1-p2"]; ?>
         </p>
+        
     </div>
     
     
@@ -561,7 +528,7 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
-             class="voting-icons" id="party1-3" data-voted="2" data-vote='0'>
+             class="voting-icons" id="<?php echo strtolower($_GET['party']); ?>-3" data-voted="2" data-vote='0'>
         <p class="white voted"> Voted! </p>
     </div>
     
@@ -570,7 +537,7 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
-             class="voting-icons-mediumsmall" id="party1-3" data-voted="2" data-vote='0'>
+             class="voting-icons-mediumsmall" id="<?php echo strtolower($_GET['party']); ?>-3" data-voted="2" data-vote='0'>
         <p class="white voted-m"> Voted! </p>
     </div>
     
@@ -633,35 +600,18 @@
     <div class="column large-4 medium-12 small-12 padding-none center overlay
          half-page">
         
-        <p> Blue mountain pumpkin spice cafÃ© au lait, 
-            cultivar pumpkin spice filter et caffeine
-            spoon. Blue mountain extraction cinnamon
-            variety java aroma medium lungo. Grinder
-            spoon foam, cappuccino dripper plunger 
-            pot, siphon mazagran plunger pot decaffeinated aged.<br><br>                
-
-            Plunger pot coffee in sweet instant 
-            arabica frappuccino decaffeinated dark
-            brewed. Organic, lungo, sit seasonal latte,
-            chicory trifecta instant crema single origin 
-            organic. Trifecta, brewed siphon, doppio 
-            est cortado grounds instant organic americano.
+        <p>
+            <?php echo $asocArray["Healthcare"]["column-1-p1"]; ?>
+        </p>              
+        <p>
+            <?php echo $asocArray["Healthcare"]["column-1-p2"]; ?>
         </p>
         
         <p class="column medium-12 small-12 hide-for-large"> 
-            Blue mountain pumpkin spice cafÃ© au lait, 
-            cultivar pumpkin spice filter et caffeine
-            spoon. Blue mountain extraction cinnamon
-            variety java aroma medium lungo. Grinder
-            spoon foam, cappuccino dripper plunger 
-            pot, siphon mazagran plunger pot decaffeinated aged.<br><br>                
-
-            Plunger pot coffee in sweet instant 
-            arabica frappuccino decaffeinated dark
-            brewed. Organic, lungo, sit seasonal latte,
-            chicory trifecta instant crema single origin 
-            organic. Trifecta, brewed siphon, doppio 
-            est cortado grounds instant organic americano.
+            <?php echo $asocArray["Healthcare"]["column-1-p1"]; ?>
+        </p>  
+        <p class="column medium-12 small-12 hide-for-large"> 
+            <?php echo $asocArray["Healthcare"]["column-1-p2"]; ?>
         </p>
         
     </div>
@@ -670,7 +620,6 @@
     <div class="column large-4 show-for-large padding-none left <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page">
         <br><br><h1 class="party-topic1"> HEALTH </h1>
        
-        
         
     </div>
     
@@ -695,20 +644,13 @@
     <div class="column large-4 show-for-large padding-none center 
          overlay half-page">
         
-        <p> Blue mountain pumpkin spice cafÃ© au lait, 
-            cultivar pumpkin spice filter et caffeine
-            spoon. Blue mountain extraction cinnamon
-            variety java aroma medium lungo. Grinder
-            spoon foam, cappuccino dripper plunger 
-            pot, siphon mazagran plunger pot decaffeinated aged.<br><br>                
-
-            Plunger pot coffee in sweet instant 
-            arabica frappuccino decaffeinated dark
-            brewed. Organic, lungo, sit seasonal latte,
-            chicory trifecta instant crema single origin 
-            organic. Trifecta, brewed siphon, doppio 
-            est cortado grounds instant organic americano.
+        <p>
+            <?php echo $asocArray["Healthcare"]["column-1-p1"]; ?>
+        </p>              
+        <p>
+            <?php echo $asocArray["Healthcare"]["column-1-p2"]; ?>
         </p>
+        
     </div>
     
     
@@ -718,7 +660,7 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
-             class="voting-icons" id="party1-4" data-voted="3" data-vote='0'>
+             class="voting-icons" id="<?php echo strtolower($_GET['party']); ?>-4" data-voted="3" data-vote='0'>
         <p class="white voted"> Voted! </p>
     </div>
     
@@ -727,7 +669,7 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
-             class="voting-icons-mediumsmall" id="party1-4" data-voted="3" data-vote='0'>
+             class="voting-icons-mediumsmall" id="<?php echo strtolower($_GET['party']); ?>-4" data-voted="3" data-vote='0'>
         <p class="white voted-m"> Voted! </p>
     </div>
     
@@ -792,37 +734,19 @@
     <div class="column large-4 medium-12 small-12 padding-none center overlay
          half-page">
         
-        <p> Blue mountain pumpkin spice cafÃ© au lait, 
-            cultivar pumpkin spice filter et caffeine
-            spoon. Blue mountain extraction cinnamon
-            variety java aroma medium lungo. Grinder
-            spoon foam, cappuccino dripper plunger 
-            pot, siphon mazagran plunger pot decaffeinated aged.<br><br>                
-
-            Plunger pot coffee in sweet instant 
-            arabica frappuccino decaffeinated dark
-            brewed. Organic, lungo, sit seasonal latte,
-            chicory trifecta instant crema single origin 
-            organic. Trifecta, brewed siphon, doppio 
-            est cortado grounds instant organic americano.
+        <p>
+            <?php echo $asocArray["Immigration"]["column-1-p1"]; ?>
+        </p>              
+        <p>
+            <?php echo $asocArray["Immigration"]["column-1-p2"]; ?>
         </p>
         
         <p class="column medium-12 small-12 hide-for-large"> 
-            Blue mountain pumpkin spice cafÃ© au lait, 
-            cultivar pumpkin spice filter et caffeine
-            spoon. Blue mountain extraction cinnamon
-            variety java aroma medium lungo. Grinder
-            spoon foam, cappuccino dripper plunger 
-            pot, siphon mazagran plunger pot decaffeinated aged.<br><br>                
-
-            Plunger pot coffee in sweet instant 
-            arabica frappuccino decaffeinated dark
-            brewed. Organic, lungo, sit seasonal latte,
-            chicory trifecta instant crema single origin 
-            organic. Trifecta, brewed siphon, doppio 
-            est cortado grounds instant organic americano.
+            <?php echo $asocArray["Immigration"]["column-1-p1"]; ?>
+        </p>  
+        <p class="column medium-12 small-12 hide-for-large"> 
+            <?php echo $asocArray["Immigration"]["column-1-p2"]; ?>
         </p>
-        
     </div>
     
     
@@ -854,20 +778,13 @@
     <div class="column large-4 show-for-large padding-none center 
          overlay half-page">
         
-        <p> Blue mountain pumpkin spice cafÃ© au lait, 
-            cultivar pumpkin spice filter et caffeine
-            spoon. Blue mountain extraction cinnamon
-            variety java aroma medium lungo. Grinder
-            spoon foam, cappuccino dripper plunger 
-            pot, siphon mazagran plunger pot decaffeinated aged.<br><br>                
-
-            Plunger pot coffee in sweet instant 
-            arabica frappuccino decaffeinated dark
-            brewed. Organic, lungo, sit seasonal latte,
-            chicory trifecta instant crema single origin 
-            organic. Trifecta, brewed siphon, doppio 
-            est cortado grounds instant organic americano.
+        <p>
+            <?php echo $asocArray["Immigration"]["column-1-p1"]; ?>
+        </p>              
+        <p>
+            <?php echo $asocArray["Immigration"]["column-1-p2"]; ?>
         </p>
+        
     </div>
     
     
@@ -877,7 +794,7 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
-             class="voting-icons" id="party1-5" data-voted="4" data-vote='0'>
+             class="voting-icons" id="<?php echo strtolower($_GET['party']); ?>-5" data-voted="4" data-vote='0'>
         <p class="white voted"> Voted! </p>
     </div>
     
@@ -886,7 +803,7 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
-             class="voting-icons-mediumsmall" id="party1-5" data-voted="4" data-vote='0'>
+             class="voting-icons-mediumsmall" id="<?php echo strtolower($_GET['party']); ?>-5" data-voted="4" data-vote='0'>
         <p class="white voted-m"> Voted! </p>
     </div>
     
@@ -943,35 +860,18 @@
     <div class="column large-4 medium-12 small-12 padding-none center overlay
          half-page">
         
-        <p> Blue mountain pumpkin spice cafÃ© au lait, 
-            cultivar pumpkin spice filter et caffeine
-            spoon. Blue mountain extraction cinnamon
-            variety java aroma medium lungo. Grinder
-            spoon foam, cappuccino dripper plunger 
-            pot, siphon mazagran plunger pot decaffeinated aged.<br><br>                
-
-            Plunger pot coffee in sweet instant 
-            arabica frappuccino decaffeinated dark
-            brewed. Organic, lungo, sit seasonal latte,
-            chicory trifecta instant crema single origin 
-            organic. Trifecta, brewed siphon, doppio 
-            est cortado grounds instant organic americano.
+        <p>
+            <?php echo $asocArray["Housing"]["column-1-p1"]; ?>
+        </p>              
+        <p>
+            <?php echo $asocArray["Housing"]["column-1-p2"]; ?>
         </p>
         
         <p class="column medium-12 small-12 hide-for-large"> 
-            Blue mountain pumpkin spice cafÃ© au lait, 
-            cultivar pumpkin spice filter et caffeine
-            spoon. Blue mountain extraction cinnamon
-            variety java aroma medium lungo. Grinder
-            spoon foam, cappuccino dripper plunger 
-            pot, siphon mazagran plunger pot decaffeinated aged.<br><br>                
-
-            Plunger pot coffee in sweet instant 
-            arabica frappuccino decaffeinated dark
-            brewed. Organic, lungo, sit seasonal latte,
-            chicory trifecta instant crema single origin 
-            organic. Trifecta, brewed siphon, doppio 
-            est cortado grounds instant organic americano.
+            <?php echo $asocArray["Housing"]["column-1-p1"]; ?>
+        </p>  
+        <p class="column medium-12 small-12 hide-for-large"> 
+            <?php echo $asocArray["Housing"]["column-1-p2"]; ?>
         </p>
         
     </div>
@@ -1004,20 +904,13 @@
     <div class="column large-4 show-for-large padding-none center 
          overlay half-page">
         
-        <p> Blue mountain pumpkin spice cafÃ© au lait, 
-            cultivar pumpkin spice filter et caffeine
-            spoon. Blue mountain extraction cinnamon
-            variety java aroma medium lungo. Grinder
-            spoon foam, cappuccino dripper plunger 
-            pot, siphon mazagran plunger pot decaffeinated aged.<br><br>                
-
-            Plunger pot coffee in sweet instant 
-            arabica frappuccino decaffeinated dark
-            brewed. Organic, lungo, sit seasonal latte,
-            chicory trifecta instant crema single origin 
-            organic. Trifecta, brewed siphon, doppio 
-            est cortado grounds instant organic americano.
+        <p>
+            <?php echo $asocArray["Housing"]["column-1-p1"]; ?>
+        </p>              
+        <p>
+            <?php echo $asocArray["Housing"]["column-1-p2"]; ?>
         </p>
+        
     </div>
     
     
@@ -1027,7 +920,7 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
-             class="voting-icons" id="party1-6" data-voted="5" data-vote='0'>
+             class="voting-icons" id="<?php echo strtolower($_GET['party']); ?>-6" data-voted="5" data-vote='0'>
         <p class="white voted"> Voted! </p>
     </div>
     
@@ -1036,7 +929,7 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
-             class="voting-icons-mediumsmall" id="party1-6" data-voted="5" data-vote='0'>
+             class="voting-icons-mediumsmall" id="<?php echo strtolower($_GET['party']); ?>-6" data-voted="5" data-vote='0'>
         <p class="white voted-m"> Voted! </p>
     </div>
     
@@ -1095,35 +988,18 @@
     <div class="column large-4 medium-12 small-12 padding-none center overlay
          half-page">
         
-        <p> Blue mountain pumpkin spice cafÃ© au lait, 
-            cultivar pumpkin spice filter et caffeine
-            spoon. Blue mountain extraction cinnamon
-            variety java aroma medium lungo. Grinder
-            spoon foam, cappuccino dripper plunger 
-            pot, siphon mazagran plunger pot decaffeinated aged.<br><br>                
-
-            Plunger pot coffee in sweet instant 
-            arabica frappuccino decaffeinated dark
-            brewed. Organic, lungo, sit seasonal latte,
-            chicory trifecta instant crema single origin 
-            organic. Trifecta, brewed siphon, doppio 
-            est cortado grounds instant organic americano.
+        <p>
+            <?php echo $asocArray["Foreign Policy"]["column-1-p1"]; ?>
+        </p>              
+        <p>
+            <?php echo $asocArray["Foreign Policy"]["column-1-p2"]; ?>
         </p>
         
         <p class="column medium-12 small-12 hide-for-large"> 
-            Blue mountain pumpkin spice cafÃ© au lait, 
-            cultivar pumpkin spice filter et caffeine
-            spoon. Blue mountain extraction cinnamon
-            variety java aroma medium lungo. Grinder
-            spoon foam, cappuccino dripper plunger 
-            pot, siphon mazagran plunger pot decaffeinated aged.<br><br>                
-
-            Plunger pot coffee in sweet instant 
-            arabica frappuccino decaffeinated dark
-            brewed. Organic, lungo, sit seasonal latte,
-            chicory trifecta instant crema single origin 
-            organic. Trifecta, brewed siphon, doppio 
-            est cortado grounds instant organic americano.
+            <?php echo $asocArray["Foreign Policy"]["column-1-p1"]; ?>
+        </p>  
+        <p class="column medium-12 small-12 hide-for-large"> 
+            <?php echo $asocArray["Foreign Policy"]["column-1-p2"]; ?>
         </p>
         
     </div>
@@ -1156,20 +1032,13 @@
     <div class="column large-4 show-for-large padding-none center 
          overlay half-page">
         
-        <p> Blue mountain pumpkin spice cafÃ© au lait, 
-            cultivar pumpkin spice filter et caffeine
-            spoon. Blue mountain extraction cinnamon
-            variety java aroma medium lungo. Grinder
-            spoon foam, cappuccino dripper plunger 
-            pot, siphon mazagran plunger pot decaffeinated aged.<br><br>                
-
-            Plunger pot coffee in sweet instant 
-            arabica frappuccino decaffeinated dark
-            brewed. Organic, lungo, sit seasonal latte,
-            chicory trifecta instant crema single origin 
-            organic. Trifecta, brewed siphon, doppio 
-            est cortado grounds instant organic americano.
+       <p>
+            <?php echo $asocArray["Foreign Policy"]["column-1-p1"]; ?>
+        </p>              
+        <p>
+            <?php echo $asocArray["Foreign Policy"]["column-1-p2"]; ?>
         </p>
+        
     </div>
     
     
@@ -1179,7 +1048,7 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
-             class="voting-icons" id="party1-7" data-voted="6" data-vote='0'>
+             class="voting-icons" id="<?php echo strtolower($_GET['party']); ?>-7" data-voted="6" data-vote='0'>
         <p class="white voted"> Voted! </p>
     </div>
     
@@ -1188,7 +1057,7 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
-             class="voting-icons-mediumsmall" id="party1-7" data-voted="6" data-vote='0'>
+             class="voting-icons-mediumsmall" id="<?php echo strtolower($_GET['party']); ?>-7" data-voted="6" data-vote='0'>
         <p class="white voted-m"> Voted! </p>
     </div>
     
@@ -1249,35 +1118,18 @@
     <div class="column large-4 medium-12 small-12 padding-none center overlay
          half-page">
         
-        <p> Blue mountain pumpkin spice cafÃ© au lait, 
-            cultivar pumpkin spice filter et caffeine
-            spoon. Blue mountain extraction cinnamon
-            variety java aroma medium lungo. Grinder
-            spoon foam, cappuccino dripper plunger 
-            pot, siphon mazagran plunger pot decaffeinated aged.<br><br>                
-
-            Plunger pot coffee in sweet instant 
-            arabica frappuccino decaffeinated dark
-            brewed. Organic, lungo, sit seasonal latte,
-            chicory trifecta instant crema single origin 
-            organic. Trifecta, brewed siphon, doppio 
-            est cortado grounds instant organic americano.
+        <p>
+            <?php echo $asocArray["Privacy"]["column-1-p1"]; ?>
+        </p>              
+        <p>
+            <?php echo $asocArray["Privacy"]["column-1-p2"]; ?>
         </p>
         
         <p class="column medium-12 small-12 hide-for-large"> 
-            Blue mountain pumpkin spice cafÃ© au lait, 
-            cultivar pumpkin spice filter et caffeine
-            spoon. Blue mountain extraction cinnamon
-            variety java aroma medium lungo. Grinder
-            spoon foam, cappuccino dripper plunger 
-            pot, siphon mazagran plunger pot decaffeinated aged.<br><br>                
-
-            Plunger pot coffee in sweet instant 
-            arabica frappuccino decaffeinated dark
-            brewed. Organic, lungo, sit seasonal latte,
-            chicory trifecta instant crema single origin 
-            organic. Trifecta, brewed siphon, doppio 
-            est cortado grounds instant organic americano.
+            <?php echo $asocArray["Privacy"]["column-1-p1"]; ?>
+        </p>  
+        <p class="column medium-12 small-12 hide-for-large"> 
+            <?php echo $asocArray["Privacy"]["column-1-p2"]; ?>
         </p>
         
     </div>
@@ -1311,20 +1163,13 @@
     <div class="column large-4 show-for-large padding-none center 
          overlay half-page">
         
-        <p> Blue mountain pumpkin spice cafÃ© au lait, 
-            cultivar pumpkin spice filter et caffeine
-            spoon. Blue mountain extraction cinnamon
-            variety java aroma medium lungo. Grinder
-            spoon foam, cappuccino dripper plunger 
-            pot, siphon mazagran plunger pot decaffeinated aged.<br><br>                
-
-            Plunger pot coffee in sweet instant 
-            arabica frappuccino decaffeinated dark
-            brewed. Organic, lungo, sit seasonal latte,
-            chicory trifecta instant crema single origin 
-            organic. Trifecta, brewed siphon, doppio 
-            est cortado grounds instant organic americano.
+        <p>
+            <?php echo $asocArray["Privacy"]["column-1-p1"]; ?>
+        </p>              
+        <p>
+            <?php echo $asocArray["Privacy"]["column-1-p2"]; ?>
         </p>
+        
     </div>
     
     
@@ -1334,7 +1179,7 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
-             class="voting-icons" id="party1-8" data-voted="7" data-vote='0'>
+             class="voting-icons" id="<?php echo strtolower($_GET['party']); ?>-8" data-voted="7" data-vote='0'>
         <p class="white voted"> Voted! </p>
     </div>
     
@@ -1343,7 +1188,7 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
-             class="voting-icons-mediumsmall" id="party1-8" data-voted="7" data-vote='0'>
+             class="voting-icons-mediumsmall" id="<?php echo strtolower($_GET['party']); ?>-8" data-voted="7" data-vote='0'>
         <p class="white voted-m"> Voted! </p>
     </div>
     
@@ -1406,35 +1251,18 @@
     <div class="column large-4 medium-12 small-12 padding-none center overlay
          half-page">
         
-        <p> Blue mountain pumpkin spice cafÃ© au lait, 
-            cultivar pumpkin spice filter et caffeine
-            spoon. Blue mountain extraction cinnamon
-            variety java aroma medium lungo. Grinder
-            spoon foam, cappuccino dripper plunger 
-            pot, siphon mazagran plunger pot decaffeinated aged.<br><br>                
-
-            Plunger pot coffee in sweet instant 
-            arabica frappuccino decaffeinated dark
-            brewed. Organic, lungo, sit seasonal latte,
-            chicory trifecta instant crema single origin 
-            organic. Trifecta, brewed siphon, doppio 
-            est cortado grounds instant organic americano.
+        <p>
+            <?php echo $asocArray["Electoral Reform"]["column-1-p1"]; ?>
+        </p>              
+        <p>
+            <?php echo $asocArray["Electoral Reform"]["column-1-p2"]; ?>
         </p>
         
         <p class="column medium-12 small-12 hide-for-large"> 
-            Blue mountain pumpkin spice cafÃ© au lait, 
-            cultivar pumpkin spice filter et caffeine
-            spoon. Blue mountain extraction cinnamon
-            variety java aroma medium lungo. Grinder
-            spoon foam, cappuccino dripper plunger 
-            pot, siphon mazagran plunger pot decaffeinated aged.<br><br>                
-
-            Plunger pot coffee in sweet instant 
-            arabica frappuccino decaffeinated dark
-            brewed. Organic, lungo, sit seasonal latte,
-            chicory trifecta instant crema single origin 
-            organic. Trifecta, brewed siphon, doppio 
-            est cortado grounds instant organic americano.
+            <?php echo $asocArray["Electoral Reform"]["column-1-p1"]; ?>
+        </p>  
+        <p class="column medium-12 small-12 hide-for-large"> 
+            <?php echo $asocArray["Electoral Reform"]["column-1-p2"]; ?>
         </p>
         
     </div>
@@ -1468,19 +1296,11 @@
     <div class="column large-4 show-for-large padding-none center 
          overlay half-page">
         
-        <p> Blue mountain pumpkin spice cafÃ© au lait, 
-            cultivar pumpkin spice filter et caffeine
-            spoon. Blue mountain extraction cinnamon
-            variety java aroma medium lungo. Grinder
-            spoon foam, cappuccino dripper plunger 
-            pot, siphon mazagran plunger pot decaffeinated aged.<br><br>                
-
-            Plunger pot coffee in sweet instant 
-            arabica frappuccino decaffeinated dark
-            brewed. Organic, lungo, sit seasonal latte,
-            chicory trifecta instant crema single origin 
-            organic. Trifecta, brewed siphon, doppio 
-            est cortado grounds instant organic americano.
+        <p>
+            <?php echo $asocArray["Electoral Reform"]["column-1-p1"]; ?>
+        </p>              
+        <p>
+            <?php echo $asocArray["Electoral Reform"]["column-1-p2"]; ?>
         </p>
     </div>
     
@@ -1491,7 +1311,7 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
-             class="voting-icons" id="party1-9" data-voted="8" data-vote='0'>
+             class="voting-icons" id="<?php echo strtolower($_GET['party']); ?>-9" data-voted="8" data-vote='0'>
         <p class="white voted"> Voted! </p>
     </div>
     
@@ -1500,7 +1320,7 @@
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon-mediumsmall.svg" alt="the voting icon"
-             class="voting-icons-mediumsmall" id="party1-9" data-voted="8" data-vote='0'>
+             class="voting-icons-mediumsmall" id="<?php echo strtolower($_GET['party']); ?>-9" data-voted="8" data-vote='0'>
         <p class="white voted-m"> Voted! </p>
     </div>
     

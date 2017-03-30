@@ -31,7 +31,7 @@
                         </a>
                     </li>
                     <li class="column large-2 medium-2 nav nav-conservative ">                       
-                        <a href="conservative.php" class="active1" id="nav-conservative"> Conservative </a>
+                        <a href="parties.php?party=Conservative" class="active1" id="nav-conservative"> Conservative </a>
                     </li>
                       <li class="column large-2 medium-2 nav nav-democratic">                      
                         <a href="parties.php?party=Democratic" id="nav-democratic"> Democratic </a>
