@@ -10,6 +10,7 @@
     if(!$conn){
         echo "error : " + mysqli_connect_error();
     }else{
+        mysqli_set_charset($conn,"utf8");
         $topicList=explode(",",$_POST["topics"]);
         $arrrayParty=explode(",",$_POST["party"]);
         $arrrayParty=addPartyQuery($arrrayParty,'party');
