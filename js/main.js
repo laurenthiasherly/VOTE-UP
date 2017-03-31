@@ -463,26 +463,44 @@ $(function(){
     }
 
     function updateComparingContent(){
-        messageComparing="";
+       let partyComparing="";
+        let topics="";
         $(".sidebar-topic-filt").each(function(index){
             if($(this).data("selected")==1){
-                messageComparing+="<div class='clear-fix'>";
-                messageComparing+="<h1 class='content-topic-default'>"+$(".tip-topic").eq(index).text()+"</h1>";
-                topicSelected=$(this).text();
-                $(".party-top-comp").each(function(){
-                    if($(this).data("selected")==1){
-                        messageComparing+="<div class='content-topic-party"+partiesSelected+" col'><div class='content-showing-style'><div class='topic-title-"+$(this).text().toLocaleLowerCase()+"'>"+$(this).text()+" PARTY"+"</div><div class='comparison-content'>Proin tempus lobortis quam, non varius libero eleifend et. Aliquam vehicula, augue quis sodales lacinia, lectus felis facilisis diam, ac lacinia nulla sapien auctor orci. Ut bibendum ornare hendrerit. </div></div></div>";
-
-                    }
-                });
-                messageComparing+="</div>";
+                topics+=$(".tip-topic").eq(index).text()+",";
             }
         });
-        if(partiesSelected==0){
-            $("#contentTopic").html('<p class="content-topic-default">Please select the parties and Topics.</p>');
+        $(".party-top-comp").each(function(){
+            if($(this).data("selected")==1){
+                partyComparing+=$(this).text()+",";
+            }
+        });
+        if(partiesSelected==0||topics==""){
+            $("#contentTopic").html('<p class="content-topic-default">Please select the parties.</p>');
         }else{
-            $("#contentTopic").html(messageComparing);
+            topics=topics.substring(0,topics.length-1);
+            partyComparing=partyComparing.substring(0,partyComparing.length-1);
+            if(topics!=""&&partyComparing!=""){
+                ajaxGetDatafromDatabase(partyComparing,topics);
+            }else{
+                $("#contentTopic").html('<p class="content-topic-default">Please select the Topics.</p>');
+            }
         }
+    }
+    
+    function ajaxGetDatafromDatabase(partyname,topics){
+        $.ajax({
+            url: 'comparisondatabase.php',
+            type: 'POST',
+            data: {"party":partyname,"topics":topics},
+            success: function(data, status) {
+                $("#contentTopic").html(data);
+            },
+            error: function(xhr, desc, err) {
+                console.log(xhr);
+                console.log("Details: " + desc + "\nError:" + err);
+            }
+        });
     }
 
     window.onbeforeunload = function(){

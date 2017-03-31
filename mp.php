@@ -12,7 +12,7 @@
     <div id="container" class="map-style">
         <div class="loading">
             <i class="icon-spinner icon-spin icon-large"></i>
-            Loading Map...
+            
         </div>
     </div>
 </div>
