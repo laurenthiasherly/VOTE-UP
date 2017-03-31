@@ -133,7 +133,8 @@
                 <div class="column padding-none center arrow-down" data-status="open" id="arrow-down">
                     <i class="fa fa-sort white" aria-hidden="true"> </i>
                 </div>
-                <h3 data-direct="filter0" id="filterShow"> COMPARE PARTY! </h3>
+                <h3 data-direct="filter0" id="filterShow" class="show-for-large"> COMPARE PARTY! </h3>
+                <a class='' href='comparisonmobile.php'><h3 data-direct="filter0"> COMPARE PARTY! </h3></a>
             </div>
             
         </header>
