@@ -80,26 +80,28 @@
                         <a><i class="fa fa-sitemap white" aria-hidden="true"> </i></a></li>
                 </ul>
             </div>
-            
+            <div class="modalbox-topic-text center">
+                <div class="modalbox-topic" id="modal-text0"><a>Economy</a></div>
+                <div class="modalbox-topic" id="modal-text1"><a>Environment</a></div>
+                <div class="modalbox-topic" id="modal-text2"><a>Education</a></div>
+                <div class="modalbox-topic" id="modal-text3"><a>Health</a></div>
+                <div class="modalbox-topic" id="modal-text4"><a>Immigration</a></div>
+                <div class="modalbox-topic" id="modal-text5"><a>Housing</a></div>
+                <div class="modalbox-topic" id="modal-text6"><a>Foreign Policy</a></div>
+                <div class="modalbox-topic" id="modal-text7"><a>Privacy</a></div>
+                <div class="modalbox-topic" id="modal-text8"><a>Electoral Reform</a></div>
+
+            </div>
             <div class="comp-content">
                 <div id="contentTopic">
                     <h3 class="content-topic-default">Please select the parties and Topics.</h3>
                 </div>
             </div>
+            
+            
         </div>
         
-        <div class="modalbox-topic-text center">
-            <div class="modalbox-topic" id="modal-text0"><a>Economy</a></div>
-            <div class="modalbox-topic" id="modal-text1"><a>Environment</a></div>
-            <div class="modalbox-topic" id="modal-text2"><a>Education</a></div>
-            <div class="modalbox-topic" id="modal-text3"><a>Health</a></div>
-            <div class="modalbox-topic" id="modal-text4"><a>Immigration</a></div>
-            <div class="modalbox-topic" id="modal-text5"><a>Housing</a></div>
-            <div class="modalbox-topic" id="modal-text6"><a>Foreign Policy</a></div>
-            <div class="modalbox-topic" id="modal-text7"><a>Privacy</a></div>
-            <div class="modalbox-topic" id="modal-text8"><a>Electoral Reform</a></div>
-
-        </div>
+        
     </div>
 
     <div id="votingBox" class="center">
