@@ -140,7 +140,7 @@
         </div>
     </div>
     
-    <div class="column large-7 medium-6 small-12 padding-vertical 
+    <div class="column large-7 medium-12 small-12 padding-vertical 
          center parties-page-mp-list">
         <h3 id="party-page-mp-close"> X </h3>
         <h1 id="province-header"> Province </h1> 

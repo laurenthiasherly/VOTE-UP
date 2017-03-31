@@ -49,6 +49,40 @@
         cursor: pointer;
         padding: 20px;
     }
+    .content-topic-party1,
+    .content-topic-party2,
+    .content-topic-party3,
+    .content-topic-party4
+    {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .content-showing-style{
+        background-color: white;
+    }
+
+    .comparison-content{
+        padding: 60px 0;
+    }
+    
+    .mobile-list-top{
+        padding: 0;
+        margin: 0;
+        width: 20%;
+        float: left;
+        text-align: center;
+    }
+    .mobile-list-bottom{
+        padding: 0;
+        margin: 0;
+        width: 25%;
+        float: left;
+        text-align: center;
+    }
+    .tip-topic-style{
+        display: none;
+    }
 }
 
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
@@ -171,6 +205,33 @@
         cursor: pointer;
         padding: 20px;
     }
+    .content-topic-party1{
+        padding: 10px;
+        width: 100%;
+    }
+
+    .content-topic-party2{
+        padding: 10px;
+        width: 50%;
+    }
+
+    .content-topic-party3{
+        padding: 10px;
+        width: 33.33%;
+    }
+
+    .content-topic-party4{
+        padding: 10px;
+        width: 100%;
+    }
+
+    .content-showing-style{
+        background-color: white;
+    }
+
+    .comparison-content{
+        padding: 60px 0;
+    }
 }
 
 /* ----- Modal Box (Comparing Side) ------*/
@@ -287,33 +348,7 @@
    
 }
 
-.content-topic-party1{
-    padding: 10px;
-    width: 100%;
-}
 
-.content-topic-party2{
-    padding: 10px;
-    width: 50%;
-}
-
-.content-topic-party3{
-    padding: 10px;
-    width: 33.33%;
-}
-
-.content-topic-party4{
-    padding: 10px;
-    width: 100%;
-}
-
-.content-showing-style{
-    background-color: white;
-}
-
-.comparison-content{
-    padding: 60px 0;
-}
 
 .topic-title-conservative{
     padding: 10px 0;
