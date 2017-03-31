@@ -87,18 +87,7 @@
 
 /* ----- Modal Box (Comparing Side) ------*/
 
-.conservative-desc-para, .conservative-desc{
-    background:$light-blue;
-}
-.democratic-desc-para, .democratic-desc{
-    background:$light-orange;
-}
-.liberal-desc-para, .liberal-desc{
-    background:$light-red;
-}
-.green-desc-para, .green-desc{
-    background:$light-green;
-}
+
 
 .comp-topbar-style{
     position:fixed;
@@ -379,31 +368,80 @@
 
 .democratic-desc-title{
     background:$orange;
-    height:50vh;
+    height:170px;
+    padding:15px;
     width:100%;
     transition: all 1s ease;
+
 }
 
 .conservative-desc-title{
     background:$blue;
-    height:50vh;
+    height:170px;
     width:100%;
     transition: all 1s ease;
 }
 
 .liberal-desc-title{
     background:$red;
-    height:50vh;
+    padding:15px;
+    height:170px;
     width:100%;
     transition: all 1s ease;
 }
 
 .green-desc-title{
     background:$green;
-    height:50vh;
+    height:170px;
+    padding:15px;
     width:100%;
     transition: all 1s ease;
 }
+
+
+.conservative-desc-para{
+    background:$light-blue;
+    width:100%;
+    height:450px;
+    padding: 10px 30px;
+
+}
+.democratic-desc-para{
+    background:$light-orange;
+    width:100%;
+    height:450px;
+    padding: 10px 30px;
+}
+.liberal-desc-para{
+    background:$light-red;
+    width:100%;
+    height:450px;
+    padding: 10px 30px;
+}
+.green-desc-para{
+    background:$light-green;
+    width:100%;
+    height:450px;
+    padding: 10px 30px;
+}
+
+
+
+.conservative-desc{
+    background:$light-blue;
+}
+.democratic-desc{
+    background:$light-orange;
+}
+.liberal-desc{
+    background:$light-red;
+}
+.green-desc{
+    background:$light-green;
+}
+
+
+
 
 .party-democratic-bground{
     background:$orange;

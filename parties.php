@@ -106,7 +106,7 @@
         </div>
     </div>
 
-
+    
     
     
     <!-- =========================================================
@@ -140,7 +140,7 @@
         </div>
     </div>
     
-    <div class="column large-7 medium-6 small-12 padding-vertical 
+    <div class="column large-7 show-for-large padding-vertical 
          center parties-page-mp-list">
         <h3 id="party-page-mp-close"> X </h3>
         <h1 id="province-header"> Province </h1> 
@@ -157,11 +157,12 @@
         
         
     </div>
+    
+    
+    
    
     
 </div>
-
-
 
 
 
@@ -192,6 +193,56 @@
                             padding-none <?php echo strtolower($_GET["party"])."-party"; ?> topic-pages full-page scrollDiv">
     
 
+    <!-- ==============    MEDDIUM AND SMALL VERSION - MP PER PROVINCE ==================== -->
+    
+    <div class="column hide-for-large medium-12 small-12 padding-none center  parties-page-mp-responsive">   
+
+        <div class="column padding-none center">
+            <button class="province-resp" data-party="0" data-province="British Columbia"> British Columbia </button>
+            <button class="province-resp" data-party="1" data-province="Alberta"> Alberta </button>
+            <button class="province-resp" data-party="2" data-province="Saskatchewan"> Saskatchewan </button>
+            <button class="province-resp" data-party="3" data-province="Manitoba"> Manitoba </button>
+            <button class="province-resp" data-party="4" data-province="Ontario"> Ontario </button>
+            <button class="province-resp" data-party="5" data-province="Quebec"> Quebec </button>
+            <button class="province-resp" data-party="6" data-province="Nova Scotia "> Nova Scotia </button>
+            <button class="province-resp" data-party="7" data-province="New Brunswick"> New Brunswick </button>
+            <button class="province-resp" data-party="8" data-province="Prince Edward"> Prince Edward </button>
+            <button class="province-resp" data-party="9" data-province="Newfoundland and Labrador"> Newfoundland and Labrador </button>
+            <button class="province-resp" data-party="10" data-province="Nuvanut"> Nuvanut </button>
+            <button class="province-resp" data-party="11" data-province="Northwest Territories"> Northwest Territories </button>
+            <button class="province-resp" data-party="12" data-province="Yukon" > Yukon </button>
+        </div>
+
+    </div>
+    
+    <div class="column hide-for-large medium-12 small-12 padding-none center parties-page-mp-list-responsive">
+        <h3 id="party-page-mp-close-resp">
+            <i class="fa fa-sort-up fa-2x white" aria-hidden="true"> </i>
+        </h3>
+        <h1 id="province-header-resp"> Province </h1> 
+        <p style="color:white">
+            1. YUKI <br> 
+            2. LAUREN <br>
+            3. BEATRICE <br>
+            4. TYRONE <br>
+            1. YUKI <br> 
+            2. LAUREN <br>
+            3. BEATRICE <br>
+            4. TYRONE <br>
+        </p>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="column large-2 show-for-large padding-none center 
          <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page">
         
@@ -272,7 +323,7 @@
     
     
     <div class="column small-12 medium-12 large-2 padding-vertical center 
-         <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page voting-party">
+         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
              class="voting-icons" id="<?php echo strtolower($_GET['party']); ?>-1" data-voted="0" data-vote='0'>
@@ -405,7 +456,7 @@
     
     
     <div class="column small-12 medium-12 large-2 padding-vertical center 
-         <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page voting-party">
+         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
@@ -535,7 +586,7 @@
     
     
     <div class="column small-12 medium-12 large-2 padding-vertical center 
-         <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page voting-party">
+         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
@@ -656,7 +707,7 @@
     
     
     <div class="column small-12 medium-12 large-2 padding-vertical center 
-         <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page voting-party">
+         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
@@ -779,7 +830,7 @@
     
     
     <div class="column small-12 medium-12 large-2 padding-vertical center 
-         <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page voting-party">
+         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
@@ -893,7 +944,7 @@
     
     
     <div class="column small-12 medium-12 large-2 padding-vertical center 
-         <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page voting-party">
+         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
@@ -1010,7 +1061,7 @@
     
     
     <div class="column small-12 medium-12 large-2 padding-vertical center 
-         <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page voting-party">
+         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
@@ -1129,7 +1180,7 @@
     
     
     <div class="column small-12 medium-12 large-2 padding-vertical center 
-         <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page voting-party">
+         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"
@@ -1250,7 +1301,7 @@
     
     
     <div class="column small-12 medium-12 large-2 padding-vertical center 
-         <?php echo "party-".strtolower($_GET['party'])."-bground"; ?> half-page voting-party">
+         <?php echo "party-".strtolower($_GET['party'])."-lightbground"; ?> half-page voting-party">
         <h3> CLICK <br> TO <br> VOTE </h3>
         
         <img src="img/conservative/badge-icon.svg" alt="the voting icon"

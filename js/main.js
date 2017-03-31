@@ -382,16 +382,19 @@ $(function(){
         $(".conservative-desc").animate({"height":"50vh"},1000,"swing");
     });
     
+     
+    
+    $(".province-resp").each(function(index){
+       $(this).click(function(){
+           $(".parties-page-mp-list-responsive").fadeIn({'display':"block"},1000,"swing");
+           $("#province-header-resp").text($(this).data("province"));
+        }); 
+    });
     
     
-    
-    
-    
-    
-    
-    
-    
-    
+    $("#party-page-mp-close-resp").click(function(){
+        $(".parties-page-mp-list-responsive").fadeOut({'display':"none"},1000,"swing");
+    });
     
     
     

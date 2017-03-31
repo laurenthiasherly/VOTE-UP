@@ -12,15 +12,15 @@
          padding-none center video-container">
         
         <?php 
-            $videoParties = array("VIDEO-01","VIDEO-02","VIDEO-03","VIDEO-04");
+            $videoParties = array("first","second","third","fourth");
             $randomVideo = $videoParties[array_rand($videoParties)];
         ?>
         
         <video id="my-video" class="video-homepage" autoplay loop muted>
             
             <source src="video/<?php echo $randomVideo ?>.mp4" type="video/mp4" />
-            <source src="video/<?php echo $randomVideo ?>.ogg" type="video/ogg" />
-            <source src="video/<?php echo $randomVideo ?>.webm" type="video/webm" />
+<!--            <source src="video/<?php echo $randomVideo ?>.ogg" type="video/ogg" />
+            <source src="video/<?php echo $randomVideo ?>.webm" type="video/webm" />-->
             Your browser does not support this video 
         </video>
     </div>
