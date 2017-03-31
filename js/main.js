@@ -368,6 +368,34 @@ $(function(){
     
     conservativeDesc();
     
+    
+    $(".province").each(function(index){
+       $(this).click(function(){
+           $(".conservative-desc").animate({"height":"0"},1000,"swing");
+           $(".parties-page-mp-list").fadeIn({'display':"block"},1000,"swing");
+           $("#province-header").text($(this).data("province"));
+       }); 
+    });
+    
+    $("#party-page-mp-close").click(function(){
+        $(".parties-page-mp-list").fadeOut({'display':"none"},1000,"swing");
+        $(".conservative-desc").animate({"height":"50vh"},1000,"swing");
+    });
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     function checkBig(){
         $("#voting-icon").animate({"font-size":"24px"},1000,"swing",checkSmall);
     }

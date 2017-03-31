@@ -211,6 +211,7 @@
 
         .conservative-desc{
             height:50vh;
+            //display:none;
 
             .conservative-desc-title{
                 height:100vh;
@@ -229,6 +230,23 @@
                 margin-right:-1000px;
                 width:50%;
                 transition: all 1s ease;
+            }
+        }
+        
+        .parties-page-mp-list{
+            height:50vh;
+            background:$blue;
+            display:none;
+            transition: all 0.5s ease;
+            
+            
+            h1{
+                color:white;
+            }
+            
+            #party-page-mp-close{
+                float:right;
+                cursor:pointer;
             }
         }
 
@@ -313,7 +331,7 @@
 
 
     .conservative-leader-img{
-        background: url(../img/conservative/leader.jpg);
+        background: url(../img/conservative/Conservative.jpg);
         
     }
     .green-leader-img{
