@@ -84,13 +84,25 @@
     </div>
     
     <div class="column large-7 show-for-large padding-none conservative-logo background">
-        <div class="column padding-none center">
+        <div class="column padding-none center conservative-logo-container">
             <img src="img/conservative/logo-<?php echo $_GET['party']; ?>.png" alt="conservative logo"
                  class="logo-conservative">
         </div>
     
         <div class="column padding-none center parties-page-mp">
-            
+            <button> British Columbia </button>
+            <button> Alberta </button>
+            <button> Saskatchewan </button>
+            <button> Manitoba </button>
+            <button> Ontario </button>
+            <button> Quebec </button>
+            <button> Nova Scotia </button>
+            <button> New Brunswick </button>
+            <button> Prince Edward </button>
+            <button> Newfoundland and Labrador </button>
+            <button> Nuvanut </button>
+            <button> Northwest Territories </button>
+            <button> Yukon </button>
         </div>
     </div>
 
