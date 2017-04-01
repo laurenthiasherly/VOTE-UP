@@ -13,10 +13,11 @@
         mysqli_set_charset($conn,"utf8");
         $topicList=explode(",",$_POST["topics"]);
         $arrrayParty=explode(",",$_POST["party"]);
+        $arrrayParty=convertShorttoCom($arrrayParty);
         $arrrayParty=addPartyQuery($arrrayParty,'party');
         $topicList=addPartyQuery($topicList,'topic');
         $query="SELECT * FROM party_tbl WHERE (".join(" OR ",$arrrayParty).") AND (".join(" OR ",$topicList).") ORDER BY topic";
-        echo $query;
+//        echo $query;
         $result=mysqli_query($conn,$query);
 
         $rowData=mysqli_num_rows($result);
@@ -70,6 +71,25 @@
             $arrayP[$i]=$conca."='".str_replace("DEMOCRATIC","NDP",$arrayP[$i])."'";
         }
         return $arrayP;
+    }
+
+    function convertShorttoCom($arrayP){
+        for($i=0;$i<count($arrayP);$i+=1){
+            $arrayP[$i]=searchChangeName($arrayP[$i]);
+        }
+        return $arrayP;
+    }
+
+    function searchChangeName($partyname){
+        if($partyname=="LI"){
+            return str_replace("LI","Liberal",$partyname);
+        }else if($partyname=="CO"){
+            return str_replace("CO","Conservative",$partyname);
+        }else  if($partyname=="GR"){
+            return str_replace("GR","Green",$partyname);
+        }else {
+            return $partyname;
+        } 
     }
 
 ?>

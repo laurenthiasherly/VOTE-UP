@@ -89,20 +89,20 @@
                  class="logo-conservative">
         </div>
     
-        <div class="column padding-none center parties-page-mp">
-            <button class="province" data-party="0" data-province="British Columbia"> British Columbia </button>
-            <button class="province" data-party="1" data-province="Alberta"> Alberta </button>
-            <button class="province" data-party="2" data-province="Saskatchewan"> Saskatchewan </button>
-            <button class="province" data-party="3" data-province="Manitoba"> Manitoba </button>
-            <button class="province" data-party="4" data-province="Ontario"> Ontario </button>
-            <button class="province" data-party="5" data-province="Quebec"> Quebec </button>
-            <button class="province" data-party="6" data-province="Nova Scotia "> Nova Scotia </button>
-            <button class="province" data-party="7" data-province="New Brunswick"> New Brunswick </button>
-            <button class="province" data-party="8" data-province="Prince Edward"> Prince Edward </button>
-            <button class="province" data-party="9" data-province="Newfoundland and Labrador"> Newfoundland and Labrador </button>
-            <button class="province" data-party="10" data-province="Nuvanut"> Nuvanut </button>
-            <button class="province" data-party="11" data-province="Northwest Territories"> Northwest Territories </button>
-            <button class="province" data-party="12" data-province="Yukon" > Yukon </button>
+        <div class="column padding-none center parties-page-mp <?php echo strtolower($_GET['party'])."-mp-page"; ?>">
+            <button class="province-<?php echo strtolower($_GET['party']); ?>" data-party="0" data-province="British Columbia"> British Columbia </button>
+            <button class="province-<?php echo strtolower($_GET['party']); ?>" data-party="1" data-province="Alberta"> Alberta </button>
+            <button class="province-<?php echo strtolower($_GET['party']); ?>" data-party="2" data-province="Saskatchewan"> Saskatchewan </button>
+            <button class="province-<?php echo strtolower($_GET['party']); ?>" data-party="3" data-province="Manitoba"> Manitoba </button>
+            <button class="province-<?php echo strtolower($_GET['party']); ?>" data-party="4" data-province="Ontario"> Ontario </button>
+            <button class="province-<?php echo strtolower($_GET['party']); ?>" data-party="5" data-province="Quebec"> Quebec </button>
+            <button class="province-<?php echo strtolower($_GET['party']); ?>" data-party="6" data-province="Nova Scotia "> Nova Scotia </button>
+            <button class="province-<?php echo strtolower($_GET['party']); ?>" data-party="7" data-province="New Brunswick"> New Brunswick </button>
+            <button class="province-<?php echo strtolower($_GET['party']); ?>" data-party="8" data-province="Prince Edward"> Prince Edward </button>
+            <button class="province-<?php echo strtolower($_GET['party']); ?>" data-party="9" data-province="Newfoundland and Labrador"> Newfoundland and Labrador </button>
+            <button class="province-<?php echo strtolower($_GET['party']); ?>" data-party="10" data-province="Nuvanut"> Nuvanut </button>
+            <button class="province-<?php echo strtolower($_GET['party']); ?>" data-party="11" data-province="Northwest Territories"> Northwest Territories </button>
+            <button class="province-<?php echo strtolower($_GET['party']); ?>" data-party="12" data-province="Yukon" > Yukon </button>
         </div>
     </div>
 
@@ -141,6 +141,7 @@
     </div>
     
     <div class="column large-7 show-for-large padding-vertical 
+
          center parties-page-mp-list">
         <h3 id="party-page-mp-close"> X </h3>
         <h1 id="province-header"> Province </h1> 

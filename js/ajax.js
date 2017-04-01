@@ -1,8 +1,6 @@
 function ajaxGetDatafromDatabase(provincename){
     $.ajax({
-        url: 'mpdatabase.php',
-        type: 'POST',
-        data: {"province":provincename},
+        url: 'lauren.php',
         success: function(data, status) {
             $("#contentTopic").html(data);
         },

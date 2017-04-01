@@ -49,10 +49,121 @@
         cursor: pointer;
         padding: 20px;
     }
+    .content-topic-party1,
+    .content-topic-party2,
+    .content-topic-party3,
+    .content-topic-party4
+    {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .content-showing-style{
+        background-color: white;
+    }
+
+    .comparison-content{
+        padding: 60px 0;
+    }
+    
+    .mobile-list-top{
+        padding: 0;
+        margin: 0;
+        width: 20%;
+        float: left;
+        text-align: center;
+    }
+    .mobile-list-bottom{
+        padding: 0;
+        margin: 0;
+        width: 25%;
+        float: left;
+        text-align: center;
+    }
+    .tip-topic-style{
+        display: none;
+    }
 }
 
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
     .side-topics-bar{
+        display: none;
+    }
+    .comparing-box-mobile{
+        padding-top: 70px;
+        background-color: $dark-grey;
+        width: 100%;
+    }
+    .comp-topbar-style{
+        text-align: center;
+        color:white;
+        li{
+            background-color: $mid-grey;
+        }
+    }
+    .comp-topbar-style ul{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        margin: auto;
+        list-style: none;
+    }
+
+    .comp-topbar-style li{
+        cursor: pointer;
+        text-align: center;
+        float: left;
+        width: 25%;
+        display: inline-block;
+        padding: 20px 0;
+    }
+    .comp-sidebar-topic{
+        background-color: #464646;
+    }
+
+    .comp-topic-style{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .comp-topic-style li{
+        display: inline-block;
+        cursor: pointer;
+        padding: 20px;
+    }
+    .content-topic-party1,
+    .content-topic-party2,
+    .content-topic-party3,
+    .content-topic-party4
+    {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .content-showing-style{
+        background-color: white;
+    }
+
+    .comparison-content{
+        padding: 60px 0;
+    }
+    
+    .mobile-list-top{
+        padding: 0;
+        margin: 0;
+        width: 20%;
+        float: left;
+        text-align: center;
+    }
+    .mobile-list-bottom{
+        padding: 0;
+        margin: 0;
+        width: 25%;
+        float: left;
+        text-align: center;
+    }
+    .tip-topic-style{
         display: none;
     }
 }
@@ -102,6 +213,13 @@
             color:$text-color;
             font-size:20px;
         }
+    }
+	
+	.conservative-desc,
+    .democratic-desc,
+    .green-desc,
+    .liberal-desc{
+        height:50vh;
     }
     
     .conservative-desc-title,
@@ -171,13 +289,36 @@
         cursor: pointer;
         padding: 20px;
     }
+    .content-topic-party1{
+        padding: 10px;
+        width: 100%;
+    }
+
+    .content-topic-party2{
+        padding: 10px;
+        width: 50%;
+    }
+
+    .content-topic-party3{
+        padding: 10px;
+        width: 33.33%;
+    }
+
+    .content-topic-party4{
+        padding: 10px;
+        width: 100%;
+    }
+
+    .content-showing-style{
+        background-color: white;
+    }
+
+    .comparison-content{
+        padding: 60px 0;
+    }
 }
 
 /* ----- Modal Box (Comparing Side) ------*/
-
-
-
-
 
 .top-parties-bar ul{
     margin: 0;
@@ -276,33 +417,7 @@
    
 }
 
-.content-topic-party1{
-    padding: 10px;
-    width: 100%;
-}
 
-.content-topic-party2{
-    padding: 10px;
-    width: 50%;
-}
-
-.content-topic-party3{
-    padding: 10px;
-    width: 33.33%;
-}
-
-.content-topic-party4{
-    padding: 10px;
-    width: 100%;
-}
-
-.content-showing-style{
-    background-color: white;
-}
-
-.comparison-content{
-    padding: 60px 0;
-}
 
 .topic-title-conservative{
     padding: 10px 0;
@@ -411,7 +526,7 @@
 
 .democratic-desc-title{
     background:$orange;
-    height:170px;
+//    height:170px;
     padding:15px;
     width:100%;
     transition: all 1s ease;
@@ -420,7 +535,7 @@
 
 .conservative-desc-title{
     background:$blue;
-    height:170px;
+//    height:170px;
     width:100%;
     transition: all 1s ease;
 }
@@ -428,14 +543,14 @@
 .liberal-desc-title{
     background:$red;
     padding:15px;
-    height:170px;
+//    height:170px;
     width:100%;
     transition: all 1s ease;
 }
 
 .green-desc-title{
     background:$green;
-    height:170px;
+//    height:170px;
     padding:15px;
     width:100%;
     transition: all 1s ease;
@@ -444,26 +559,26 @@
 
 .conservative-desc-para{
     background:$light-blue;
-    width:100%;
+    width:50%;
     height:450px;
     padding: 10px 30px;
 
 }
 .democratic-desc-para{
     background:$light-orange;
-    width:100%;
+    width:50%;
     height:450px;
     padding: 10px 30px;
 }
 .liberal-desc-para{
     background:$light-red;
-    width:100%;
+    width:50%;
     height:450px;
     padding: 10px 30px;
 }
 .green-desc-para{
     background:$light-green;
-    width:100%;
+    width:50%;
     height:450px;
     padding: 10px 30px;
 }
@@ -518,7 +633,34 @@
     background:$light-blue;
 }
 
+.conservative-mp-page{
+    background:$light-blue;
+}
+.democratic-mp-page{
+    background:$light-orange;
+}
+.green-mp-page{
+    background:$light-green;
+}
+.liberal-mp-page{
+    background:$light-red;
+}
 
+.province-liberal{
+	background:$red;
+}
+
+.province-conservative{
+	background:$blue;
+}
+
+.province-green{
+	background:$green;
+}
+
+.province-democratic{
+	background:$orange;
+}
 
 
 //a{
