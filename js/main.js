@@ -17,6 +17,17 @@ $(function(){
 
     resize();
     
+    
+    
+    // ====================================================
+    // ====================================================
+    // 
+    //        PAGE SCROLLING SYSTEM
+    //                   
+    // ===================================================
+    // ====================================================
+    
+    
     if($( window ).width()>1024){
         document.body.addEventListener("wheel", myFunction);
         if($("#scrollOption").val()=="0"){
@@ -87,16 +98,22 @@ $(function(){
         }
     });
    
-    $(".sidebar-topic").each(function(index){
-        $(this).mouseover(function(){
-            $(".tip-topic").eq(index).css("transform","translateX(185px)");
-        });
-        $(this).mouseout(function(){
-            $(".tip-topic").eq(index).css("transform","translateX(0px)");
-        });
-    });
+   
     
-    $(".sidebar-topic-filt").each(function(index){
+    
+    
+    
+    
+    // ====================================================
+    // ====================================================
+    // 
+    //          COMPARING PARTY MODAL BOX 
+    //                   
+    // ===================================================
+    // ====================================================
+    
+    
+   $(".sidebar-topic-filt").each(function(index){
         $(this).mouseover(function(){
             $("#modal-text"+[index]).css("margin-left","30px");
             $("#modal-text"+[index]).css("width","140px");
@@ -109,15 +126,14 @@ $(function(){
     });
     
     
+    
     $("#filterShow").click(function(){
         modalBoxShow=1;
-//        $("body").css("overflow","hidden");
         $("#modalBox").fadeIn("0.2","swing");
     });
     
     $("#closeComparingBox").click(function(){
         modalBoxShow=0;
-//        $("body").css("overflow","auto");
         $("#modalBox").fadeOut("0.2","swing");
     });
     
@@ -159,12 +175,15 @@ $(function(){
     
     
     
-    
-    
-    
     // ====================================================
+    // ====================================================
+    // 
     //                   NAVIGATION BAR
+    //                   
     // ===================================================
+    // ====================================================
+    
+    
     
     var navParty = ["conservative","liberal","democratic","green"];
     var navColour = ["blue","red","orange","green"];
@@ -183,9 +202,6 @@ $(function(){
    
     });
     
-  
-    
-    
     
     
     menuShow =0;
@@ -200,10 +216,14 @@ $(function(){
         }
     });
     
+    
+    
     setTimeout(function(){
         $(".see-your-vote").animate({"right":"-80px"},600, "swing");
         $("#arrow-down").data("status","open");
     },3500);
+
+
 
     
     $("#arrow-down").click(function(){
@@ -220,14 +240,38 @@ $(function(){
     
     
     
+    $(".sidebar-topic").each(function(index){
+        $(this).mouseover(function(){
+            $(".tip-topic").eq(index).css("transform","translateX(185px)");
+        });
+        $(this).mouseout(function(){
+            $(".tip-topic").eq(index).css("transform","translateX(0px)");
+        });
+    });
+    
+    
+    
+    function checkBig(){
+        $("#voting-icon").animate({"font-size":"24px"},1000,"swing",checkSmall);
+    }
+    
+    function checkSmall(){
+        $("#voting-icon").animate({"font-size":"20px"},1000,"swing", checkBig);
+    }
+    
+    checkBig();
     
     
     
     
     
     // ====================================================
-    //                  HOMEPAGE
+    // ====================================================
+    // 
+    //                   HOMEPAGE 
+    //                   
     // ===================================================
+    // ====================================================
     
     function arrowBig(){
         $("#arrow").animate({"width":"90px"},1000,"swing",arrowSmall);
@@ -321,19 +365,16 @@ $(function(){
     
     
     
-    // ------------ THE VIDEO -----------
+    // ===================  VIDEO  =======================
     
     window.onresize = function(event){
         resize();
     }
     
     function resize(){
-        //$("#my-video").css("width", window.innerWidth);
-        //$("#my-video").css("height", window.innerHeight);
         $("#my-video").css("min-height", window.innerHeight);
         
         var boxHeight = $(".homepage-orange").height() + 20;
-        //alert(boxHeight);
         $(".party-div-height").css("height",boxHeight);
     }
     
@@ -348,8 +389,12 @@ $(function(){
     
     
     // ====================================================
-    //           CONSERVATIVE - ORIGINAL PAGE
+    // ====================================================
+    // 
+    //         CONSERVATIVE PAGE - INITIAL PARTY PAGE  
+    //                   
     // ===================================================
+    // ====================================================
     
 
     function conservativeDesc(){
@@ -399,17 +444,16 @@ $(function(){
     
     
     
-    function checkBig(){
-        $("#voting-icon").animate({"font-size":"24px"},1000,"swing",checkSmall);
-    }
     
-    function checkSmall(){
-        $("#voting-icon").animate({"font-size":"20px"},1000,"swing", checkBig);
-    }
-    
-    checkBig();
     
 
+    
+    
+    
+    // ====================================================
+    //         VOTING ICONS IN THE PARTIES PAGE
+    //===================================================
+    
     
     $(".voting-icons").hover(function(){
         $(".voting-icons").css("width","120px");
@@ -459,6 +503,10 @@ $(function(){
         updateVoting();
     });
 
+
+    // ====================================================
+    //         VOTING ICONS IN THE PARTIES PAGE
+    //===================================================
     
     
     var partyBg = ["economy","economy", "economy", 
@@ -480,9 +528,46 @@ $(function(){
     
     
     
+    
+    
+    // ====================================================
+    // ====================================================
+    // 
+    //            WHO'S MY MP (MAP) PAGE 
+    //            
+    // ====================================================
+    // ====================================================
+    
+    
+    $(".map-title").css("left","0");
+    
+    
+    
+});
+
+
+
+// ================================    END END END    ================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // ====================================================
-    //              PARTY PAGE SCROLLING SECTION    
+    // ====================================================
+    // 
+    //           PARTY PAGE SCROLLING SECTION  
+    //                   
+    // ===================================================
     // ====================================================
 
 
@@ -501,6 +586,7 @@ $(function(){
                 topics+=$(".tip-topic").eq(index).text()+",";
             }
         });
+        
         $(".party-top-comp").each(function(){
             if($(this).data("selected")==1){
                 partyComparing+=$(this).text()+",";
@@ -538,16 +624,29 @@ $(function(){
         $('body').stop(); 
         window.scrollTo(0,0); 
     }
-
-    // ====================================================
-    //            WHO'S MY MP (MAP) PAGE 
-    // ====================================================
     
-    $(".map-title").css("left","0");
+    
+    
+    
+    
+
+    
+
+
+
+
+
+
+
+
 
 
     // ====================================================
-    //                  VOTING SYSTEM
+    // ====================================================
+    // 
+    //                   VOTING SYSTEM  
+    //                   
+    // ===================================================
     // ====================================================
 
 
@@ -707,4 +806,3 @@ $(function(){
 
 
 
-});

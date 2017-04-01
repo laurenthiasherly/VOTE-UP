@@ -104,15 +104,6 @@
         }
     }
     
-    .conservative-desc-title,
-    .democratic-desc-title,
-    .green-desc-title,
-    .liberal-desc-title{
-        height:100vh;
-        width:100%;
-        transition: all 1s ease;
-        padding-top:70px;
-    }
     
     .conservative-desc-para,
     .green-desc-para,
@@ -411,8 +402,7 @@
 
 .democratic-desc-title{
     background:$orange;
-    height:170px;
-    padding:15px;
+    padding:50px 20px;
     width:100%;
     transition: all 1s ease;
 
@@ -420,25 +410,27 @@
 
 .conservative-desc-title{
     background:$blue;
-    height:170px;
     width:100%;
+    padding:50px 20px;
     transition: all 1s ease;
 }
 
 .liberal-desc-title{
     background:$red;
-    padding:15px;
-    height:170px;
+    padding:50px 20px;
     width:100%;
     transition: all 1s ease;
 }
 
 .green-desc-title{
     background:$green;
-    height:170px;
-    padding:15px;
+    padding:50px 20px;
     width:100%;
     transition: all 1s ease;
+}
+
+.arrow-conservative{
+    margin-top:40px;
 }
 
 
@@ -521,9 +513,8 @@
 
 
 
-//a{
-//    text-decoration: none;
-//}
+
+
 
 
 .voting-box{

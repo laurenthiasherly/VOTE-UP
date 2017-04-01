@@ -90,19 +90,19 @@
         </div>
     
         <div class="column padding-none center parties-page-mp">
-            <button class="province" data-party="0" data-province="British Columbia"> British Columbia </button>
-            <button class="province" data-party="1" data-province="Alberta"> Alberta </button>
-            <button class="province" data-party="2" data-province="Saskatchewan"> Saskatchewan </button>
-            <button class="province" data-party="3" data-province="Manitoba"> Manitoba </button>
-            <button class="province" data-party="4" data-province="Ontario"> Ontario </button>
-            <button class="province" data-party="5" data-province="Quebec"> Quebec </button>
-            <button class="province" data-party="6" data-province="Nova Scotia "> Nova Scotia </button>
-            <button class="province" data-party="7" data-province="New Brunswick"> New Brunswick </button>
-            <button class="province" data-party="8" data-province="Prince Edward"> Prince Edward </button>
-            <button class="province" data-party="9" data-province="Newfoundland and Labrador"> Newfoundland and Labrador </button>
-            <button class="province" data-party="10" data-province="Nuvanut"> Nuvanut </button>
-            <button class="province" data-party="11" data-province="Northwest Territories"> Northwest Territories </button>
-            <button class="province" data-party="12" data-province="Yukon" > Yukon </button>
+            <button class="province" data-party="0" data-province="British Columbia"> BC </button>
+            <button class="province" data-party="1" data-province="Alberta"> AB </button>
+            <button class="province" data-party="2" data-province="Saskatchewan"> SK </button>
+            <button class="province" data-party="3" data-province="Manitoba"> MB </button>
+            <button class="province" data-party="4" data-province="Ontario"> ON </button>
+            <button class="province" data-party="5" data-province="Quebec"> QC </button>
+            <button class="province" data-party="6" data-province="Nova Scotia "> NS </button>
+            <button class="province" data-party="7" data-province="New Brunswick"> NB </button>
+            <button class="province" data-party="8" data-province="Prince Edward"> PE </button>
+            <button class="province" data-party="9" data-province="Newfoundland and Labrador"> NL </button>
+            <button class="province" data-party="10" data-province="Nuvanut"> NU </button>
+            <button class="province" data-party="11" data-province="Northwest Territories"> NT </button>
+            <button class="province" data-party="12" data-province="Yukon" > YT </button>
         </div>
     </div>
 
@@ -118,7 +118,7 @@
     <div class="column large-7 medium-6 small-12 padding-none center
           <?php echo strtolower($_GET['party'])."-desc"; ?>">
         
-        <div class="column large-6 medium-12 small-12 padding-none center 
+        <div class="column large-6 medium-12 small-12 padding-none half-page center 
              <?php echo strtolower($_GET['party'])."-desc-title"; ?>">
             <h1> <?php echo $leadername; ?></h1>
             <h2> <?php echo $_GET['party']; ?> Party Leader </h2> 
@@ -198,19 +198,19 @@
     <div class="column hide-for-large medium-12 small-12 padding-none center  parties-page-mp-responsive">   
 
         <div class="column padding-none center">
-            <button class="province-resp" data-party="0" data-province="British Columbia"> British Columbia </button>
-            <button class="province-resp" data-party="1" data-province="Alberta"> Alberta </button>
-            <button class="province-resp" data-party="2" data-province="Saskatchewan"> Saskatchewan </button>
-            <button class="province-resp" data-party="3" data-province="Manitoba"> Manitoba </button>
-            <button class="province-resp" data-party="4" data-province="Ontario"> Ontario </button>
-            <button class="province-resp" data-party="5" data-province="Quebec"> Quebec </button>
-            <button class="province-resp" data-party="6" data-province="Nova Scotia "> Nova Scotia </button>
-            <button class="province-resp" data-party="7" data-province="New Brunswick"> New Brunswick </button>
-            <button class="province-resp" data-party="8" data-province="Prince Edward"> Prince Edward </button>
-            <button class="province-resp" data-party="9" data-province="Newfoundland and Labrador"> Newfoundland and Labrador </button>
-            <button class="province-resp" data-party="10" data-province="Nuvanut"> Nuvanut </button>
-            <button class="province-resp" data-party="11" data-province="Northwest Territories"> Northwest Territories </button>
-            <button class="province-resp" data-party="12" data-province="Yukon" > Yukon </button>
+            <button class="province-resp" data-party="0" data-province="British Columbia"> BB </button>
+            <button class="province-resp" data-party="1" data-province="Alberta"> AB </button>
+            <button class="province-resp" data-party="2" data-province="Saskatchewan"> SK </button>
+            <button class="province-resp" data-party="3" data-province="Manitoba"> MN </button>
+            <button class="province-resp" data-party="4" data-province="Ontario"> ON </button>
+            <button class="province-resp" data-party="5" data-province="Quebec"> QC </button>
+            <button class="province-resp" data-party="6" data-province="Nova Scotia "> NS </button>
+            <button class="province-resp" data-party="7" data-province="New Brunswick"> NB </button>
+            <button class="province-resp" data-party="8" data-province="Prince Edward"> PE </button>
+            <button class="province-resp" data-party="9" data-province="Newfoundland and Labrador"> NL </button>
+            <button class="province-resp" data-party="10" data-province="Nuvanut"> NU </button>
+            <button class="province-resp" data-party="11" data-province="Northwest Territories"> NT </button>
+            <button class="province-resp" data-party="12" data-province="Yukon" > YT </button>
         </div>
 
     </div>
