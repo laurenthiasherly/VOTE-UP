@@ -87,23 +87,28 @@
         <div class="column padding-none center conservative-logo-container">
             <img src="img/conservative/logo-<?php echo $_GET['party']; ?>.png" alt="conservative logo"
                  class="logo-conservative">
+            
         </div>
     
-
-        <div class="column padding-none center parties-page-mp">
-            <button class="province-<?php echo strtolower($_GET['party']); ?>" data-party="0" data-province="British Columbia"> BC </button>
-            <button class="province-<?php echo strtolower($_GET['party']); ?>" data-party="1" data-province="Alberta"> AB </button>
-            <button class="province-<?php echo strtolower($_GET['party']); ?>" data-party="2" data-province="Saskatchewan"> SK </button>
-            <button class="province-<?php echo strtolower($_GET['party']); ?>" data-party="3" data-province="Manitoba"> MB </button>
-            <button class="province-<?php echo strtolower($_GET['party']); ?>" data-party="4" data-province="Ontario"> ON </button>
-            <button class="province-<?php echo strtolower($_GET['party']); ?>" data-party="5" data-province="Quebec"> QC </button>
-            <button class="province-<?php echo strtolower($_GET['party']); ?>" data-party="6" data-province="Nova Scotia "> NS </button>
-            <button class="province-<?php echo strtolower($_GET['party']); ?>" data-party="7" data-province="New Brunswick"> NB </button>
-            <button class="province-<?php echo strtolower($_GET['party']); ?>" data-party="8" data-province="Prince Edward"> PE </button>
-            <button class="province-<?php echo strtolower($_GET['party']); ?>" data-party="9" data-province="Newfoundland and Labrador"> NL </button>
-            <button class="province-<?php echo strtolower($_GET['party']); ?>" data-party="10" data-province="Nuvanut"> NU </button>
-            <button class="province-<?php echo strtolower($_GET['party']); ?>" data-party="11" data-province="Northwest Territories"> NT </button>
-            <button class="province-<?php echo strtolower($_GET['party']); ?>" data-party="12" data-province="Yukon" > YT </button>
+        
+        
+        <div class="column padding-none center parties-page-mp province-list-<?php echo strtolower($_GET['party']); ?>">
+            
+            <h3 class="show-for-large jquery-province-title province-title-<?php echo strtolower($_GET['party']); ?>"> Newfoundland and Labrador </h3><br>
+            
+            <button class="jquery-province province-<?php echo strtolower($_GET['party']); ?>" data-party="0" data-province="British Columbia"> BC </button>
+            <button class="jquery-province province-<?php echo strtolower($_GET['party']); ?>" data-party="1" data-province="Alberta"> AB </button>
+            <button class="jquery-province province-<?php echo strtolower($_GET['party']); ?>" data-party="2" data-province="Saskatchewan"> SK </button>
+            <button class="jquery-province province-<?php echo strtolower($_GET['party']); ?>" data-party="3" data-province="Manitoba"> MB </button>
+            <button class="jquery-province province-<?php echo strtolower($_GET['party']); ?>" data-party="4" data-province="Ontario"> ON </button>
+            <button class="jquery-province province-<?php echo strtolower($_GET['party']); ?>" data-party="5" data-province="Quebec"> QC </button>
+            <button class="jquery-province province-<?php echo strtolower($_GET['party']); ?>" data-party="6" data-province="Nova Scotia "> NS </button>
+            <button class="jquery-province province-<?php echo strtolower($_GET['party']); ?>" data-party="7" data-province="New Brunswick"> NB </button>
+            <button class="jquery-province province-<?php echo strtolower($_GET['party']); ?>" data-party="8" data-province="Prince Edward"> PE </button>
+            <button class="jquery-province province-<?php echo strtolower($_GET['party']); ?>" data-party="9" data-province="Newfoundland and Labrador"> NL </button>
+            <button class="jquery-province province-<?php echo strtolower($_GET['party']); ?>" data-party="10" data-province="Nuvanut"> NU </button>
+            <button class="jquery-province province-<?php echo strtolower($_GET['party']); ?>" data-party="11" data-province="Northwest Territories"> NT </button>
+            <button class="jquery-province province-<?php echo strtolower($_GET['party']); ?>" data-party="12" data-province="Yukon" > YT </button>
         </div>
     </div>
 
@@ -116,7 +121,7 @@
     
   
     
-    <div class="column large-7 medium-6 small-12 padding-none center
+    <div class="column large-7 medium-6 small-12 padding-none half-page center jquery-desc
           <?php echo strtolower($_GET['party'])."-desc"; ?>">
         
         <div class="column large-6 medium-12 small-12 padding-none half-page center 
@@ -130,7 +135,7 @@
                 class="arrow-conservative" id="arrow"> 
             </a>
         </div>
-        <div class="column large-6 medium-12 small-12 padding-none center 
+        <div class="column large-6 medium-12 small-12 padding-none jquery-desc-para center 
              <?php echo strtolower($_GET['party'])."-desc-para"; ?>">
             <p>
                <?php echo $leadercontent1; ?>
@@ -143,18 +148,15 @@
     
     <div class="column large-7 show-for-large padding-vertical 
 
-         center parties-page-mp-list">
+         center parties-page-mp-list mp-list-<?php echo strtolower($_GET['party']); ?>">
         <h3 id="party-page-mp-close"> X </h3>
         <h1 id="province-header"> Province </h1> 
         <p style="color:white">
             1. YUKI <br> 
             2. LAUREN <br>
             3. BEATRICE <br>
-            4. TYRONE <br>
-            1. YUKI <br> 
-            2. LAUREN <br>
-            3. BEATRICE <br>
-            4. TYRONE <br>
+            4. TYRONE <br>           
+            5. KAJOL <br>
         </p>
         
         
@@ -197,27 +199,27 @@
 
     <!-- ==============    MEDDIUM AND SMALL VERSION - MP PER PROVINCE ==================== -->
     
-    <div class="column hide-for-large medium-12 small-12 padding-none center  parties-page-mp-responsive">   
+    <div class="column hide-for-large medium-12 small-12 padding-none center parties-page-mp-responsive province-list-resp-<?php echo strtolower($_GET['party']); ?>">   
 
-        <div class="column padding-none center">
-            <button class="province-resp" data-party="0" data-province="British Columbia"> BB </button>
-            <button class="province-resp" data-party="1" data-province="Alberta"> AB </button>
-            <button class="province-resp" data-party="2" data-province="Saskatchewan"> SK </button>
-            <button class="province-resp" data-party="3" data-province="Manitoba"> MN </button>
-            <button class="province-resp" data-party="4" data-province="Ontario"> ON </button>
-            <button class="province-resp" data-party="5" data-province="Quebec"> QC </button>
-            <button class="province-resp" data-party="6" data-province="Nova Scotia "> NS </button>
-            <button class="province-resp" data-party="7" data-province="New Brunswick"> NB </button>
-            <button class="province-resp" data-party="8" data-province="Prince Edward"> PE </button>
-            <button class="province-resp" data-party="9" data-province="Newfoundland and Labrador"> NL </button>
-            <button class="province-resp" data-party="10" data-province="Nuvanut"> NU </button>
-            <button class="province-resp" data-party="11" data-province="Northwest Territories"> NT </button>
-            <button class="province-resp" data-party="12" data-province="Yukon" > YT </button>
-        </div>
+        <a href="#the-mp-list-parties-page"  > <div class="column padding-none center">
+            <button class="jquery-province-resp  province-resp-<?php echo strtolower($_GET['party']); ?>" data-party="0" data-province="British Columbia"> BC </button>
+            <button class="jquery-province-resp  province-resp-<?php echo strtolower($_GET['party']); ?>" data-party="1" data-province="Alberta"> AB </button>
+            <button class="jquery-province-resp  province-resp-<?php echo strtolower($_GET['party']); ?>" data-party="2" data-province="Saskatchewan"> SK </button>
+            <button class="jquery-province-resp  province-resp-<?php echo strtolower($_GET['party']); ?>" data-party="3" data-province="Manitoba"> MN </button>
+            <button class="jquery-province-resp  province-resp-<?php echo strtolower($_GET['party']); ?>" data-party="4" data-province="Ontario"> ON </button>
+            <button class="jquery-province-resp  province-resp-<?php echo strtolower($_GET['party']); ?>" data-party="5" data-province="Quebec"> QC </button>
+            <button class="jquery-province-resp  province-resp-<?php echo strtolower($_GET['party']); ?>" data-party="6" data-province="Nova Scotia "> NS </button>
+            <button class="jquery-province-resp  province-resp-<?php echo strtolower($_GET['party']); ?>" data-party="7" data-province="New Brunswick"> NB </button>
+            <button class="jquery-province-resp  province-resp-<?php echo strtolower($_GET['party']); ?>" data-party="8" data-province="Prince Edward"> PE </button>
+            <button class="jquery-province-resp  province-resp-<?php echo strtolower($_GET['party']); ?>" data-party="9" data-province="Newfoundland and Labrador"> NL </button>
+            <button class="jquery-province-resp  province-resp-<?php echo strtolower($_GET['party']); ?>" data-party="10" data-province="Nuvanut"> NU </button>
+            <button class="jquery-province-resp  province-resp-<?php echo strtolower($_GET['party']); ?>" data-party="11" data-province="Northwest Territories"> NT </button>
+            <button class="jquery-province-resp  province-resp-<?php echo strtolower($_GET['party']); ?>" data-party="12" data-province="Yukon" > YT </button>
+            </div> </a>
 
     </div>
     
-    <div class="column hide-for-large medium-12 small-12 padding-none center parties-page-mp-list-responsive">
+    <div class="column hide-for-large medium-12 small-12 padding-none center parties-page-mp-list-responsive" id="the-mp-list-parties-page">
         <h3 id="party-page-mp-close-resp">
             <i class="fa fa-sort-up fa-2x white" aria-hidden="true"> </i>
         </h3>
@@ -227,10 +229,7 @@
             2. LAUREN <br>
             3. BEATRICE <br>
             4. TYRONE <br>
-            1. YUKI <br> 
-            2. LAUREN <br>
-            3. BEATRICE <br>
-            4. TYRONE <br>
+            5. KAJOL 
         </p>
     </div>
     
@@ -253,7 +252,7 @@
     
     <!-- THE DIVS BELOW IS FOR SMALL & MEDIUM VERSION -->
     
-     <div class="column hide-for-large medium-12 small-12 padding-none center <?php echo "party-".strtolower($_GET['party'])."-bground"; ?>">
+    <div class="column hide-for-large medium-12 small-12 padding-none center <?php echo "party-".strtolower($_GET['party'])."-bground"; ?>">
         <h1 class="party-topic"> ECONOMY </h1>   
     </div>
     

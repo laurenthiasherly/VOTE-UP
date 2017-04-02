@@ -1,0 +1,757 @@
+// ============================================================================
+// ============================================================================
+
+// ALL OF THE STYLING "CONSERVATIVE" ARE JUST ALL ORIGINAL STYLING 
+// AND THE OTHER PARTIES STYLING WILL BE FAR BELOW AS LABELLED 
+
+// ============================================================================
+// ============================================================================
+
+@media screen and (max-width: 39.9375em) {
+    .conservative-party{
+        overflow:hidden;
+
+        .conservative-logo{
+            background:white;
+            height:200px;
+
+            .logo-conservative{
+                width:70%;
+                margin-left:10%;
+                margin-top:23%;
+            }
+        }
+
+
+        .conservative-desc{
+            overflow:hidden;
+            
+            .conservative-desc-title{
+                 width:100%;
+                transition: all 1s ease;
+                height:180px;
+            }
+        }
+    }
+    
+    .conservative-desc-para,
+    .democratic-desc-para,
+    .liberal-desc-para,
+    .green-desc-para{
+        width:100%;
+        height:760px;
+        padding: 40px 40px;
+        transition: all 1s ease;
+        
+    }
+
+    .parties-page-mp-responsive{
+        height:300px;
+        padding-top:20px;
+
+        button{
+            padding:10px;
+            color:white;
+            margin:10px;
+        }
+    }
+
+    .parties-page-mp-list-responsive{
+        padding: 10px 40px 40px 40px;
+        display:none;
+        transition: all 1s ease;
+
+
+        h1{
+            color:white;
+        }
+
+        #party-page-mp-close{
+            float:right;
+            cursor:pointer;
+        }
+
+    }
+    
+    .bg-party-height{
+        height:200px;
+    }
+    
+    .party-topic{
+        font-family:helvetica;
+        color:white;
+        font-size:2.8em;
+        height:80px;
+    }
+    
+    .party-topic1{
+        font-family:helvetica;
+        color:white;
+        font-size:2.1em;
+        height:80px;
+        padding-top:10px;
+    }
+    
+    .voting-party{
+        height:350px;
+    }
+
+
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .conservative-party{
+        overflow:hidden;
+
+        .conservative-logo{
+            background:white;
+            height:300px;
+
+            .logo-conservative{
+                width:70%;
+                margin-left:10%;
+                margin-top:15%;
+            }
+        }
+
+
+        .conservative-leader-img,
+        .green-leader-img,
+        .liberal-leader-img,
+        .democratic-leader-img{
+            height:900px;      
+            
+        }
+
+
+        .conservative-desc{
+            overflow:hidden;
+            
+            .conservative-desc-title{
+                width:100%;
+                transition: all 1s ease;
+
+            }  
+        }
+        
+        
+    }
+    
+    
+    .conservative-desc-para,
+    .democratic-desc-para,
+    .liberal-desc-para,
+    .green-desc-para{
+        width:100%;
+        height:652px;
+        padding: 30px 50px;
+        transition: all 1s ease;
+
+    }
+
+    .parties-page-mp-responsive{
+        height:160px;
+        padding:15px 30px;
+
+        button{
+            padding:10px;
+            color:white;
+            margin:10px;
+        }
+    }
+
+    .parties-page-mp-list-responsive{
+        padding: 10px 40px 40px 40px;
+        display:none;
+        transition: all 1s ease;
+        h1{
+            color:white;
+        }
+
+        #party-page-mp-close{
+            float:right;
+            cursor:pointer;
+        }
+    }
+
+    
+    .bg-party-height{
+        height:300px;
+    }
+    
+    .party-topic{
+        font-family:helvetica;
+        color:white;
+        font-size:4em;
+        height:120px;
+    }
+    
+   
+    
+    .party-topic1{
+        font-family:helvetica;
+        color:white;
+        font-size:3em;
+        height:120px;
+    }
+    
+    .voting-party{
+        height:350px;
+    }
+
+}
+
+@media screen and (min-width: 64em) {
+
+    .conservative-party{
+        overflow:hidden;
+        padding-top:70px;
+
+        .conservative-logo{
+            background:white;
+            height:50vh;
+
+            .logo-conservative{
+                width:70%;
+                margin-left:10%;
+                margin-top:11%;
+            }
+        }
+        
+        .conservative-logo-container{
+            height:40vh;
+        }
+        
+        
+
+
+        .conservative-leader-img,
+        .green-leader-img,
+        .liberal-leader-img,
+        .democratic-leader-img{
+            height:100vh;      
+            
+        }
+
+
+        .conservative-desc{
+            height:50vh;
+            //display:none;
+
+            .conservative-desc-title{
+                height:100vh;
+                width:100%;
+                transition: all 1s ease;
+
+                .arrow-conservative{
+                    margin-top:70px;
+                }
+
+            }
+            
+            
+        }
+        
+        
+    }
+    
+    .parties-page-mp{
+
+        height:10vh;
+        //background-color:rgb(184,200,252);
+        padding-top:20px;
+
+        button{
+            padding:10px;
+            border: solid 2px white;
+            color:white;
+            margin:5px;
+            cursor:pointer;
+        }
+    }
+    
+    
+    
+    
+    .conservative-desc-para,
+    .green-desc-para,
+    .liberal-desc-para,
+    .democratic-desc-para,
+    .jquery-desc-para{
+        height: 50vh;
+        padding: 10px 30px;
+        width: 50%;
+        margin-right:-1000px;
+        transition: all 1s ease;
+    }
+
+    .parties-page-mp-list{
+        height:50vh;
+        display:none;
+        transition: all 0.5s ease;
+
+
+        h1{
+            color:white;
+        }
+
+        #party-page-mp-close{
+            float:right;
+            cursor:pointer;
+        }
+        
+    }
+
+    .jquery-province-title{
+        padding:7px;
+        color:$dark-grey;
+        width: 300px;
+        margin:auto;
+        margin-top:-80px;
+        font-weight:bold;
+        position:relative;
+        z-index:-200;
+        transition: all 0.2s ease;
+    }
+    
+    .province-title-conservative{
+        border: solid 2px $blue;
+    }
+    .province-title-green{
+        border: solid 2px $green;
+    }
+    .province-title-democratic{
+        border: solid 2px $orange;
+    }
+    .province-title-liberal{
+        border: solid 2px $red;
+    }
+    
+    
+    
+   
+    .bg-party-height{
+        height:50vh;
+    }
+    
+    .full-page{
+        height:100vh; 
+    }
+
+    .half-page{
+        height:50vh;
+    }
+    
+    .party-topic{
+        font-family:helvetica;
+        margin-top:16%;
+        margin-left:30px;
+        color:white;
+        font-size:6em;
+        line-height: 30px;
+    }
+    
+    .party-topic1{
+        font-family:helvetica;
+        margin-top:16%;
+        margin-left:30px;
+        color:white;
+        font-size:5em;
+        line-height: 30px;
+    }
+    
+} 
+    
+    
+    
+    
+    
+    
+    
+    
+
+/* =================================================
+        CONSERVATIVE PARTY DESC - FRONT PAGE 
+    =============================================== */
+
+.conservative-party{
+    
+    overflow:hidden;
+    background:$light-blue;
+    
+    .conservative-logo{
+        background:white;
+
+        .logo-conservative{
+            width:70%;
+            margin-left:8%;
+        }
+    }
+
+    .conservative-desc{
+        background:$light-blue;
+
+        .conservative-desc-title{
+            background:$blue;
+            color:white;
+            padding-top:6%;
+
+            h2{
+                letter-spacing:1px;
+            }
+        }
+
+       
+    }
+    
+    .background{
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position:center;
+    }
+}
+
+
+
+
+/* =================================================
+        CONSERVATIVE PARTY - TOPICS SECTIONS 
+    =============================================== */
+
+
+    .topics-bg{
+        background:url(../img/conservative/environment.jpg);
+
+    }
+
+
+
+
+
+    .blue{
+        background:$blue;
+    }
+
+    .light-blue{
+        background:$light-blue;
+    }
+
+    .overlay{
+        background:rgba(0,0,0,0.8);
+        overflow:auto;
+        padding: 40px 50px;
+
+        p{
+            color:white;
+        }
+    }
+
+    .background{
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position:center;
+    }
+
+
+    // =========================================
+
+
+    .voting-party{
+        overflow:hidden;
+
+        .voting-icons{
+            width:100px;
+            transition: all 0.8s ease;
+            margin-bottom:20px;
+        }
+
+
+        .voting-icons-mediumsmall{
+            width:80px;
+            transition: all 0.8s ease;
+            margin-bottom:20px;
+        }
+
+        .voted{
+            margin-top:300px;
+            transition: all 0.7s ease;
+        }
+        .voted-m{
+            margin-top:300px;
+            transition: all 0.7s ease;
+        }
+    }
+
+
+
+    
+    
+ 
+    
+    
+    
+    
+// =========================================================
+    
+    
+    
+    
+                                 
+    .conservative-leader-img{
+        background: url(../img/conservative/Conservative.jpg);
+        height:700px;
+    }
+    
+    .green-leader-img{
+        background: url(../img/conservative/Green.jpg);
+        height:700px;
+    }
+    
+    .liberal-leader-img{
+        background: url(../img/conservative/Liberal.jpg);
+        height:700px;
+    }
+    
+    .democratic-leader-img{
+        background: url(../img/conservative/Democratic.jpg);
+        height:700px;
+    }
+
+
+
+    
+    
+
+    .democratic-party{
+        background: $light-orange;
+        padding-top:70px;
+    }
+
+    .conservative-party{
+        background: $light-blue;
+        padding-top:70px;
+    }
+
+    .green-party{
+        background: $light-green;
+        padding-top:70px;
+    }
+
+    .liberal-party{
+        background: $light-red;
+        padding-top:70px;
+    }
+    
+    
+    
+    
+    
+    
+
+    .democratic-desc-title{
+        background:$orange;
+        padding:50px 20px;
+        width:100%;
+        transition: all 1s ease;
+
+    }
+
+    .conservative-desc-title{
+        background:$blue;
+        width:100%;
+        padding:50px 20px;
+        transition: all 1s ease;
+    }
+
+    .liberal-desc-title{
+        background:$red;
+        padding:50px 20px;
+        width:100%;
+        transition: all 1s ease;
+    }
+
+    .green-desc-title{
+        background:$green;
+        padding:50px 20px;
+        width:100%;
+        transition: all 1s ease;
+    }
+
+    .arrow-conservative{
+        margin-top:40px;
+    }
+
+
+    
+    
+
+    .conservative-desc{
+        background:$light-blue;
+        
+    }
+    .democratic-desc{
+        background:$light-orange;
+    }
+    .liberal-desc{
+        background:$light-red;
+    }
+    .green-desc{
+        background:$light-green;
+    }
+
+
+
+    
+    
+    .party-democratic-bground{
+        background:$orange;
+    }
+
+    .party-green-bground{
+        background:$green;
+    }
+
+    .party-liberal-bground{
+        background:$red;
+    }
+
+    .party-conservative-bground{
+        background:$blue;
+    }
+    
+    
+    
+
+    
+    
+    
+    .party-democratic-lightbground{
+        background:$light-orange;
+    }
+
+    .party-green-lightbground{
+        background:$light-green;
+    }
+
+    .party-liberal-lightbground{
+        background:$light-red;
+    }
+
+    .party-conservative-lightbground{
+        background:$light-blue;
+    }
+
+    
+    
+    
+    
+    .conservative-mp-page{
+        background:$light-blue;
+    }
+    .democratic-mp-page{
+        background:$light-orange;
+    }
+    .green-mp-page{
+        background:$light-green;
+    }
+    .liberal-mp-page{
+        background:$light-red;
+    }
+
+    
+    
+    
+    
+    .province-liberal,
+    .province-resp-liberal,
+    .province-list-liberal,
+    .mp-list-liberal{
+        background:$red;            
+         
+    }
+
+    .province-conservative,
+    .province-resp-conservative,
+    .province-list-conservative,
+    .mp-list-conservative{
+        background:$blue;
+    }
+
+    .province-green,
+    .province-list-green,
+    .province-resp-green,
+    .mp-list-green{
+        background:$green;
+    }
+
+    .province-democratic,
+    .province-list-democratic,
+    .province-resp-democratic,
+    .mp-list-democratic{
+        background:$orange;
+            
+    }
+
+
+    
+    .province-list-conservative{
+        background-color:rgb(184,200,252);
+    }
+    .province-list-liberal{
+        background-color:rgb(252,185,187);
+    }
+    .province-list-democratic{
+        background-color:rgb(252,219,190);
+    }
+    .province-list-green{
+        background-color:rgb(215,250,212);
+    }
+    
+    
+    .province-list-resp-conservative{
+        background-color:rgb(184,200,252);
+        border-top: solid 10px $light-blue;
+        border-bottom: solid 10px $light-blue;
+    }
+    .province-list-resp-liberal{
+        background-color:rgb(252,185,187);
+        border-top: solid 10px $light-red;
+        border-bottom: solid 10px $light-red;
+    }
+    .province-list-resp-democratic{
+        background-color:rgb(252,219,190);
+        border-top: solid 10px $light-orange;
+        border-bottom: solid 10px $light-orange;
+    }
+    .province-list-resp-green{
+        background-color:rgb(215,250,212);
+        border-top: solid 10px $light-green;
+        border-bottom: solid 10px $light-green;
+    }
+
+
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----- END  Parties Page ------*/

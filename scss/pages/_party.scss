@@ -1,16 +1,12 @@
-// -----------------------------------------------------------------------------
-// This file contains styles that are specific to the Party page.
-// -----------------------------------------------------------------------------
+
+
+
 
 @media screen and (max-width: 39.9375em) {
     .side-topics-bar{
         display: none;
     }
-    .comparing-box-mobile{
-        padding-top: 70px;
-        background-color: $dark-grey;
-        width: 100%;
-    }
+        
     .comp-topbar-style{
         text-align: center;
         color:white;
@@ -33,7 +29,9 @@
         width: 25%;
         display: inline-block;
         padding: 20px 0;
+        
     }
+    
     .comp-sidebar-topic{
         background-color: #464646;
     }
@@ -49,51 +47,21 @@
         cursor: pointer;
         padding: 20px;
     }
-    .content-topic-party1,
-    .content-topic-party2,
-    .content-topic-party3,
-    .content-topic-party4
-    {
-        padding: 10px;
-        width: 100%;
-    }
-
-    .content-showing-style{
-        background-color: white;
-    }
-
-    .comparison-content{
-        padding: 60px 0;
-    }
     
-    .mobile-list-top{
-        padding: 0;
-        margin: 0;
-        width: 20%;
-        float: left;
-        text-align: center;
-    }
-    .mobile-list-bottom{
-        padding: 0;
-        margin: 0;
-        width: 25%;
-        float: left;
-        text-align: center;
-    }
     .tip-topic-style{
         display: none;
     }
+    
+    
 }
+
+
 
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
     .side-topics-bar{
         display: none;
     }
-    .comparing-box-mobile{
-        padding-top: 70px;
-        background-color: $dark-grey;
-        width: 100%;
-    }
+    
     .comp-topbar-style{
         text-align: center;
         color:white;
@@ -117,7 +85,7 @@
         display: inline-block;
         padding: 20px 0;
     }
-    .comp-sidebar-topic{
+      .comp-sidebar-topic{
         background-color: #464646;
     }
 
@@ -132,43 +100,16 @@
         cursor: pointer;
         padding: 20px;
     }
-    .content-topic-party1,
-    .content-topic-party2,
-    .content-topic-party3,
-    .content-topic-party4
-    {
-        padding: 10px;
-        width: 100%;
-    }
-
-    .content-showing-style{
-        background-color: white;
-    }
-
-    .comparison-content{
-        padding: 60px 0;
-    }
     
-    .mobile-list-top{
-        padding: 0;
-        margin: 0;
-        width: 20%;
-        float: left;
-        text-align: center;
-    }
-    .mobile-list-bottom{
-        padding: 0;
-        margin: 0;
-        width: 25%;
-        float: left;
-        text-align: center;
-    }
     .tip-topic-style{
         display: none;
     }
 }
 
+
+
 @media screen and (min-width: 64em) {
+
     .comparing-box{
         background-color: $dark-grey;
         width: 960px;
@@ -178,7 +119,7 @@
         top: 100px;
         left: 50%;
         transform: translateX(-50%);
-        /*overflow: auto;*/
+
         
         
     }
@@ -192,16 +133,7 @@
         cursor: pointer;
         display:none; 
     }
-    
-    .democratic-party,
-    .green-party,
-    .liberal-party,
-    .conservative-party
-    {
-        padding-top:70px; 
-    }
 
-    
     #seeyourvote{
         background:$crimson;
     }
@@ -214,26 +146,7 @@
             font-size:20px;
         }
     }
-	
-	.conservative-desc,
-    .democratic-desc,
-    .green-desc,
-    .liberal-desc{
-        height:50vh;
-    }
-    
-    
-    .conservative-desc-para,
-    .green-desc-para,
-    .liberal-desc-para,
-    .democratic-desc-para{
-        height: 50vh;
-        padding: 20px;
-        width: 50%;
-        margin-right:-1000px;
-        transition: all 1s ease;
-    }
-    
+
     .comp-topbar-style{
         position:fixed;
         top:-70px;
@@ -273,501 +186,228 @@
         list-style: none;
         padding: 0;
         margin: 0;
-        /*margin-left:-7px;*/
+        margin-left:-7px;
     }
 
     .comp-topic-style li{
         cursor: pointer;
         padding: 20px;
     }
-    .content-topic-party1{
+}
+
+
+
+    /* ----- Modal Box (Comparing Side) ------*/
+
+
+
+    .sidebar-topic-style{
+        padding: 20px 0;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        color: white;
+        background-color: #272526;
+    }
+
+    .tip-topic-style{
+        position: absolute;
+        padding: 20px;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        left: -130px;
+        list-style: none;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        z-index: -20;
+    }
+
+    .side-topics-bar li{
         padding: 10px;
+    }
+
+    .side-topics-bar a{
+        padding: 10px;
+    }
+
+    .tip-topic{
+        width: 190px;
+        transition: all 0.3s ease;
+        padding: 10px;
+        opacity: 1;
+    }
+
+    .tip-style{
+        color: white;
+        background-color: #272526;
+        border-radius: 10px;
+    }
+
+    .modal-box-comparing{
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
+        height: 100vh;
+        background-color: rgba(255,255,255,0.7);
+        display: none;
+        z-index: 300;
     }
 
-    .content-topic-party2{
-        padding: 10px;
-        width: 50%;
+    #closeComparingBox{
+        position: absolute;
+        top: 70px;
+        right: 70px;
+        cursor: pointer;
+        color: black;
+        i{
+            color:black;
+        }
+
     }
 
-    .content-topic-party3{
-        padding: 10px;
-        width: 33.33%;
-    }
-
-    .content-topic-party4{
-        padding: 10px;
+    .content-topic-default{
+        padding: 20px 0;
         width: 100%;
+        text-align: center;
+        color:white;
+        letter-spacing:1px;
+
+        p{
+            color:white; 
+        }
+
     }
 
-    .content-showing-style{
-        background-color: white;
-    }
-
-    .comparison-content{
-        padding: 60px 0;
-    }
-}
-
-/* ----- Modal Box (Comparing Side) ------*/
-
-.top-parties-bar ul{
-    margin: 0;
-    padding: 0;
-    width: 960px;
-    list-style: none;
-}
-
-.top-parties-bar li{
-    text-align: center;
-    float: left;
-    width: 25%;
-    display: inline-block;
-    padding: 20px 0;
-}
-
-
-
-.sidebar-topic-style{
-    padding: 20px 0;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    color: white;
-    background-color: #272526;
-}
-
-.tip-topic-style{
-    position: absolute;
-    padding: 20px;
-    margin: 0;
-    padding: 0;
-    top: 0;
-    left: -130px;
-    list-style: none;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    z-index: -20;
-}
-
-.side-topics-bar li{
-    padding: 10px;
-}
-
-.side-topics-bar a{
-    padding: 10px;
-}
-
-.tip-topic{
-    width: 190px;
-    transition: all 0.3s ease;
-    padding: 10px;
-    opacity: 1;
-}
-
-.tip-style{
-    color: white;
-    background-color: #272526;
-    border-radius: 10px;
-}
-
-.modal-box-comparing{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(255,255,255,0.7);
-    display: none;
-    z-index: 300;
-}
-
-#closeComparingBox{
-    position: absolute;
-    top: 70px;
-    right: 70px;
-    cursor: pointer;
-    color: black;
-    i{
-        color:black;
-    }
-//    padding: 20px 25px;
-//    border-radius: 50%;
-}
-
-.content-topic-default{
-    padding: 20px 0;
-    width: 100%;
-    text-align: center;
-    color:white;
-    letter-spacing:1px;
-    
-    p{
-        color:white; 
-    }
-   
-}
-
-
-
-.topic-title-conservative{
-    padding: 10px 0;
-    background-color: #0331cf;
-    width: 100%;
-    color: white;
-}
-
-.party-top-comp{
-    border-bottom: solid 2px transparent;
-}
-
-.topic-title-green{
-    padding: 10px 0;
-    background-color: #3c9b35;
-    width: 100%;
-    color: white;
-}
-
-.topic-title-democratic{
-    padding: 10px 0;
-    background-color: #f6821f;
-    width: 100%;
-    color: white;
-}
-
-.topic-title-liberal{
-    padding: 10px 0;
-    background-color: #ff1a24;
-    width: 100%;
-    color: white;
-}
-
-.comp-content{
-    background-color:#444444;
-    overflow: auto;
-    width: 100%;
-    height:100%;
-}
-
-.contentTopic{
-    overflow:auto;
-}
-
-.col{
-    display: block;
-    text-align: center;
-    float: left;
-}
-
-.clear-fix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-
-//////////////////////////////=======   LAUREN ADDED THIS   ======////////////
-
-.modalbox-topic-text{
-    position:fixed;
-    top: 0;
-    left: -240px;
-    list-style: none;
-    z-index:-10;
-    
-    .modalbox-topic{
-        position:relative;
-        background:$dark-grey;
-        padding:5px;
-        border-radius:10px;
-        margin-bottom:30px;
-        margin-left:200px;
-        width:140px;
-        transition: all 0.5s ease;
         
-        a{
-            color:white;
+    .comp-content{
+        background-color:#444444;
+        overflow: auto;
+        width: 100%;
+        height:100%;
+    }
+
+    .contentTopic{
+        overflow:auto;
+    }
+
+
+    // it should be id
+
+   
+    .modalbox-topic-text{
+        position:fixed;
+        top: 0;
+        left: -240px;
+        list-style: none;
+        z-index:-10;
+
+        .modalbox-topic{
+            position:relative;
+            background:$dark-grey;
+            padding:5px;
+            border-radius:10px;
+            margin-bottom:30px;
+            margin-left:200px;
+            width:140px;
+            transition: all 0.5s ease;
+
+            a{
+                color:white;
+            }
         }
     }
-}
 
-/////////////////////
-// Parties Style  ///
-/////////////////////
-
-.democratic-party{
-    overflow: hidden;
-    background: $light-orange;
-}
-
-.conservative-party{
-    overflow: hidden;
-    background: $light-blue;
-}
-
-.green-party{
-    overflow: hidden;
-    background: $light-green;
-}
-
-.liberal-party{
-    overflow: hidden;
-    background: $light-red;
-}
-
-.democratic-desc-title{
-    background:$orange;
-    padding:50px 20px;
-    width:100%;
-    transition: all 1s ease;
-
-}
-
-.conservative-desc-title{
-    background:$blue;
-    width:100%;
-    padding:50px 20px;
-    transition: all 1s ease;
-}
-
-.liberal-desc-title{
-    background:$red;
-    padding:50px 20px;
-    width:100%;
-    transition: all 1s ease;
-}
-
-.green-desc-title{
-    background:$green;
-    padding:50px 20px;
-    width:100%;
-    transition: all 1s ease;
-}
-
-.arrow-conservative{
-    margin-top:40px;
-}
+    
+    .voting-box{
+        overflow: hidden;
+        position: fixed;
+        bottom: -10px;
+        left: 0px;
+        height:0;
+        width: 100%;
+        padding-top:10px;
+        background-color: $dark-grey;
 
 
-.conservative-desc-para{
-    background:$light-blue;
-    width:50%;
-    height:450px;
-    padding: 10px 30px;
+        p{
+            color:white;
+            padding: 0;
+            margin: 0;
+        }
+    }
+    
+    .row-voting{
+        width: 100%;
+        height: 100px;
+    }
 
-}
-.democratic-desc-para{
-    background:$light-orange;
-    width:50%;
-    height:450px;
-    padding: 10px 30px;
-}
-.liberal-desc-para{
-    background:$light-red;
-    width:50%;
-    height:450px;
-    padding: 10px 30px;
-}
-.green-desc-para{
-    background:$light-green;
-    width:50%;
-    height:450px;
-    padding: 10px 30px;
-}
-
-
-
-.conservative-desc{
-    background:$light-blue;
-}
-.democratic-desc{
-    background:$light-orange;
-}
-.liberal-desc{
-    background:$light-red;
-}
-.green-desc{
-    background:$light-green;
-}
-
-
-
-
-.party-democratic-bground{
-    background:$orange;
-}
-
-.party-green-bground{
-    background:$green;
-}
-
-.party-liberal-bground{
-    background:$red;
-}
-
-.party-conservative-bground{
-    background:$blue;
-}
-
-.party-democratic-lightbground{
-    background:$light-orange;
-}
-
-.party-green-lightbground{
-    background:$light-green;
-}
-
-.party-liberal-lightbground{
-    background:$light-red;
-}
-
-.party-conservative-lightbground{
-    background:$light-blue;
-}
-
-.conservative-mp-page{
-    background:$light-blue;
-}
-.democratic-mp-page{
-    background:$light-orange;
-}
-.green-mp-page{
-    background:$light-green;
-}
-.liberal-mp-page{
-    background:$light-red;
-}
-
-.province-liberal{
-	background:$red;
-}
-
-.province-conservative{
-	background:$blue;
-}
-
-.province-green{
-	background:$green;
-}
-
-.province-democratic{
-	background:$orange;
-}
-
-
-
-
-
-
-.voting-box{
-    overflow: hidden;
-    position: fixed;
-    bottom: -10px;
-    left: 0px;
-    height:0;
-    width: 100%;
-    padding-top:10px;
-    background-color: $dark-grey;
+    .centered{
+        text-align: center;
+    }
     
     
-    p{
-        color:white;
-        padding: 0;
-        margin: 0;
-    }
-}
-.row-voting{
-    width: 100%;
-    height: 100px;
-}
+    .voting-col{
+        width: 22%;
+        float: left;
+        color: white;
 
-.centered{
-    text-align: center;
-}
-.voting-col{
-    width: 22%;
-    float: left;
-    color: white;
+        #party1total{
+            background:$blue;
+            border: solid 2px white;
+        }
+        #party2total{
+            background:$orange;
+            border: solid 2px white;
+
+        }
+        #party3total{
+            background:$green;
+            border: solid 2px white;
+
+        }
+        #party4total{
+            background:$red;
+            border: solid 2px white;
+        }
+
+    }
+    .voting-col-clear{
+        position:absolute;
+        height: 100px;
+        right:50px;
+        bottom:0;
+        cursor: pointer;
+        width: 10%;
+        background-color: $crimson;
+    }
+
+    .voting-close{
+        position:absolute;
+        bottom:0;
+        right:0;
+        width:50px;
+        height:100px;
+        cursor: pointer;
+    }
     
-    #party1total{
-        background:$blue;
-        border: solid 2px white;
-    }
-    #party2total{
-        background:$orange;
-        border: solid 2px white;
-        
-    }
-    #party3total{
-        background:$green;
-        border: solid 2px white;
-        
-    }
+
+
+    #party1total,
+    #party2total,
+    #party3total,
     #party4total{
-        background:$red;
-        border: solid 2px white;
+        background-color: white;
+        border-radius: 50%;
+        width: 50px;
+        padding: 10px 5px;
+        margin: auto;
+        font-size: 20px;
+        color:white;
     }
+
     
-}
-.voting-col-clear{
-    position:absolute;
-    height: 100px;
-    right:50px;
-    bottom:0;
-    cursor: pointer;
-    width: 10%;
-    background-color: $crimson;
-}
-
-.voting-close{
-    position:absolute;
-    bottom:0;
-    right:0;
-    width:50px;
-    height:100px;
-    cursor: pointer;
-}
-
-
-
-#party1total,
-#party2total,
-#party3total,
-#party4total{
-    background-color: white;
-    border-radius: 50%;
-    width: 50px;
-    padding: 10px 5px;
-    margin: auto;
-    font-size: 20px;
-    color:white;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ----- END  Parties Page ------*/
+    
+    
+    
