@@ -52,7 +52,7 @@
 </div>
 
 <div class="mp-title-style">
-    <h1 style="width:100%;text-align:center;" id="provinceNamePage"></h1>
+    <h1 class="mp-title-map-style" id="provinceNamePage"></h1>
     <div id="contentTopicMp">
     </div>
 </div>
@@ -89,7 +89,7 @@
 				this.name="North West Territories";
 			}
             $('html, body').animate({scrollTop: $("#provinceNamePage").offset().top}, 1000);
-            ajaxGetDatafromDatabase(this.name);
+            ajaxGetDatafromDatabaseMap(this.name);
 
         }  
 

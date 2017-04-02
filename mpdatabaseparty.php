@@ -30,7 +30,7 @@
 		$numberCount=0;
 			
         if($rowData>0){
-			if($_POST["type"]==1){
+			if($_POST["type"]==0){
 				$message.="<ul class='party-mp-list-style".ceil($rowData/10)."'>";
 			}else{
 				$message.="<ul class='party-mp-list-style1'>";

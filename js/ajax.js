@@ -1,4 +1,4 @@
-function ajaxGetDatafromDatabase(provincename){
+function ajaxGetDatafromDatabaseMap(provincename){
     $.ajax({
         url: 'mpdatabase.php',
 		type: 'POST',
