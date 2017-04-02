@@ -1,5 +1,5 @@
-@media screen and (max-width: 39.9375em) {
-    /* styles for small only */
+/*@media screen and (max-width: 39.9375em) {
+     styles for small only 
     .conservative-party{
         overflow:hidden;
 
@@ -113,7 +113,7 @@
 
 
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-    /* styles for medium only */
+     styles for medium only 
     .conservative-party{
         overflow:hidden;
 
@@ -228,7 +228,7 @@
 
 
 @media screen and (min-width: 64em) {
-    /* styles for large and onward only */
+     styles for large and onward only 
     .conservative-party{
         overflow:hidden;
         padding-top:70px;
@@ -376,9 +376,9 @@
 
 
 
-/* =================================================
+ =================================================
         CONSERVATIVE PARTY DESC - FRONT PAGE 
-    =============================================== */
+    =============================================== 
 
 .conservative-party{
     
@@ -442,31 +442,16 @@
 
 
 
-/* =================================================
+ =================================================
         CONSERVATIVE PARTY - TOPICS SECTIONS 
-    =============================================== */
+    =============================================== 
 
 
-/*.topics-bg{
+.topics-bg{
     background:url(../img/conservative/environment.jpg);
 
-}*/
-
-.conservative-leader-img{
-    background: url(../img/conservative/Conservative.jpg);
 }
-.green-leader-img{
-    background: url(../img/conservative/Green.jpg);
 
-}
-.liberal-leader-img{
-    background: url(../img/conservative/Liberal.jpg);
-
-}
-.democratic-leader-img{
-    background: url(../img/conservative/Democratic.jpg);
-
-}
 
 
 
@@ -495,6 +480,10 @@
     background-position:center;
 }
 
+
+// =========================================
+
+
 .voting-party{
     overflow:hidden;
     
@@ -520,4 +509,4 @@
         transition: all 0.7s ease;
     }
 }
-
+*/

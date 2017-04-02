@@ -403,7 +403,7 @@ $(function(){
             
             setInterval(function(){
 
-                $(".conservative-desc-para").css("margin-right","0");
+                $(".jquery-desc-para").css("margin-right","0");
                 $("."+$("#type-party").val()+"-desc-title").css("width","50%");
                 $(".side-topics-bar").slideDown({"display":"initial"},500);
 
@@ -414,9 +414,9 @@ $(function(){
     conservativeDesc();
     
     
-    $(".province").each(function(index){
+    $(".jquery-province").each(function(index){
        $(this).click(function(){
-           $(".conservative-desc").animate({"height":"0"},1000,"swing");
+           $(".jquery-desc").animate({"height":"0"},1000,"swing");
            $(".parties-page-mp-list").fadeIn({'display':"block"},1000,"swing");
            $("#province-header").text($(this).data("province"));
        }); 
@@ -424,14 +424,14 @@ $(function(){
     
     $("#party-page-mp-close").click(function(){
         $(".parties-page-mp-list").fadeOut({'display':"none"},1000,"swing");
-        $(".conservative-desc").animate({"height":"50vh"},1000,"swing");
-    });
+        $(".jquery-desc").animate({"height":"50vh"},1000,"swing");
+    }); 
     
      
     
-    $(".province-resp").each(function(index){
+    $(".jquery-province-resp").each(function(index){
        $(this).click(function(){
-           $(".parties-page-mp-list-responsive").fadeIn({'display':"block"},1000,"swing");
+           $(".parties-page-mp-list-responsive").slideDown({'display':"block"},1000,"swing");
            $("#province-header-resp").text($(this).data("province"));
         }); 
     });
@@ -442,6 +442,19 @@ $(function(){
     });
     
     
+    $(".jquery-province").each(function(){
+        $(this).mouseover(function(){
+            $(".jquery-province-title").css("z-index","5");
+            $(".jquery-province-title").text($(this).data("province"));
+            
+        });
+        
+        $(this).mouseout(function(){
+           $(".jquery-province-title").css("z-index","-200");
+        
+        });
+        
+    });
     
     
     
