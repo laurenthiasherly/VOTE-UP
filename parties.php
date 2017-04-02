@@ -151,12 +151,121 @@
          center parties-page-mp-list mp-list-<?php echo strtolower($_GET['party']); ?>">
         <h3 id="party-page-mp-close"> X </h3>
         <h1 id="province-header"> Province </h1> 
-        <p style="color:white">
-            1. YUKI <br> 
-            2. LAUREN <br>
-            3. BEATRICE <br>
-            4. TYRONE <br>           
-            5. KAJOL <br>
+        <p style="color:white" id="parties-mp-list-content">
+            
+            
+            <?php
+
+
+                $host="localhost";
+                $user="root";
+                $password="";
+                $database="party_db";
+
+                $conn=mysqli_connect($host,$user,$password,$database);
+
+                if(!$conn){
+                    echo "error : " + mysqli_connect_error();
+                }
+
+                else{
+
+                    if( strtolower($_GET['party']) === "democratic"){
+                        
+                        $query="SELECT * FROM mp_tbl WHERE party = 'NDP' ";
+                        $result=mysqli_query($conn,$query);
+
+                        $rowData=mysqli_num_rows($result);
+
+                        if($rowData > 0){
+                            while($row = mysqli_fetch_assoc($result)){
+
+                                $nameParty = $row["name"];
+
+                                echo '<div class="parties-page-mp-display large-12">';
+                                echo "<p>". $nameParty ."</p>";
+                                
+                                echo '</div>';
+                                
+//                                echo '<div class="parties-page-mp-display large-6">';
+//                                echo "<p>". $nameParty ."</p>";
+//                                
+//                                echo '</div>';
+
+                            }
+
+                        }
+                    }
+                    
+                    else if( strtolower($_GET['party']) === "liberal"){
+                        
+                        $query="SELECT * FROM mp_tbl WHERE party = 'liberal' ";
+                        $result=mysqli_query($conn,$query);
+
+                        $rowData=mysqli_num_rows($result);
+
+                        if($rowData > 0){
+                            while($row = mysqli_fetch_assoc($result)){
+
+                                $nameParty = $row["name"];
+
+                                echo '<div class="parties-page-mp-display large-12">';
+                                echo "<p>". $nameParty ."</p>";
+                                
+                                echo '</div>';
+
+                            }
+
+                        }
+                    }
+                    
+                    else if( strtolower($_GET['party']) === "green"){
+                        
+                        $query="SELECT * FROM mp_tbl WHERE party = 'green' ";
+                        $result=mysqli_query($conn,$query);
+
+                        $rowData=mysqli_num_rows($result);
+
+                        if($rowData > 0){
+                            while($row = mysqli_fetch_assoc($result)){
+
+                                $nameParty = $row["name"];
+
+                                echo '<div class="parties-page-mp-display large-12">';
+                                echo "<p>". $nameParty ."</p>";
+                                
+                                echo '</div>';
+
+                            }
+
+                        }
+                    }
+                    
+                    else if( strtolower($_GET['party']) === "conservative"){
+                        
+                        $query="SELECT * FROM mp_tbl WHERE party = 'conservative' ";
+                        $result=mysqli_query($conn,$query);
+
+                        $rowData=mysqli_num_rows($result);
+
+                        if($rowData > 0){
+                            while($row = mysqli_fetch_assoc($result)){
+
+                                $nameParty = $row["name"];
+
+                                echo '<div class="parties-page-mp-display large-12">';
+                                echo "<p>". $nameParty ."</p>";
+                                
+                                echo '</div>';
+
+                            }
+
+                        }
+                    }
+                }
+
+
+                ?>
         </p>
         
         
@@ -224,7 +333,7 @@
             <i class="fa fa-sort-up fa-2x white" aria-hidden="true"> </i>
         </h3>
         <h1 id="province-header-resp"> Province </h1> 
-        <p style="color:white">
+        <p style="color:white" id="parties-mp-list-content">
             1. YUKI <br> 
             2. LAUREN <br>
             3. BEATRICE <br>
