@@ -3,7 +3,14 @@
 <?php include "partials/header.php"; ?>
 
 
+    
+
     <div class="side-topics-bar">
+        
+        <!-- ============================================================
+                    THE SIDE BAR FOR THE PARTIES PAGE 
+        ================================================================= -->   
+        
         <ul class="sidebar-topic-style">
             <li class="sidebar-topic" data-direct="scroll2">
                 <a><i class="fa fa-line-chart white" aria-hidden="true"> </i> </a></li>

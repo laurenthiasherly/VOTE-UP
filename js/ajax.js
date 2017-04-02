@@ -1,8 +1,10 @@
 function ajaxGetDatafromDatabase(provincename){
     $.ajax({
-        url: 'lauren.php',
+        url: 'partiesMP.php',
+        type:'POST',
+        data: {"province":provincename},
         success: function(data, status) {
-            $("#contentTopic").html(data);
+            $("#parties-mp-list-content").html(data);
         },
         error: function(xhr, desc, err) {
             console.log(xhr);

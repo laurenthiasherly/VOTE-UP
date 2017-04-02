@@ -1,9 +1,14 @@
 
 
 
-
-
-
+    
+        <!-- =====================================================================================
+                                            THE FOOTER FOR MOBILE 
+        
+            the web does not have footer for desktop and tablet cause of the scrolling page thing
+        
+            ====================================================================================== -->
+        
         <footer>
             <div class="column show-for-small-only small-12 padding-none center footer-section">
                 

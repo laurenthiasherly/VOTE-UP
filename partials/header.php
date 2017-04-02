@@ -22,6 +22,13 @@
     
     <body>
         <header class="page-header column large-12 medium-12 small-12 padding-none">
+            
+            
+            <!-- ============================================================
+                            THE TOP FIXED NAVIGATION BAR 
+            ================================================================= -->
+            
+            
             <nav class="column large-12 show-for-large padding-none">
                 <ul class="navigation center">
                     <li class="column large-1 medium-1 small-9 nav">                       
@@ -53,13 +60,17 @@
             </nav>
             
             
-            <div class="column large-12 medium-12 large-12 padding-vertical center" id="subscribe-box">
+            <!-- ============================================================
+                        THE SUBSCRIBE SLIDEDOWN FORM FOR DESKTOP 
+            ================================================================= -->
+            
+            <div class="column large-12 show-for-large padding-vertical center" id="subscribe-box">
                 <div class="column large-2 show-for-large padding-none center ">
                     <h4> Subscribe for Updated News! </h4>
 
                 </div>
 
-                <div class="column large-10 medium-12 padding-none center ">
+                <div class="column large-10 show-for-large padding-none center ">
 
                     <form method='post' action='' >
 
@@ -78,12 +89,16 @@
                                 <input type="submit" name="subscribe" value="Subscribe"
                                        class="button"/>     
                             </li>
-
+                        </ul>
                     </form>            
                 </div>
             </div>
     
             
+            
+            <!-- ============================================================
+                        THE NAVIGATION BAR FOR MOBILE AND TABLET  
+            ================================================================= -->
             
             <div class="column medium-12 small-12 padding-none center hide-for-large">
                 <nav>
@@ -95,6 +110,8 @@
                             </a>
                         </li>
                         <li>
+                            <!-- =======THE HAMBURGER BUTTON ============= --> 
+                            
                             <a class="mobile-menu large-8">
                                 <i class="fa fa-bars fa-2x" aria-hidden="true">
                             </i></a>
@@ -102,6 +119,10 @@
                     </ul>    
                 </nav>
             </div>
+            
+            
+            <!-- =======THE DROP DOWN MENU FROM THE HAMBURGER BUTTON ============= --> 
+            
             
             <div id="menu-control" class="column hide-for-large medium-12 small-12 padding-none">
                 <ul class="navigation-mobile center padding-none">
@@ -128,6 +149,11 @@
                 </ul>   
                 
             </div>
+            
+            
+            <!-- ============================================================
+                        THE COMPARISON PARTY FOR MOBILE VERSION  
+            ================================================================= -->
             
             <?php 
                 if(!isset($comparisonmobile)){
