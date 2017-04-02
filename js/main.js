@@ -441,27 +441,28 @@ $(function(){
     conservativeDesc();
     
     
-    $(".jquery-province").each(function(index){
-       $(this).click(function(){
-           $(".jquery-desc").animate({"height":"0"},1000,"swing");
-           $(".parties-page-mp-list").fadeIn({'display':"block"},1000,"swing");
-           $("#province-header").text($(this).data("province"));
-       }); 
-    });
+	$(".jquery-province").click(function(){
+		$(".jquery-desc").stop();
+	   $(".jquery-desc").animate({"height":"0"},1000,"swing");
+	   $(".parties-page-mp-list").fadeIn({'display':"block"},700,"swing");
+	   $("#province-header").text($(this).data("province"));
+		ajaxMPPartyGetDatafromDatabase($("#type-party").val(),$(this).data("province"),0);
+	}); 
     
     $("#party-page-mp-close").click(function(){
+		$(".jquery-desc").stop();
         $(".parties-page-mp-list").fadeOut({'display':"none"},1000,"swing");
         $(".jquery-desc").animate({"height":"50vh"},1000,"swing");
     }); 
     
      
     
-    $(".jquery-province-resp").each(function(index){
-       $(this).click(function(){
-           $(".parties-page-mp-list-responsive").slideDown({'display':"block"},1000,"swing");
-           $("#province-header-resp").text($(this).data("province"));
-        }); 
-    });
+	$(".jquery-province-resp").click(function(){
+		$(".jquery-desc").stop();
+	   $(".parties-page-mp-list-responsive").slideDown({'display':"block"},700,"swing");
+	   $("#province-header-resp").text($(this).data("province"));
+	   ajaxMPPartyGetDatafromDatabase($("#type-party").val(),$(this).data("province"),1);
+	}); 
     
     
     $("#party-page-mp-close-resp").click(function(){
@@ -469,21 +470,32 @@ $(function(){
     });
     
     
-    $(".jquery-province").each(function(){
-        $(this).mouseover(function(){
-            $(".jquery-province-title").css("z-index","5");
-            $(".jquery-province-title").text($(this).data("province"));
-            
-        });
-        
-        $(this).mouseout(function(){
-           $(".jquery-province-title").css("z-index","-200");
-        
-        });
-        
-    });
+	$(".jquery-province").mouseover(function(){
+		$(".jquery-province-title").css("z-index","5");
+		$(".jquery-province-title").text($(this).data("province"));
+
+	});
+
+	 $(".jquery-province").mouseout(function(){
+	   $(".jquery-province-title").css("z-index","-200");
+
+	});
     
-    
+   function ajaxMPPartyGetDatafromDatabase(partyname,province,type){
+	$.ajax({
+		url: 'mpdatabaseparty.php',
+		type: 'POST',
+		data: {"province":province,"party":partyname,"type":type},
+		success: function(data, status) {
+			$("#parties-mp-list-content").html(data);
+			$("#parties-mp-list-content-mobile").html(data);
+		},
+		error: function(xhr, desc, err) {
+			console.log(xhr);
+			console.log("Details: " + desc + "\nError:" + err);
+		}
+	});
+	}
     
     
 
@@ -547,7 +559,7 @@ $(function(){
         $(".topics-bg").css("background-position","center");
     });
     
-    
+  
     
     
     
