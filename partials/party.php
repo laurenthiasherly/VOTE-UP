@@ -31,6 +31,9 @@
             <li id="votingBtn" class="sidebar-topic" data-direct="voting0">
                 <a> <i id="voting-icon" class="fa fa-check " aria-hidden="true"> </i>
                 </a></li>
+			<li id="votingGraBtn" class="sidebar-topic" data-direct="voting0">
+                <a> <i id="voting-icon" class="fa fa-check " aria-hidden="true"> </i>
+                </a></li>
         </ul>
         <div class="tip-topic-style">
             <div class="tip-topic"><a class="tip-style">Economy</a></div>
@@ -105,6 +108,26 @@
     </div>
 
     <div id="votingBox" class="center">
+		<div class="votingBoxGra">
+			<h3>Graphic</h3>
+			<div class="votingGra-style">
+				<div class="party-gra-vote">
+					<div id="grafic-con" class="column small-3 medium-3 large-3 gra-col">
+					</div>
+					<div id="grafic-ndp" class="column small-push-3 medium-push-3 large-push-3 small-3 medium-3 large-3 gra-col">2</div>
+					<div id="grafic-gre" class="column small-push-6 medium-push-6 large-push-6 small-3 medium-3 large-3 gra-col">3</div>
+					<div id="grafic-lib" class="column small-push-9 medium-push-9 large-push-9 small-3 medium-3 large-3 gra-col">4</div>
+				</div>
+			</div>
+			<div class="party-gra-name">
+				<div class="column small-3 medium-3 large-3">1</div>
+				<div class="column small-3 medium-3 large-3">2</div>
+				<div class="column small-3 medium-3 large-3">3</div>
+				<div class="column small-3 medium-3 large-3">4</div>
+			</div>
+		</div>
+			
+		</div>
         <div class="voting-box">
             <div class="voting-col">
                 <p>Conservative</p>
@@ -130,4 +153,6 @@
             </div>
         </div>
     </div>
+
+
   

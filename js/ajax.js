@@ -1,8 +1,10 @@
 function ajaxGetDatafromDatabase(provincename){
     $.ajax({
-        url: 'lauren.php',
+        url: 'mpdatabase.php',
+		type: 'POST',
+		data: {'province':provincename},
         success: function(data, status) {
-            $("#contentTopic").html(data);
+            $("#contentTopicMp").html(data);
         },
         error: function(xhr, desc, err) {
             console.log(xhr);
@@ -11,3 +13,10 @@ function ajaxGetDatafromDatabase(provincename){
     });
 }
 
+$('#selectProvince').change(function(){
+	if($(this).val()=="select"){
+		$("#contentTopicMp").html("");
+	}else{
+		ajaxGetDatafromDatabase($(this).val());
+	}
+});

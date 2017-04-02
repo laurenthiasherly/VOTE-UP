@@ -28,22 +28,22 @@
     
     </div>
     <form method="" action="">
-        <li> 
-            <select>
-                <option value="bc"> British Columbia </option>
-                <option value="alberta"> Alberta </option>
-                <option value="saskatchewan"> Saskatchewan</option>
-                <option value="manitoba"> Manitoba </option>
-                <option value="ontario"> Ontario </option>
-                <option value="quebec"> Quebec </option>
-                <option value="manitoba"> Manitoba </option>
-                <option value="nb"> New Brunswick </option>
-                <option value="ns"> Nova Scotia </option>
-                <option value="pe"> Prince Edward </option>
-                <option value="nl"> Newfoundland and Labrador </option>
-                <option value="nuvanut"> Nuvanut </option>
-                <option value="nt"> Northwest Territories </option>
-                <option value="yukon"> Yukon </option>
+        <li>
+            <select id="selectProvince">
+				<option value="select">Select Province</option>
+                <option value="British Columbia">British Columbia</option>
+                <option value="Alberta">Alberta</option>
+                <option value="Saskatchewan">Saskatchewan</option>
+                <option value="Manitoba">Manitoba</option>
+                <option value="Ontario">Ontario</option>
+                <option value="Quebec">Quebec</option>
+                <option value="New Brunswick">New Brunswick</option>
+                <option value="Nova Scotia">Nova Scotia</option>
+                <option value="Prince Edward">Prince Edward</option>
+                <option value="Newfoundland">Newfoundland and Labrador</option>
+                <option value="Nuvanut">Nuvanut</option>
+                <option value="Northwest Territories">Northwest Territories</option>
+                <option value="Yukon">Yukon</option>
 
             </select>
         </li>
@@ -53,8 +53,7 @@
 
 <div class="mp-title-style">
     <h1 style="width:100%;text-align:center;" id="provinceNamePage"></h1>
-    <div id="contentTopic">
-        
+    <div id="contentTopicMp">
     </div>
 </div>
 
@@ -83,8 +82,13 @@
             if(this.name=="Québec"){
                 this.name="Quebec";
             }
+			if(this.name=="Newfoundland and Labrador"){
+				this.name="Newfoundland";
+			}
+			if(this.mae=="Northwest Territories"){
+				this.name="North West Territories";
+			}
             $('html, body').animate({scrollTop: $("#provinceNamePage").offset().top}, 1000);
-            //$("#message-mp").text('');
             ajaxGetDatafromDatabase(this.name);
 
         }  

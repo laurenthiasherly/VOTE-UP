@@ -54,7 +54,45 @@
     }
 
 
+	
 
+
+.votingBoxGra{
+	padding: 20px 20px 20px 50px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	position: absolute;
+	width: 500px;
+	height: 500px;
+	background-color: rgba(0,0,0,0.9);
+	h3{
+		margin: 0;
+	}
+	.votingGra-style{
+		position: absolute;
+		border-left: solid 2px white;
+		border-bottom: solid 2px white;
+		height: 80%;
+		width: 80%;
+	}
+	.party-gra-vote{
+		position: absolute;
+		bottom: 10px;
+		width: 93%;
+		color: white;
+	}
+	.party-gra-name{
+		position: absolute;
+		bottom: 10px;
+		width: 75%;
+		color: white;
+	}
+	.gra-col{
+		position: absolute;
+		bottom: 0;
+	}
+}
 
 
 
