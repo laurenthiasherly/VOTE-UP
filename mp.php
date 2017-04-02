@@ -1,4 +1,4 @@
-<?php include "partials/header.php"; ?>
+<?php include "partials/party.php"; ?>
 <?php include "partials/comparison.php"; ?>
 <div class="map-space">
     <div class="column map-title center">

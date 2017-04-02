@@ -8,7 +8,7 @@ var iScrollPos = 0;
 
 var sizeOfScrollDiv=0;
 var modalBoxShow=0;
-var voteNameArray=["liberal","conservative","green","democratic"];
+var voteNameArray=["conservative","democratic","green","liberal"];
 
 $(function(){
     
@@ -98,7 +98,34 @@ $(function(){
         }
     });
    
-   
+   jQuery('img.svg').each(function(){
+            var $img = jQuery(this);
+            var imgID = $img.attr('id');
+            var imgClass = $img.attr('class');
+            var imgURL = $img.attr('src');
+
+            jQuery.get(imgURL, function(data) {
+                // Get the SVG tag, ignore the rest
+                var $svg = jQuery(data).find('svg');
+
+                // Add replaced image's ID to the new SVG
+                if(typeof imgID !== 'undefined') {
+                    $svg = $svg.attr('id', imgID);
+                }
+                // Add replaced image's classes to the new SVG
+                if(typeof imgClass !== 'undefined') {
+                    $svg = $svg.attr('class', imgClass+' replaced-svg');
+                }
+
+                // Remove any invalid XML tags as per http://validator.w3.org
+                $svg = $svg.removeAttr('xmlns:a');
+
+                // Replace image with new SVG
+                $img.replaceWith($svg);
+
+            }, 'xml');
+
+        });
     
     
     
@@ -547,15 +574,6 @@ $(function(){
 
 
 
-
-
-
-
-
-
-
-
-
     // ====================================================
     // ====================================================
     // 
@@ -618,20 +636,6 @@ $(function(){
         $('body').stop(); 
         window.scrollTo(0,0); 
     }
-    
-    
-    
-    
-    
-
-    
-
-
-
-
-
-
-
 
 
 
@@ -687,6 +691,7 @@ $(function(){
     var party2=0;
     var party3=0;
     var party4=0;
+	var openGrapficBox=0;
 
     function ShowVotingBox(){
         $(".voting-box").stop();
@@ -712,6 +717,7 @@ $(function(){
     });
 
     $("#voting-close").click(function(){
+		showVoting=0;
         $(".voting-box").animate({"height":"0", "bottom":"-10px"},400);
     });
 
@@ -746,6 +752,7 @@ $(function(){
         $("#party2total").text(party2);
         $("#party3total").text(party3);
         $("#party4total").text(party4);
+		showGraphicVote();
     }
 
     function resetVotingBox(){
@@ -774,5 +781,76 @@ $(function(){
         resetVotingBox();
     });
 
+	function showGraphicVote(){
+		$("#grafic-con").stop();
+		$("#grafic-ndp").stop();
+		$("#grafic-gre").stop();
+		$("#grafic-lib").stop();
+		let showParty1="";
+		let showParty2="";
+		let showParty3="";
+		let showParty4="";
+		for(var i=0;i<party1;i+=1){
+			showParty1+='<div class="col-gra-line"><svg version="1.1" id="Layer_1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 237.3 258.7" style="enable-background:new 0 0 237.3 258.7;" xml:space="preserve"> <style type="text/css">.st0{fill:#727272;}</style><path class="st0" d="M218.2,80.1l-36-14.5l-2.5-38.5l-37,9.2l-24-29.7l-25,29.7l-37-9.5l-2,39L18.2,79.3l21.8,32.1l-21.8,30.9 l37,15.5l1.8,38.3l36.7-9.3l25,29.5l23.8-29.3l37.8,8.5l2.3-37.3l35.8-14.5l-21-31.2L218.2,80.1z M118.8,167.1 c-30.7,0-55.6-24.9-55.6-55.6s24.9-55.6,55.6-55.6s55.6,24.9,55.6,55.6S149.5,167.1,118.8,167.1z"/> <polygon class="st0" points="38.9,158.5 3.5,193.8 11.8,198.3 47.8,161.7 "/> <polygon class="st0" points="50.3,164.6 16,199 43.7,209 54.2,237 94.5,196.7 90.8,191.6 55.3,200.8 52.4,198.3 "/> <polygon class="st0" points="97,203.6 55.3,245.8 59.2,255 103,210.8 "/> <polygon class="st0" points="197.6,158.5 232.9,193.8 224.7,198.3 188.7,161.7 "/> <polygon class="st0" points="186.2,164.6 220.4,199 192.8,209 182.3,237 141.9,196.7 145.7,191.6 181.2,200.8 184.1,198.3 "/> <polygon class="st0" points="139.4,203.6 181.2,245.8 177.3,255 133.4,210.8 "/> </svg> </div>';
+		}
+		for(var i=0;i<party2;i+=1){
+			showParty2+='<div class="col-gra-line"><svg version="1.1" id="Layer_1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 237.3 258.7" style="enable-background:new 0 0 237.3 258.7;" xml:space="preserve"> <style type="text/css">.st1{fill:#727272;}</style><path class="st1" d="M218.2,80.1l-36-14.5l-2.5-38.5l-37,9.2l-24-29.7l-25,29.7l-37-9.5l-2,39L18.2,79.3l21.8,32.1l-21.8,30.9 l37,15.5l1.8,38.3l36.7-9.3l25,29.5l23.8-29.3l37.8,8.5l2.3-37.3l35.8-14.5l-21-31.2L218.2,80.1z M118.8,167.1 c-30.7,0-55.6-24.9-55.6-55.6s24.9-55.6,55.6-55.6s55.6,24.9,55.6,55.6S149.5,167.1,118.8,167.1z"/> <polygon class="st1" points="38.9,158.5 3.5,193.8 11.8,198.3 47.8,161.7 "/> <polygon class="st1" points="50.3,164.6 16,199 43.7,209 54.2,237 94.5,196.7 90.8,191.6 55.3,200.8 52.4,198.3 "/> <polygon class="st1" points="97,203.6 55.3,245.8 59.2,255 103,210.8 "/> <polygon class="st1" points="197.6,158.5 232.9,193.8 224.7,198.3 188.7,161.7 "/> <polygon class="st1" points="186.2,164.6 220.4,199 192.8,209 182.3,237 141.9,196.7 145.7,191.6 181.2,200.8 184.1,198.3 "/> <polygon class="st1" points="139.4,203.6 181.2,245.8 177.3,255 133.4,210.8 "/> </svg> </div>';
+		}
+		for(var i=0;i<party3;i+=1){
+			showParty3+='<div class="col-gra-line"><svg version="1.1" id="Layer_1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 237.3 258.7" style="enable-background:new 0 0 237.3 258.7;" xml:space="preserve"> <style type="text/css">.st2{fill:#727272;}</style><path class="st2" d="M218.2,80.1l-36-14.5l-2.5-38.5l-37,9.2l-24-29.7l-25,29.7l-37-9.5l-2,39L18.2,79.3l21.8,32.1l-21.8,30.9 l37,15.5l1.8,38.3l36.7-9.3l25,29.5l23.8-29.3l37.8,8.5l2.3-37.3l35.8-14.5l-21-31.2L218.2,80.1z M118.8,167.1 c-30.7,0-55.6-24.9-55.6-55.6s24.9-55.6,55.6-55.6s55.6,24.9,55.6,55.6S149.5,167.1,118.8,167.1z"/> <polygon class="st2" points="38.9,158.5 3.5,193.8 11.8,198.3 47.8,161.7 "/> <polygon class="st2" points="50.3,164.6 16,199 43.7,209 54.2,237 94.5,196.7 90.8,191.6 55.3,200.8 52.4,198.3 "/> <polygon class="st2" points="97,203.6 55.3,245.8 59.2,255 103,210.8 "/> <polygon class="st2" points="197.6,158.5 232.9,193.8 224.7,198.3 188.7,161.7 "/> <polygon class="st2" points="186.2,164.6 220.4,199 192.8,209 182.3,237 141.9,196.7 145.7,191.6 181.2,200.8 184.1,198.3 "/> <polygon class="st2" points="139.4,203.6 181.2,245.8 177.3,255 133.4,210.8 "/> </svg> </div>';
+		}
+		for(var i=0;i<party4;i+=1){
+			showParty4+='<div class="col-gra-line"><svg version="1.1" id="Layer_1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 237.3 258.7" style="enable-background:new 0 0 237.3 258.7;" xml:space="preserve"> <style type="text/css">.st3{fill:#727272;}</style><path class="st3" d="M218.2,80.1l-36-14.5l-2.5-38.5l-37,9.2l-24-29.7l-25,29.7l-37-9.5l-2,39L18.2,79.3l21.8,32.1l-21.8,30.9 l37,15.5l1.8,38.3l36.7-9.3l25,29.5l23.8-29.3l37.8,8.5l2.3-37.3l35.8-14.5l-21-31.2L218.2,80.1z M118.8,167.1 c-30.7,0-55.6-24.9-55.6-55.6s24.9-55.6,55.6-55.6s55.6,24.9,55.6,55.6S149.5,167.1,118.8,167.1z"/> <polygon class="st3" points="38.9,158.5 3.5,193.8 11.8,198.3 47.8,161.7 "/> <polygon class="st3" points="50.3,164.6 16,199 43.7,209 54.2,237 94.5,196.7 90.8,191.6 55.3,200.8 52.4,198.3 "/> <polygon class="st3" points="97,203.6 55.3,245.8 59.2,255 103,210.8 "/> <polygon class="st3" points="197.6,158.5 232.9,193.8 224.7,198.3 188.7,161.7 "/> <polygon class="st3" points="186.2,164.6 220.4,199 192.8,209 182.3,237 141.9,196.7 145.7,191.6 181.2,200.8 184.1,198.3 "/> <polygon class="st3" points="139.4,203.6 181.2,245.8 177.3,255 133.4,210.8 "/> </svg> </div>';
+		}
+		$('#grafic-con').html(showParty1);
+		$('#grafic-ndp').html(showParty2);
+		$('#grafic-gre').html(showParty3);
+		$('#grafic-lib').html(showParty4);
+		
+		$("#grafic-con").animate({"height":(41*party1)+"px"},1000);
+		$("#grafic-ndp").animate({"height":(41*party2)+"px"},1000);
+		$("#grafic-gre").animate({"height":(41*party3)+"px"},1000);
+		$("#grafic-lib").animate({"height":(41*party4)+"px"},1000);
+	}
+	
+	$(".votingBoxGra").click(function(){
+		openGrapficBox=0;
+		$("#grafic-con").stop();
+		$("#grafic-ndp").stop();
+		$("#grafic-gre").stop();
+		$("#grafic-lib").stop();
+		$(this).fadeOut(500);
+		$("#grafic-con").animate({"height":"0px"},1000);
+		$("#grafic-ndp").animate({"height":"0px"},1000);
+		$("#grafic-gre").animate({"height":"0px"},1000);
+		$("#grafic-lib").animate({"height":"0px"},1000);
+	});
 
+	$(".see-you-vote").click(function(){
+		if(openGrapficBox==0){
+			openGrapficBox=1;
+			$("#grafic-con").stop();
+			$("#grafic-ndp").stop();
+			$("#grafic-gre").stop();
+			$("#grafic-lib").stop();
+			$("#grafic-con").css("height","0px");
+			$("#grafic-ndp").css("height","0px");
+			$("#grafic-gre").css("height","0px");
+			$("#grafic-lib").css("height","0px");
+			$(".votingBoxGra").eq(0).fadeIn(500);
+			showGraphicVote();
+		}else{
+			openGrapficBox=0;
+			$("#grafic-con").stop();
+			$("#grafic-ndp").stop();
+			$("#grafic-gre").stop();
+			$("#grafic-lib").stop();
+			$(".votingBoxGra").eq(0).fadeOut(500);
+			$("#grafic-con").animate({"height":"0px"},1000);
+			$("#grafic-ndp").animate({"height":"0px"},1000);
+			$("#grafic-gre").animate({"height":"0px"},1000);
+			$("#grafic-lib").animate({"height":"0px"},1000);
+		}
+		
+	});
 

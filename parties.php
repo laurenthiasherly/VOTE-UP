@@ -312,10 +312,10 @@
     <div class="column large-4 show-for-large padding-none center 
          overlay half-page">
         
-        <p> 
+        <p class="hide-for-small-only"> 
             <?php echo $asocArray["Economy"]["column-2-p1"]; ?>
         </p>  
-        <p> 
+        <p class="hide-for-small-only"> 
             <?php echo $asocArray["Economy"]["column-2-p2"]; ?>
         </p> 
         

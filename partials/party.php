@@ -25,13 +25,10 @@
                 <a> <i class="fa fa-sitemap white" aria-hidden="true"> </i> </a></li>
             
 
-            <li class="sidebar-topic" id="seeyourvote">
+            <li class="sidebar-topic see-you-vote" id="seeyourvote">
                 <a> <i class="fa fa-arrows fa-spin white" aria-hidden="true"> </i> </a></li>
 
             <li id="votingBtn" class="sidebar-topic" data-direct="voting0">
-                <a> <i id="voting-icon" class="fa fa-check " aria-hidden="true"> </i>
-                </a></li>
-			<li id="votingGraBtn" class="sidebar-topic" data-direct="voting0">
                 <a> <i id="voting-icon" class="fa fa-check " aria-hidden="true"> </i>
                 </a></li>
         </ul>
@@ -100,59 +97,57 @@
                     <h3 class="content-topic-default">Please select the parties and Topics.</h3>
                 </div>
             </div>
-            
-            
         </div>
-        
-        
     </div>
 
-    <div id="votingBox" class="center">
 		<div class="votingBoxGra">
-			<h3>Graphic</h3>
+			<h3 class="center">Graphic</h3>
 			<div class="votingGra-style">
 				<div class="party-gra-vote">
 					<div id="grafic-con" class="column small-3 medium-3 large-3 gra-col">
 					</div>
-					<div id="grafic-ndp" class="column small-push-3 medium-push-3 large-push-3 small-3 medium-3 large-3 gra-col">2</div>
-					<div id="grafic-gre" class="column small-push-6 medium-push-6 large-push-6 small-3 medium-3 large-3 gra-col">3</div>
-					<div id="grafic-lib" class="column small-push-9 medium-push-9 large-push-9 small-3 medium-3 large-3 gra-col">4</div>
+					<div id="grafic-ndp" class="column small-push-3 medium-push-3 large-push-3 small-3 medium-3 large-3 gra-col"></div>
+					<div id="grafic-gre" class="column small-push-6 medium-push-6 large-push-6 small-3 medium-3 large-3 gra-col"></div>
+					<div id="grafic-lib" class="column small-push-9 medium-push-9 large-push-9 small-3 medium-3 large-3 gra-col"></div>
 				</div>
 			</div>
 			<div class="party-gra-name">
-				<div class="column small-3 medium-3 large-3">1</div>
-				<div class="column small-3 medium-3 large-3">2</div>
-				<div class="column small-3 medium-3 large-3">3</div>
-				<div class="column small-3 medium-3 large-3">4</div>
+				<div class="column small-3 medium-3 large-3">CO</div>
+				<div class="column small-3 medium-3 large-3">NDP</div>
+				<div class="column small-3 medium-3 large-3">GR</div>
+				<div class="column small-3 medium-3 large-3">LI</div>
 			</div>
 		</div>
 			
 		</div>
         <div class="voting-box">
             <div class="voting-col">
-                <p>Conservative</p>
+                <p class="hide-for-small-only">Conservative</p>
+				<p class="show-for-small-only">CO</p>
                 <a href="parties.php?party=Conservative"><div id="party1total"></div></a>
             </div>
             <div class="voting-col">
-                <p>Democratic</p>
+                <p class="hide-for-small-only">Democratic</p>
+				<p class="show-for-small-only">NDP</p>
                 <a href="parties.php?party=Democratic"><div id="party2total"></div></a>
             </div>
             <div class="voting-col">
-                <p>Green</p>
+                <p class="hide-for-small-only">Green</p>
+				<p class="show-for-small-only">GR</p>
                 <a href="parties.php?party=Green"><div id="party3total"></div></a>
             </div>
             <div class="voting-col">
-                <p>Liberal</p>
+                <p class="hide-for-small-only">Liberal</p>
+				<p class="show-for-small-only">LI</p>
                  <a href="parties.php?party=Liberal"><div id="party4total"></div></a>
             </div>
-            <div id="refreshVoting" class="voting-col-clear">
+            <div id="refreshVoting" class="voting-col-clear hide-for-small-only">
                 <h3> Clear <br> Voting </h3>
             </div>
             <div class="voting-close" id="voting-close">
                 <i class="fa fa-sort-down fa-2x white" aria-hidden="true"> </i>
             </div>
         </div>
-    </div>
 
 
   

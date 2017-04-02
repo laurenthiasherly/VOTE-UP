@@ -58,13 +58,23 @@
 
 
 .votingBoxGra{
-	padding: 20px 20px 20px 50px;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	position: absolute;
-	width: 500px;
-	height: 500px;
+	display: none;
+	z-index: 999;
+	@media screen and (max-width: 39.9375em) {
+		padding: 150px 20px 70px 30px;
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+	}
+	@media screen and (min-width: 40em){
+		padding: 20px 20px 20px 50px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		position: fixed;
+		width: 500px;
+		height: 500px;
+	}
 	background-color: rgba(0,0,0,0.9);
 	h3{
 		margin: 0;
@@ -75,6 +85,9 @@
 		border-bottom: solid 2px white;
 		height: 80%;
 		width: 80%;
+		@media screen and (max-width: 39.9375em) {
+			height: 60%;
+		}
 	}
 	.party-gra-vote{
 		position: absolute;
@@ -87,10 +100,45 @@
 		bottom: 10px;
 		width: 75%;
 		color: white;
+		@media screen and (max-width: 39.9375em) {
+			bottom: 5%;
+		}
 	}
 	.gra-col{
 		position: absolute;
 		bottom: 0;
+	}
+	.gra-batch{
+		width: 50%;
+		@media screen and (max-width: 39.9375em) {
+			width: 100%;
+		}
+	}
+	svg{
+		width: 50%;
+		@media screen and (max-width: 39.9375em) {
+			width: 31px;
+		}
+	}
+	.st0{
+		fill: $blue;
+	}
+	.st1{
+		fill: $orange;
+	}
+	.st2{
+		fill: $green;
+	}
+	.st3{
+		fill: $red;
+	}
+	#grafic-con,
+	#grafic-ndp,
+	#grafic-gre,
+	#grafic-lib
+	{
+		overflow: hidden;
+		height: 0;
 	}
 }
 

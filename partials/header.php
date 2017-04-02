@@ -121,6 +121,9 @@
                     <li class="column medium-12 small-12 padding-vertical nav1-mobile">                       
                         <a href="mp.php"> Who's my MP </a>
                     </li>
+					<li class="column medium-12 small-12 padding-vertical nav1-mobile show-for-small-only">                       
+                        <a class="see-you-vote"> See your vote </a>
+                    </li>
                     <li class="column medium-12 small-12 padding-vertical nav2-mobile">                       
                         <a href="subscribe.php"> Subscribe </a>
                     </li>
