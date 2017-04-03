@@ -40,7 +40,9 @@
 				$message.="<li>".$row["name"]."</li>";
             }
 			$message.="</ul>";
-        }
+        }else{
+			$message.="<h2 style='color:white'>".strtoupper($party)." HAS NO MEMBERS IN ".strtoupper($_POST["province"])."</h2>";
+		}
 		
         echo $message;
         mysqli_close($conn);

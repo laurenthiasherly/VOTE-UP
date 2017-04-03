@@ -63,7 +63,7 @@
 				$message.=$value;
 			}
 		}else{
-			$message.="<p>Empty</p>";
+			$message.="<p>GREEN HAS NO MEMBERS IN ".strtoupper($_POST["province"])."</p>";
 		}
 		
 		$message.="</div>";
@@ -74,7 +74,7 @@
 				$message.=$value;
 			}
 		}else{
-			$message.="<p>Empty</p>";
+			$message.="<p>CONSERVATIVE HAS NO MEMBERS IN ".strtoupper($_POST["province"])."</p>";
 		}
 		$message.="</div>";
 		$message.="<div class='small-12 medium-6 large-3 column'>";
@@ -84,7 +84,7 @@
 				$message.=$value;
 			}
 		}else{
-			$message.="<p>Empty</p>";
+			$message.="<p>NDP HAS NO MEMBERS IN ".strtoupper($_POST["province"])."</p>";
 		}
 		$message.="</div>";
 		$message.="<div class='small-12 medium-6 large-3 column'>";
@@ -94,7 +94,7 @@
 				$message.=$value;
 			}
 		}else{
-			$message.="<p>Empty</p>";
+			$message.="<p>LIBERAL HAS NO MEMBERS IN ".strtoupper($_POST["province"])."</p>";
 		}
 		$message.="</div>";
 		
