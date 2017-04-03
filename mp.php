@@ -27,28 +27,23 @@
         </h5>
     
     </div>
-    <form method="" action="">
-        <li>
-            <select id="selectProvince">
-				<option value="select">Select Province</option>
-                <option value="British Columbia">British Columbia</option>
-                <option value="Alberta">Alberta</option>
-                <option value="Saskatchewan">Saskatchewan</option>
-                <option value="Manitoba">Manitoba</option>
-                <option value="Ontario">Ontario</option>
-                <option value="Quebec">Quebec</option>
-                <option value="New Brunswick">New Brunswick</option>
-                <option value="Nova Scotia">Nova Scotia</option>
-                <option value="Prince Edward">Prince Edward</option>
-                <option value="Newfoundland">Newfoundland and Labrador</option>
-                <option value="Nuvanut">Nuvanut</option>
-                <option value="Northwest Territories">Northwest Territories</option>
-                <option value="Yukon">Yukon</option>
+	<select id="selectProvince">
+		<option value="select">Select Province</option>
+		<option value="British Columbia">British Columbia</option>
+		<option value="Alberta">Alberta</option>
+		<option value="Saskatchewan">Saskatchewan</option>
+		<option value="Manitoba">Manitoba</option>
+		<option value="Ontario">Ontario</option>
+		<option value="Quebec">Quebec</option>
+		<option value="New Brunswick">New Brunswick</option>
+		<option value="Nova Scotia">Nova Scotia</option>
+		<option value="Prince Edward">Prince Edward</option>
+		<option value="Newfoundland">Newfoundland and Labrador</option>
+		<option value="Nuvanut">Nuvanut</option>
+		<option value="Northwest Territories">Northwest Territories</option>
+		<option value="Yukon">Yukon</option>
 
-            </select>
-        </li>
-    </form>
-
+	</select>
 </div>
 
 <div class="mp-title-style">
@@ -170,8 +165,25 @@
 });
 
 $(".highcharts-background").eq(0).attr("fill","#7f142b");
-
-
+	$("#selectProvince").change(function(){
+		if($(this).val()=="select"){
+			$("#contentTopicMp").html("");
+		}else{
+			$("#provinceNamePage").css("padding","90px 0 20px 0");
+            $("#provinceNamePage").text($(this).val());
+            if(this.name=="Québec"){
+                this.name="Quebec";
+            }
+			if(this.name=="Newfoundland and Labrador"){
+				this.name="Newfoundland";
+			}
+			if(this.mae=="Northwest Territories"){
+				this.name="North West Territories";
+			}
+            ajaxGetDatafromDatabaseMap($(this).val());
+		}
+		 
+	});
 </script>
 
 
