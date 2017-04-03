@@ -37,7 +37,11 @@
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
     /* styles for medium only */
     
-
+	.map-space{
+        padding-top: 100px;
+        background-color: #e1e1e1;
+        height: 100vh;
+    }
 }
 
 @media screen and (min-width: 64em) {
@@ -177,6 +181,12 @@
 
 rect{
     fill: #e1e1e1;
+}
+
+.mp-title-map-style{
+	margin: 0;
+	width:100%;
+	text-align:center;
 }
 
 

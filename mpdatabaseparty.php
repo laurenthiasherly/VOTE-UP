@@ -30,7 +30,7 @@
 		$numberCount=0;
 			
         if($rowData>0){
-			if($_POST["type"]==1){
+			if($_POST["type"]==0){
 				$message.="<ul class='party-mp-list-style".ceil($rowData/10)."'>";
 			}else{
 				$message.="<ul class='party-mp-list-style1'>";
@@ -40,7 +40,9 @@
 				$message.="<li>".$row["name"]."</li>";
             }
 			$message.="</ul>";
-        }
+        }else{
+			$message.="<h2 style='color:white'>".strtoupper($party)." HAS NO MEMBERS IN ".strtoupper($_POST["province"])."</h2>";
+		}
 		
         echo $message;
         mysqli_close($conn);
