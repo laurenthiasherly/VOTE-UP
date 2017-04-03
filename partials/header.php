@@ -71,6 +71,85 @@
                 </div>
 
                 <div class="column large-10 show-for-large padding-none center ">
+                    
+                    
+                    
+                    <?php
+
+
+
+                        if(isset($_POST["name"]) AND $_POST["email"] AND $_POST["subscribe"] != ""){
+
+                            email($_POST["email"], $_POST["name"]);
+
+                        }
+
+                        else{
+
+
+                            echo "<form method='post' action='' >";
+                            echo '<ul class="subscription center">';
+                            echo '<li>';
+                            
+                                echo '<label for="theName"> Name </label>';
+
+                                echo  '<input type="text" name="name" id="theName"/>  ';
+
+                            echo '</li><li>';
+
+                                echo '<label for="theEmail"> Email </label>';
+
+                                echo '<input type="text" name="email" id="theEmail"/> ';
+
+                            echo '</li><li>';
+
+                                echo ' <input type="submit" name="subscribe" value="Subscribe"
+                                       class="button"/>  ';
+
+                            echo "</li>";
+
+                            echo "</ul>";
+                            echo "</form>";
+
+
+                            if(isset($_POST["name"]) AND $_POST["email"] AND $_POST["subscribe"] == "") { 
+
+                                echo "<p>Please insert name and email address </p>"; 
+                            }
+
+                        }
+
+
+
+                        function email($email, $name){
+
+                        $to = $email;
+                        $subject = "Newsletter Subscription";
+
+                        $message =  "<body> <h1> Hallo! " . $name . "
+                         </h1> <br><br> 
+                         <h2> Thank you for subscribing to our weekly newsletter </h2>
+                         <h3> We will update you about interesting and relevant information every Monday and Thursday </h3>  </body>";
+
+                        $headers = "MIME-Version:1.0\r\n";
+                        $headers .= "Content-type:text/html;charset=UTF-8\r\n";             
+
+                        $headers .= "From: laurenthiasherly@gmail.com \r\n";
+
+                        $didItSend = mail($to, $subject, $message, $headers);
+
+
+                        if($didItSend == true){
+                            echo "<p> Email sent successfully </p>";
+                        }
+                        else{
+                            echo "<p> Email failed </p>";
+                        }
+
+                    }
+
+
+                    ?>
 
                     <form method='post' action='' >
 
