@@ -33,7 +33,7 @@
                         $message.="<div class='clear-fix'>";
                         $message.="<h1 class='content-topic-default'>".$row['topic']."</h1>";
                     }
-                    $message.="<div class='content-topic-party".count($arrrayParty)." col'><div class='content-showing-style'><div class='topic-title-".strtolower(str_replace("NDP","democratic",$row['party']))."'><h3>".strtoupper($row['party'])." PARTY"."</h3></div><div class='comparison-content'><p>".$row['column-1-p1']."</p></div></div></div>";
+                    $message.="<div class='content-topic-party".count($arrrayParty)." col'><div class='content-showing-style'><div class='topic-title-".strtolower(str_replace("NDP","democratic",$row['party']))."'><h3 class='center'>".strtoupper($row['party'])." PARTY"."</h3></div><div class='comparison-content'><p>".$row['column-1-p1']."</p></div></div></div>";
                     $counter+=1;
                     if($counter==count($arrrayParty)){
                         $message.="</div>";
@@ -47,7 +47,7 @@
                     if($counterrow==0){
                         $message.="<div class='large-6 column'>";
                     }
-                    $message.="<div class='content-topic-party".count($arrrayParty)." col'><div class='content-showing-style'><div class='topic-title-".strtolower(str_replace("NDP","democratic",$row['party']))."'><h3>".strtoupper($row['party'])." PARTY"."</h3></div><div class='comparison-content'><p>".$row['column-1-p1']."</p></div></div></div>";
+                    $message.="<div class='content-topic-party".count($arrrayParty)." col'><div class='content-showing-style'><div class='topic-title-".strtolower(str_replace("NDP","democratic",$row['party']))."'><h3 class='center'>".strtoupper($row['party'])." PARTY"."</h3></div><div class='comparison-content'><p>".$row['column-1-p1']."</p></div></div></div>";
                     $counter+=1;
                     $counterrow+=1;
                     if($counterrow==2){

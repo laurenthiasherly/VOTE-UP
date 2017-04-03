@@ -9,14 +9,7 @@
         width: 100%;
     }
 
-                                            /*    .content-topic-party1,
-                                                .content-topic-party2,
-                                                .content-topic-party3,
-                                                .content-topic-party4
-                                                {
-                                                    padding: 10px;
-                                                    width: 100%;
-                                                }*/
+     
 
     .content-showing-style{
         background-color: white;
@@ -39,6 +32,37 @@
         width: 25%;
         float: left;
         text-align: center;
+    }
+	.topic-title-conservative{
+        padding: 10px 0;
+        background-color: #0331cf;
+        width: 100%;
+        color: white;
+    }
+
+    .party-top-comp{
+        border-bottom: solid 2px transparent;
+    }
+
+    .topic-title-green{
+        padding: 10px 0;
+        background-color: #3c9b35;
+        width: 100%;
+        color: white;
+    }
+
+    .topic-title-democratic{
+        padding: 10px 0;
+        background-color: #f6821f;
+        width: 100%;
+        color: white;
+    }
+
+    .topic-title-liberal{
+        padding: 10px 0;
+        background-color: #ff1a24;
+        width: 100%;
+        color: white;
     }
     
 
@@ -51,15 +75,6 @@
         width: 100%;
     }
 
-/*                                                .content-topic-party1,
-                                                .content-topic-party2,
-                                                .content-topic-party3,
-                                                .content-topic-party4
-                                                {
-                                                    padding: 10px;
-                                                    width: 100%;
-                                                }*/
-
     .content-showing-style{
         background-color: white;
     }
@@ -83,32 +98,42 @@
         text-align: center;
     }
 
+	.topic-title-conservative{
+        padding: 10px 0;
+        background-color: #0331cf;
+        width: 100%;
+        color: white;
+    }
 
+    .party-top-comp{
+        border-bottom: solid 2px transparent;
+    }
+
+    .topic-title-green{
+        padding: 10px 0;
+        background-color: #3c9b35;
+        width: 100%;
+        color: white;
+    }
+
+    .topic-title-democratic{
+        padding: 10px 0;
+        background-color: #f6821f;
+        width: 100%;
+        color: white;
+    }
+
+    .topic-title-liberal{
+        padding: 10px 0;
+        background-color: #ff1a24;
+        width: 100%;
+        color: white;
+    }
 
 }
 
 @media screen and (min-width: 64em) {
 
-       /*
-                                        .content-topic-party1{
-                                            padding: 10px;
-                                            width: 100%;
-                                        }
-
-                                        .content-topic-party2{
-                                            padding: 10px;
-                                            width: 50%;
-                                        }
-
-                                        .content-topic-party3{
-                                            padding: 10px;
-                                            width: 33.33%;
-                                        }
-
-                                        .content-topic-party4{
-                                            padding: 10px;
-                                            width: 100%;
-                                        }*/
 
     .content-showing-style{
         background-color: white;
@@ -117,28 +142,6 @@
     .comparison-content{
         padding: 60px 0;
     }
-
-
-/* ----- Modal Box (Comparing Side) ------*/
-                                                        /*
-                                                        .top-parties-bar ul{
-                                                            margin: 0;
-                                                            padding: 0;
-                                                            width: 960px;
-                                                            list-style: none;
-                                                        }
-
-                                                        .top-parties-bar li{
-                                                            text-align: center;
-                                                            float: left;
-                                                            width: 25%;
-                                                            display: inline-block;
-                                                            padding: 20px 0;
-                                                        }*/
-
-
-
-
 
 
     .topic-title-conservative{

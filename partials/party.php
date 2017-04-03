@@ -5,7 +5,7 @@
 
     
 
-    <div class="side-topics-bar">
+    <div class="side-topics-bar show-for-large">
         
         <!-- ============================================================
                     THE SIDE BAR FOR THE PARTIES PAGE 
