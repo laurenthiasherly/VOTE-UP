@@ -6,8 +6,20 @@
     <!-- ============================================================
                     THE MODAL BOX FOR COMPARING THE PARTY 
         ================================================================= -->    
-    
-     <div id="modalBox" class="modal-box-comparing">
+    <div style='display:none' class="tip-topic-style">
+            <div class="tip-topic"><a class="tip-style">Economy</a></div>
+            <div class="tip-topic"><a class="tip-style">Environment</a></div>
+            <div class="tip-topic"><a class="tip-style">Education</a></div>
+            <div class="tip-topic"><a class="tip-style">Health</a></div>
+            <div class="tip-topic"><a class="tip-style">Immigration</a></div>
+            <div class="tip-topic"><a class="tip-style">Housing</a></div>
+            <div class="tip-topic"><a class="tip-style">Foreign Policy</a></div>
+            <div class="tip-topic"><a class="tip-style">Privacy</a></div>
+            <div class="tip-topic"><a class="tip-style">Electoral Reform</a></div>
+            <div class="tip-topic"><a class="tip-style">See Your Vote</a></div>
+            <div class="tip-topic"><a class="tip-style">Voting</a></div>
+        </div>
+      <div id="modalBox" class="modal-box-comparing show-for-large">
         <div id="closeComparingBox"><i class="fa fa-3x fa-times-circle-o" aria-hidden="true"></i></div>
         <div class="comparing-box">
             <div class="comp-topbar-style">
@@ -56,46 +68,6 @@
                 <div id="contentTopic">
                     <h3 class="content-topic-default">Please select the parties and Topics.</h3>
                 </div>
-            </div>
-            
-            
-        </div>
-        
-        
-    </div>
-    
-    
-    <!-- ==============   THE VOTING BOX ON THE BOTTOM OF THE PAGE ================== -->
-
-    <div id="votingBox" class="center">
-        <div class="voting-box">
-            <div class="voting-col">
-                <p>Conservative</p>
-                <a href="parties.php?party=Conservative"><div id="party1total"></div></a>
-            </div>
-            <div class="voting-col">
-                <p>Democratic</p>
-                <a href="parties.php?party=Democratic"><div id="party2total"></div></a>
-            </div>
-            <div class="voting-col">
-                <p>Green</p>
-                <a href="parties.php?party=Green"><div id="party3total"></div></a>
-            </div>
-            <div class="voting-col">
-                <p>Liberal</p>
-                 <a href="parties.php?party=Liberal"><div id="party4total"></div></a>
-            </div>
-            
-            <!-- ========== TO CLEAR THE VOTING ============== -->
-            
-            <div id="refreshVoting" class="voting-col-clear">
-                <h3> Clear <br> Voting </h3>
-            </div>
-            
-            <!-- ========== TO CLOSE THE BOX ============== -->
-            
-            <div class="voting-close" id="voting-close">
-                <i class="fa fa-sort-down fa-2x white" aria-hidden="true"> </i>
             </div>
         </div>
     </div>

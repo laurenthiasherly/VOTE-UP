@@ -17,7 +17,7 @@ $('#selectProvince').change(function(){
 	if($(this).val()=="select"){
 		$("#contentTopicMp").html("");
 	}else{
-		ajaxGetDatafromDatabase($(this).val());
+		ajaxGetDatafromDatabaseMap($(this).val());
 	}
 });
 

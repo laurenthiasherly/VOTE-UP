@@ -1,4 +1,3 @@
-
 <?php include "partials/comparison.php"; ?>
 <div class="map-space">
     <div class="column map-title center">
